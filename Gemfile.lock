@@ -1,0 +1,22 @@
+PATH
+  remote: ../bcf-flightplans
+  specs:
+    bcf-flightplans (0.2.0)
+      redcarpet (~> 3.6)
+      tilt (~> 2.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    redcarpet (3.6.0)
+    tilt (2.4.0)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  bcf-flightplans (~> 0.2.0)!
+
+BUNDLED WITH
+   2.5.3
