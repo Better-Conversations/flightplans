@@ -3,7 +3,7 @@
         {
             "type": "ruby_lsp",
             "request": "launch",
-            "name": "Debug program",
+            "name": "Render PDF",
             "program": "ruby bin/render-pdf-watch ${file}"
         }
     ]
