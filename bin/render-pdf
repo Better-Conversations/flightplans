@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 # Setup bundler so we can require gems
-require 'bundler'
-Bundler.require
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+require 'bundler/setup'
 
 require 'bcf/flightplans'
 require 'tmpdir'
@@ -13,7 +13,7 @@ if ARGV.length != 1
   exit 1
 end
 
-load ARGV[0]
+load(ARGV[0])
 
 flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
 

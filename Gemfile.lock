@@ -1,5 +1,6 @@
-PATH
-  remote: ../bcf-flightplans
+GIT
+  remote: https://github.com/Better-Conversations/ruby-flightplans.git
+  revision: e271856e276ad9c7f2d515dd0a776735a04091d6
   specs:
     bcf-flightplans (0.2.0)
       redcarpet (~> 3.6)
@@ -16,7 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcf-flightplans (~> 0.2.0)!
+  bcf-flightplans!
 
 BUNDLED WITH
    2.5.3
