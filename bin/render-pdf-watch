@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+# Setup bundler so we can require gems
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+require 'bundler/setup'
+
+require 'bcf/flightplans'
+require 'tmpdir'
+require 'open3'
+require 'filewatcher'
+
+if ARGV.length != 1
+  puts "Usage: render-pdf <flightplan>"
+  exit 1
+end
+
+Filewatcher.new(ARGV[0]).watch do |filename, event|
+  puts "Rendering PDF for #{ARGV[0]}"
+
+  # Each load will re-run the code in this ruby process.
+  # This means that we may have pre-existing state that messes things up.
+  # But for now to allow for vscode to run things we want it to be a ruby file
+  # not a shell script so this will work.
+  load(ARGV[0])
+
+  flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
+  flight_plan.render_pdf(File.basename(ARGV[0], '.rb') + '.pdf')
+end

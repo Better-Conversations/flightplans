@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+fswatch --event Updated -0 $1 | xargs -0 -I {} bin/render-pdf {}
