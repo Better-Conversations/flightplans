@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Render PDF",
+            "type": "shell",
+            "command": "bin/render-pdf",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

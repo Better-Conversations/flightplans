@@ -17,10 +17,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "ruby --version",
-
-	// From https://code.visualstudio.com/remote/advancedcontainers/start-processes
-	"postStartCommand": "nohup bash -c './bin/watch-and-render.sh &'",
+    // TODO: Does this work, is it needed
+	"postCreateCommand": "gem install prism && gem install ruby-lsp && bundle",
 
 	// Configure tool-specific properties.
 	"customizations": {

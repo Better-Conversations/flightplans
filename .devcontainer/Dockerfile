@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/ruby:1-3.3-bullseye
+FROM mcr.microsoft.com/devcontainers/ruby:3.3
 
 ADD https://github.com/Enter-tainer/typstyle/releases/download/v0.11.28/typstyle-linux-arm64 /usr/bin/typstyle
 RUN chmod +x /usr/bin/typstyle
