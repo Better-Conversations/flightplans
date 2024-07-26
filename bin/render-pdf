@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+# Setup bundler so we can require gems
+require 'bundler'
+Bundler.require
+
+require 'bcf/flightplans'
+require 'tmpdir'
+require 'open3'
+
+if ARGV.length != 1
+  puts "Usage: render-pdf <flightplan>"
+  exit 1
+end
+
+load ARGV[0]
+
+flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
+
+if flight_plan.nil?
+  puts "No flight plan found in #{ARGV[0]}"
+  exit 1
+end
+
+flight_plan.render_pdf(File.basename(ARGV[0], '.rb') + '.pdf')

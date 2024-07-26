@@ -1,9 +1,6 @@
 module BCF
   module FlightPlans
     class ConventionalFlightPlan < BCF::FlightPlans::FlightPlan
-      include SimpleJSONSerialization
-      include SimpleJSONDeserialization
-
       def initialize
         super
         @total_length = 90
