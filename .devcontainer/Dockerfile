@@ -1,3 +1,7 @@
+# Note you can test this with 
+#    docker build .devcontainer
+# And note, it'll cache the layers, which means if you're just messing around with the last few lines, it'll be fast.
+
 FROM mcr.microsoft.com/devcontainers/ruby:3.3
 
 ADD https://github.com/Enter-tainer/typstyle/releases/download/v0.11.28/typstyle-linux-arm64 /usr/bin/typstyle
@@ -27,7 +31,9 @@ fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
 
+RUN gem install prism ruby-lsp filewatcher tilt redcarpet
 
-# Install the Ruby stuff we need
-RUN gem install prism ruby-lsp filewatcher 
-RUN gem install --source https://github.com/Better-Conversations/ruby-flightplans bcf-flightplans
+# Install our gem from the git repo
+RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
+RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
+
