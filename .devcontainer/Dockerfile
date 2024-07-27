@@ -26,3 +26,8 @@ cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
 fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
+
+
+# Install the Ruby stuff we need
+RUN gem install prism ruby-lsp filewatcher 
+RUN gem install --source https://github.com/Better-Conversations/ruby-flightplans bcf-flightplans

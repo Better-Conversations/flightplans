@@ -17,8 +17,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-    // TODO: Does this work, is it needed
-	"postCreateCommand": "gem install prism && gem install ruby-lsp && bundle",
+	// "postCreateCommand": "bundle install",
 
 	// Configure tool-specific properties.
 	"customizations": {
