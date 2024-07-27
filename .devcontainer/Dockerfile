@@ -36,4 +36,4 @@ RUN gem install prism ruby-lsp filewatcher tilt redcarpet
 # Install our gem from the git repo
 RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
 RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
-
+RUN rm -rf ./bcf-flightplans
