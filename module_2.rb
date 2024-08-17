@@ -1,36 +1,34 @@
 require 'bcf/flightplans'
 require_relative './common_blocks'
 
-# TODO check this is the same as version 2.2.3 here https://amphora.app.box.com/folder/158341017039?s=46iq09ejyhjjq6fkp2jgbw0jg4pjiu6h
+# This is from Version 2.2.3 in Box
 
-module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
+module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
   module_number 3
 
   learning_outcomes <<MD
 Learners will be able to:
 
-- Describe the elements of context in conversations
-- Link context, assumptions and state
+- Explain how assumptions affect conversations
+- Describe the link between state and assumptions
 
 Suggested learning outcomes for further trainings/interventions
 
-- Describe how social and cultural context affect conversations
+- Discuss where their own assumptions come from
+- Describe limiting and helpful assumptions they hold
+- Explain how assumptions might lead to stereotyping and prejudice
 MD
 end
 
-# The app should know if there's a demo or not because it'll be declared
+# TODO The app should know if there's a demo or not because it'll be declared
   demo <<MD
-No demo.
-
-Alternative example for context:
-
-- Imagine you are watching TV and have muted it for the commercials. The first commercial you see shows a kitchen knife setting on a cutting board on the counter. Around it there are lots of different kinds of vegetables and a stock pot. Given that context, you would likely assume they were advertising a cooking show.
-- The next commercial starts. You see the same kitchen knife. This time it is in the trunk (boot) of car along with some rope, duct tape, a tarp and a shovel.  That context brings up a completely different kind of show! Even though the kitchen knife is exactly the same.
+Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
 MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
+  # TODO I think this is always the same?
   block(name: "Greeting", lead_by: [:fx1, :fx2]) do
     length 5
 
@@ -47,10 +45,13 @@ MD
     length 2
 
     resources do
+      # Flipcharts should link to an image of the initial flipchart, in this repository, and
+      # if useful examples of completed ones, and even ones at different stages of the flow
+    end
       flipchart(
         :flip_1,
         "Flip#1 for agenda",
-        description: "Use to explain the model",
+        description: "Agenda (top half) and space for any questions or reflections",
         scribed_by: :fx1
       )
     end
@@ -63,7 +64,7 @@ MD
 
       instruction "Go through agenda on flip"
     end
-  end
+  # end
 
   block(name: "Any Questions", lead_by: :fx1) do
     length 2
@@ -124,9 +125,7 @@ Think of one conversation you had recently – maybe it was a good conversation,
 
 - Were your assumptions in that conversation accurate?
 - Please answer Yes or No in the chat.
-
 CHAT
-
     end
   end
 
@@ -477,4 +476,4 @@ CHAT
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
 # TODO I commented this out to get it to build, but I don't think this is the problem
-  # end
+#end
