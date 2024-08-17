@@ -15,4 +15,7 @@ This repository contains the sources for the BCF flight plans.
 ## Things to do 
 
 TODO is it safe having a "/" in the gem name
-TODO modules aren't building at all
+
+TODO License both a license file and also in GitHub
+
+TODO Declare demo and also require it to be there (and if there's one and no demo declaration then raise an error)

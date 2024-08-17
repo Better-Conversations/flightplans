@@ -18,15 +18,14 @@ Suggested learning outcomes for further trainings/interventions
 - Describe how social and cultural context affect conversations
 MD
 
-  # The app should know if there's a demo or not because it'll be declared
-  demo <<MD
-No demo.
+  demo <<~MD
+          No demo.
 
-Alternative example for context:
+          Alternative example for context:
 
-- Imagine you are watching TV and have muted it for the commercials. The first commercial you see shows a kitchen knife setting on a cutting board on the counter. Around it there are lots of different kinds of vegetables and a stock pot. Given that context, you would likely assume they were advertising a cooking show.
-- The next commercial starts. You see the same kitchen knife. This time it is in the trunk (boot) of car along with some rope, duct tape, a tarp and a shovel.  That context brings up a completely different kind of show! Even though the kitchen knife is exactly the same.
-MD
+          - Imagine you are watching TV and have muted it for the commercials. The first commercial you see shows a kitchen knife setting on a cutting board on the counter. Around it there are lots of different kinds of vegetables and a stock pot. Given that context, you would likely assume they were advertising a cooking show.
+          - The next commercial starts. You see the same kitchen knife. This time it is in the trunk (boot) of car along with some rope, duct tape, a tarp and a shovel.  That context brings up a completely different kind of show! Even though the kitchen knife is exactly the same.
+          MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 

@@ -19,7 +19,6 @@ Suggested learning outcomes for further trainings/interventions
 - Describe limiting and helpful assumptions they hold
 - Explain how assumptions might lead to stereotyping and prejudice
 MD
-end
 
 # TODO The app should know if there's a demo or not because it'll be declared
   demo <<MD
@@ -48,13 +47,12 @@ MD
       # Flipcharts should link to an image of the initial flipchart, in this repository, and
       # if useful examples of completed ones, and even ones at different stages of the flow
     end
-      flipchart(
-        :flip_1,
-        "Flip#1 for agenda",
-        description: "Agenda (top half) and space for any questions or reflections",
-        scribed_by: :fx1
-      )
-    end
+    flipchart(
+      :flip_1,
+      "Flip#1 for agenda",
+      description: "Agenda (top half) and space for any questions or reflections",
+      scribed_by: :fx1
+    )
 
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
@@ -64,7 +62,7 @@ MD
 
       instruction "Go through agenda on flip"
     end
-  # end
+  end
 
   block(name: "Any Questions", lead_by: :fx1) do
     length 2
@@ -109,19 +107,19 @@ CHAT
     length 4
 
     facilitator do
-      spoken "Let's have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
-      spoken("Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn't", fixed: true)
+      spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
+      spoken("Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t", fixed: true)
       spoken("Were your assumptions in that conversation accurate?", fixed: true)
       spoken("Just quickly put yes or no in the chat", fixed: true)
 
       instruction "If time permits, facilitator asks one person who answers “No” and one person who answers “Yes”:"
-      spoken "Without adding too much detail, when your assumption was/wasn't accurate, then what happened?"
+      spoken "Without adding too much detail, when your assumption was/wasn’t accurate, then what happened?"
       instruction "Handover to Fx1 for Context model."
     end
 
     producer do
       chat <<CHAT
-Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn't.
+Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
 
 - Were your assumptions in that conversation accurate?
 - Please answer Yes or No in the chat.
@@ -428,11 +426,12 @@ CHAT
 
     facilitator do
       spoken "We have covered the context in which our conversations take place today. Let’s reflect on what you know now."
-      spoken("
-Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
-- What difference does understanding context make to having Better Conversations?
-- What you will do differently now you know this?
-", fixed: true)
+      spoken fixed: true, <<~MD
+                Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
+                - What difference does understanding context make to having Better Conversations?
+                - What you will do differently now you know this?
+                MD
+
 
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
@@ -475,5 +474,3 @@ CHAT
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
-# TODO I commented this out to get it to build, but I don't think this is the problem
-#end
