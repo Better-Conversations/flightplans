@@ -31,7 +31,8 @@ fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
 
-RUN gem install bundler
+# Install the Ruby LSP server here so that it's available in the container in time for the VSCode extension to start
+RUN gem install bundler ruby-lsp debug 
 
 # Install our gem for converting Ruby flightplans from the git repo
 RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
