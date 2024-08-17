@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/Better-Conversations/ruby-flightplans.git
+  revision: 63553df2bce7e068ecbbf640be4e2a382a55e0ea
+  specs:
+    bcf-flightplans (0.2.0)
+      redcarpet (~> 3.6)
+      tilt (~> 2.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +45,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcf-flightplans!
   bundler
   debug
   filewatcher
