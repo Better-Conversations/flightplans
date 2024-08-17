@@ -17,9 +17,8 @@ Suggested learning outcomes for further trainings/interventions
 
 - Describe how social and cultural context affect conversations
 MD
-end
 
-# The app should know if there's a demo or not because it'll be declared
+  # The app should know if there's a demo or not because it'll be declared
   demo <<MD
 No demo.
 
@@ -476,5 +475,4 @@ CHAT
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
-# TODO I commented this out to get it to build, but I don't think this is the problem
-  # end
+end
