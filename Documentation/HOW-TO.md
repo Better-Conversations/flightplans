@@ -2,11 +2,13 @@
 
 ## Building a Flight Plan
 
+TODO can all text strings be Markdown?
+
 A flight plan has the following components which you declare when starting:
 
 - `module_title`, a string
 - `module_number`, an integer
-- `learning_outcomes`, a Markdown block which will be rendered as a the learning outcomes
+- `learning_outcomes`, a Markdown string which will be rendered as a the learning outcomes
 - `demo`, describes the demo or alternative
 
 ## Blocks
@@ -32,6 +34,8 @@ You can declare one like this:
 Note the block has a name and a list of who leads it.
 
 ### Block Content
+
+Block content is a block of valid Ruby code which is evaluated in the context of the block.
 
 Within a block you can give various strings (which can be plain text or Markdown). 
 
@@ -89,6 +93,8 @@ TODO flipcharts
 
 ## Common Blocks 
 
+TODO can we pass in parameters e.g. who leads a block?
+
 The common blocks are a collection of reusable components that can be used in flight plans. They are stored in a separate file to make it easier to reuse them across multiple flight plans.
 
 You can use them like this 
@@ -106,6 +112,6 @@ TODO documemnt this
 
 ### Gotchas 
 
-TODO fix this
+TODO mention not closing blocks caues class errors
 
-' is an issue?
+' in content is an issue?

@@ -19,3 +19,11 @@ TODO is it safe having a "/" in the gem name
 TODO License both a license file and also in GitHub
 
 TODO Declare demo and also require it to be there (and if there's one and no demo declaration then raise an error)
+
+TODO Consistency check that all common blocks take the same time
+
+TODO I removed some of the highlighting in STATE_CHECKIN
+TODO is state checkin always 2 mins
+
+TODO need to add who Fx is for the common blocks
+TODO we can do something with the Flipcharts

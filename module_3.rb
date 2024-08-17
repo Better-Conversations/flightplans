@@ -7,16 +7,16 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
   module_number 3
 
-  learning_outcomes <<MD
-Learners will be able to:
+  learning_outcomes <<~MD
+          Learners will be able to:
 
-- Describe the elements of context in conversations
-- Link context, assumptions and state
+          - Describe the elements of context in conversations
+          - Link context, assumptions and state
 
-Suggested learning outcomes for further trainings/interventions
+          Suggested learning outcomes for further trainings/interventions
 
-- Describe how social and cultural context affect conversations
-MD
+          - Describe how social and cultural context affect conversations
+          MD
 
   demo <<~MD
           No demo.
@@ -29,17 +29,7 @@ MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
-  block(name: "Greeting", lead_by: [:fx1, :fx2]) do
-    length 5
-
-    facilitator do
-      instruction "Greet people as they join – this is a chance to check their audio/video"
-    end
-
-    producer do
-      instruction "Setup template Breakout Room for first breakout"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::GREETING)
 
   block(name: "Welcome", lead_by: :fx1) do
     length 2
@@ -63,44 +53,9 @@ MD
     end
   end
 
-  block(name: "Any Questions", lead_by: :fx1) do
-    length 2
+  block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
-    facilitator do
-      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
-      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
-
-      instruction "Respond to any questions/insights but keep it brief."
-      instruction "Handover to Fx2 for state check-in."
-    end
-  end
-
-  block(name: "State Check-In", lead_by: :fx2) do
-    length 2
-
-    facilitator do
-      spoken "Now, let’s check-in with your state using the Traffic Light Model"
-      spoken("Please put in the chat if you are green, amber/yellow or red", fixed: true)
-      spoken("Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-", fixed: true)
-
-      instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
-    end
-
-    producer do
-      chat <<CHAT
-State check-in:
-
-Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-CHAT
-
-      instruction "Take note of states to help decide BOR participants"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN)
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
@@ -117,14 +72,13 @@ CHAT
     end
 
     producer do
-      chat <<CHAT
-Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn't.
+      chat <<~CHAT
+              Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn't.
 
-- Were your assumptions in that conversation accurate?
-- Please answer Yes or No in the chat.
+              - Were your assumptions in that conversation accurate?
+              - Please answer Yes or No in the chat.
 
-CHAT
-
+              CHAT
     end
   end
 
@@ -474,4 +428,5 @@ CHAT
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
+
 end

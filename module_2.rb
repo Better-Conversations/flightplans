@@ -7,38 +7,25 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
   module_number 3
 
-  learning_outcomes <<MD
-Learners will be able to:
+  learning_outcomes <<~MD
+                    Learners will be able to:
 
-- Explain how assumptions affect conversations
-- Describe the link between state and assumptions
+                    - Explain how assumptions affect conversations
+                    - Describe the link between state and assumptions
 
-Suggested learning outcomes for further trainings/interventions
+                    Suggested learning outcomes for further trainings/interventions
 
-- Discuss where their own assumptions come from
-- Describe limiting and helpful assumptions they hold
-- Explain how assumptions might lead to stereotyping and prejudice
-MD
+                    - Discuss where their own assumptions come from
+                    - Describe limiting and helpful assumptions they hold
+                    - Explain how assumptions might lead to stereotyping and prejudice
+                    MD
 
-# TODO The app should know if there's a demo or not because it'll be declared
-  demo <<MD
-Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
-MD
+  demo <<~MD
+          Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
+          MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
-
-  # TODO I think this is always the same?
-  block(name: "Greeting", lead_by: [:fx1, :fx2]) do
-    length 5
-
-    facilitator do
-      instruction "Greet people as they join – this is a chance to check their audio/video"
-    end
-
-    producer do
-      instruction "Setup template Breakout Room for first breakout"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::GREETING)
 
   block(name: "Welcome", lead_by: :fx1) do
     length 2
@@ -56,52 +43,15 @@ MD
 
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
-      spoken "Last time we looked at how quickly and easily we make assumptions, without being aware of them. We will do a quick review of that soon."
-      # TODO: Rewrite **'s as an BCF call. This will involve moving into cmarker
-      spoken "Then we will begin to explore the context around a conversation. **Context helps us make meaning of the world, and determines what assumptions we make.**"
-
+      spoken "•	You will need a pen and paper today, so if you need to grab those, you can do it now."
+      spoken "In Module 1 we looked at state. Today, we are going to explore how quickly and easily we make assumptions, as making assumptions can cause misunderstandings between us and other people."
       instruction "Go through agenda on flip"
     end
   end
 
-  block(name: "Any Questions", lead_by: :fx1) do
-    length 2
+  block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
-    facilitator do
-      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
-      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
-
-      instruction "Respond to any questions/insights but keep it brief."
-      instruction "Handover to Fx2 for state check-in."
-    end
-  end
-
-  block(name: "State Check-In", lead_by: :fx2) do
-    length 2
-
-    facilitator do
-      spoken "Now, let’s check-in with your state using the Traffic Light Model"
-      spoken("Please put in the chat if you are green, amber/yellow or red", fixed: true)
-      spoken("Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-", fixed: true)
-
-      instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
-    end
-
-    producer do
-      chat <<CHAT
-State check-in:
-
-Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-CHAT
-
-      instruction "Take note of states to help decide BOR participants"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN)
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4

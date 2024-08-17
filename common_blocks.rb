@@ -19,6 +19,76 @@ module BCF
         end
       end
 
+      STATE_CHECKIN = Block.build do
+        length 5
+        name "State Check-in"
+        default_leader :fx2
+
+        facilitator do
+          spoken "Now, let’s check-in with your state using the Traffic Light Model"
+          spoken("Please put in the chat if you are green, amber/yellow or red")
+        end
+
+        producer do
+          instruction "Setup template Breakout Room for first breakout"
+        end
+      end
+
+      GREETING = Block.build do
+        length 5
+        default_leader :fx2
+
+        facilitator do
+          instruction "Greet people as they join – this is a chance to check their audio/video"
+        end
+
+        producer do
+          instruction "Setup template Breakout Room for first breakout"
+        end
+      end
+
+      ANY_QUESTIONS = Block.build do
+        length 2
+        default_leader :fx2
+
+        facilitator do
+          spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
+          spoken "And do you have anything you’d like to ask us about today’s topic?"
+
+          instruction "Respond to any questions/insights but keep it brief."
+        end
+      end
+
+      STATE_CHECKIN = Block.build do
+        length 2
+        default_leader :fx2
+
+        facilitator do
+          spoken "Now, let’s check-in with your state using the Traffic Light Model"
+          spoken "Please put in the chat if you are green, amber/yellow or red"
+          spoken <<~MD
+              Green – you’re good to go!
+              Amber/Yellow – you need to proceed with caution
+              Red – you need to stop, break
+          MD
+
+          instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
+        end
+
+        producer do
+          chat <<~CHAT
+                State check-in:
+
+                - Green – you’re good to go!
+                - Amber/Yellow – you need to proceed with caution
+                - Red – you need to stop, break
+          CHAT
+
+          instruction "Take note of states to help decide BOR participants"
+        end
+      end
+
+
       SPONSOR_CLOSE = Block.build do
         length 16
         name "Sponsor Close"
