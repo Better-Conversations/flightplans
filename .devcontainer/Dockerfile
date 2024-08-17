@@ -31,7 +31,7 @@ fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
 
-RUN gem install prism ruby-lsp filewatcher tilt redcarpet
+RUN gem install prism ruby-lsp filewatcher tilt redcarpet debug
 
 # Install our gem from the git repo
 RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
