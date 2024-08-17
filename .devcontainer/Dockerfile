@@ -31,9 +31,9 @@ fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
 
-RUN gem install prism ruby-lsp filewatcher tilt redcarpet debug
+RUN gem install bundler
 
-# Install our gem from the git repo
+# Install our gem for converting Ruby flightplans from the git repo
 RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
 RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
 RUN rm -rf ./bcf-flightplans
