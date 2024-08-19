@@ -19,3 +19,4 @@ TODO is it safe having a "/" in the gem name
 TODO License both a license file and also in GitHub
 
 TODO Declare demo and also require it to be there (and if there's one and no demo declaration then raise an error)
+
