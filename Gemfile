@@ -1,4 +1,4 @@
-# A basic Gemfile because things expect it
+# A basic Gemfile because things expect it
 
 source 'https://rubygems.org'
 

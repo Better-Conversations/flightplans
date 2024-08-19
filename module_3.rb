@@ -80,11 +80,11 @@ MD
 
     facilitator do
       spoken "Now, let’s check-in with your state using the Traffic Light Model"
-      spoken("Please put in the chat if you are green, amber/yellow or red", fixed: true)
-      spoken("Green – you’re good to go!
+      spoken_exact "Please put in the chat if you are green, amber/yellow or red"
+      spoken_exact "Green – you’re good to go!
 Amber/Yellow – you need to proceed with caution
 Red – you need to stop, break
-", fixed: true)
+"
 
       instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
     end
