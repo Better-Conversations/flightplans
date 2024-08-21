@@ -2,23 +2,23 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ruby
 {
 	"name": "Ruby",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+	
+	// We build our own docker container to include additional tools and fonts.
+	// This is based off of the rails ruby devcontainer as the MS one uses rvm + rbenv in weird ways.
+	// This was the cause of the BUNDLE_* env variables needing to be set.
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/michidk/devcontainers-features/typst:1": {}
 	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "BUNDLE_PATH=~/.bundle bundle install",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
@@ -26,28 +26,27 @@
 				"nvarner.typst-lsp",
 				"mathematic.vscode-pdf",
 				"Gruntfuggly.todo-tree",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens"
 			],
-				// All of these settings are scoped only to the Ruby language
-				"[ruby]": {
-					"editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
-					"editor.formatOnSave": true, // Format files automatically when saving
-					"editor.tabSize": 2, // Use 2 spaces for indentation
-					"editor.insertSpaces": true, // Use spaces and not tabs for indentation
-					"editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
-					"editor.formatOnType": true // Enable formatting while typing
-				}
+			// All of these settings are scoped only to the Ruby language
+			"[ruby]": {
+				"editor.defaultFormatter": "Shopify.ruby-lsp", // Use the Ruby LSP as the default formatter
+				"editor.formatOnSave": true, // Format files automatically when saving
+				"editor.tabSize": 2, // Use 2 spaces for indentation
+				"editor.insertSpaces": true, // Use spaces and not tabs for indentation
+				"editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+				"editor.formatOnType": true // Enable formatting while typing
 			}
-		},
-
+		}
+	},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 
 	// Set environment variables to ensure Ruby can find the gems
 	"remoteEnv": {
-		"BUNDLE_PATH": "${containerWorkspaceFolder}/.bundle",
-		"GEM_HOME": "${containerWorkspaceFolder}/.bundle",
+		// "BUNDLE_PATH": "${containerWorkspaceFolder}/.bundle",
+		// "GEM_HOME": "${containerWorkspaceFolder}/.bundle",
 		// "PATH": "${containerWorkspaceFolder}/.bundle/bin:${PATH}"
 	}
 }
-
