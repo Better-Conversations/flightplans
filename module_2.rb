@@ -1,5 +1,6 @@
 require 'bcf/flightplans'
 require_relative './common_blocks'
+require_relative './common_resources'
 
 # This is from Version 2.2.3 in Box
 
@@ -399,11 +400,7 @@ CHAT
   end
 
   block(BCF::FlightPlans::CommonBlocks::Fieldwork.new(
-    [
-      "Try noticing what context you bring to a conversation",
-      "What do you know about the other person’s context?",
-      "What impact does that have on the conversation?",
-    ],
+    BCF::FlightPlans::CommonResources::FIELDWORK[2],
     id: :context_fieldwork,
     description: "",
     length: 2

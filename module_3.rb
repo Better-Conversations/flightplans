@@ -1,5 +1,6 @@
 require 'bcf/flightplans'
 require_relative './common_blocks'
+require_relative './common_resources'
 
 # TODO check this is the same as version 2.2.3 here https://amphora.app.box.com/folder/158341017039?s=46iq09ejyhjjq6fkp2jgbw0jg4pjiu6h
 
@@ -435,11 +436,7 @@ Thinking about the conversations you are going to have in the next week, and wha
   end
 
   block(BCF::FlightPlans::CommonBlocks::Fieldwork.new(
-    [
-      "Try noticing what context you bring to a conversation",
-      "What do you know about the other person’s context?",
-      "What impact does that have on the conversation?",
-    ],
+    BCF::FlightPlans::CommonResources::FIELDWORK[3],
     id: :context_fieldwork,
     description: "",
     length: 2

@@ -3,6 +3,8 @@ require 'bcf/flightplans'
 
 # These are the common blocks that are used in the FlightPlan DSL
 require_relative '../common_blocks'
+# And some common resources
+require_relative '../common_resources'
 
 module_learning = BCF::FlightPlans::ConventionalFlightPlan.build do
   # module_title "Module Learning"

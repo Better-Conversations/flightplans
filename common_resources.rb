@@ -1,5 +1,8 @@
 # These are common resources you can use in the flight plans
 
+module BCF
+  module FlightPlans
+    module CommonResources
 # ================================================================
 # Fieldwork
 # ================================================================
@@ -38,3 +41,7 @@ FIELDWORK[6] = [
   "Something here",
   "And something more"
 ]
+
+    end
+  end
+end
