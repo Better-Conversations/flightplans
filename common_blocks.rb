@@ -19,6 +19,7 @@ module BCF
         end
       end
 
+      # TODO = Allow more than one leader
       GREETING = Block.build do
         length 5
         name "Greeting"
