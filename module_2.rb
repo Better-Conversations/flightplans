@@ -9,22 +9,22 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_number 3
 
   learning_outcomes <<~MD
-                    Learners will be able to:
+    Learners will be able to:
 
-                    - Explain how assumptions affect conversations
-                    - Describe the link between state and assumptions
+    - Explain how assumptions affect conversations
+    - Describe the link between state and assumptions
 
-                    Suggested learning outcomes for further trainings/interventions
+    Suggested learning outcomes for further trainings/interventions
 
-                    - Discuss where their own assumptions come from
-                    - Describe limiting and helpful assumptions they hold
-                    - Explain how assumptions might lead to stereotyping and prejudice
-                    MD
+    - Discuss where their own assumptions come from
+    - Describe limiting and helpful assumptions they hold
+    - Explain how assumptions might lead to stereotyping and prejudice
+    MD
 
   # TODO The app should know if there's a demo or not because it'll be declared
   demo <<~MD
-        Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
-          MD
+    Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
+  MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
@@ -48,6 +48,7 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
       spoken "You will need a pen and paper today, so if you need to grab those, you can do it now."
+
       # TODO: Rewrite **'s as an BCF call. This will involve moving into cmarker
       spoken "In Module 1 we looked at state. Today, we are going to explore how quickly and easily we make assumptions, as making assumptions can cause misunderstandings between us and other people."
 
@@ -55,46 +56,9 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  # TODO: This can be a common block - taken from Module 2 flight plan
-  block(name: "Any Questions", lead_by: :fx1) do
-    length 2
+  block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
-    facilitator do
-      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
-      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
-
-      instruction "Respond to any questions/insights but keep it brief."
-      instruction "Handover to Fx2 for state check-in."
-    end
-  end
-
-  # TODO: This can be a common block - taken from Module 2 flight plan as a State Checkin with TLM (Module 1 is State Checkin with number scale)
-  block(name: "State Check-In", lead_by: :fx2) do
-    length 2
-
-    facilitator do
-      spoken "Now, let’s check-in with your state using the Traffic Light Model"
-      spoken("Please put in the chat if you are green, amber/yellow or red", fixed: true)
-      spoken("Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-", fixed: true)
-
-      instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
-    end
-
-    producer do
-      chat <<CHAT
-State check-in:
-
-Green – you’re good to go!
-Amber/Yellow – you need to proceed with caution
-Red – you need to stop, break
-CHAT
-
-      instruction "Take note of states to help decide BOR participants"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN_TLM)
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
@@ -102,12 +66,12 @@ CHAT
     facilitator do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
       spoken_exact <<~MD
-                      Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t
-                      - What was your state before the conversation?
-                      - What was your state after the conversation?
-      
-                      Just quickly put the two states in the chat, for example green/amber or amber/green
-                      MD
+        Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t
+        - What was your state before the conversation?
+        - What was your state after the conversation?
+
+        Just quickly put the two states in the chat, for example green/amber or amber/green
+      MD
 
       instruction "If time permits, invite examples from 1-2 people"
       spoken "Without adding too much detail, what caused the change in state?"
@@ -116,9 +80,9 @@ CHAT
 
     producer do
       chat <<~CHAT
-              Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
-              - What was your state before the conversation?
-              - What was your state after the conversation?
+        Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
+        - What was your state before the conversation?
+        - What was your state after the conversation?
 
               e.g. green/amber or amber/green
               CHAT
@@ -140,11 +104,11 @@ CHAT
     facilitator do
       spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
       spoken <<~MD 
-                You can describe behaviour in a conversation using a simple stimulus-response model: 
-                -	I see/hear (external)
-                -	I think/feel (internal; what we are calling state)
-                -	I say/do (external)
-                MD
+        You can describe behaviour in a conversation using a simple stimulus-response model: 
+        -	I see/hear (external)
+        -	I think/feel (internal; what we are calling state)
+        -	I say/do (external)
+        MD
       instruction "Point to each circle as you explain:"
 
       spoken <<~MD

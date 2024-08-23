@@ -35,7 +35,7 @@ module BCF
       GREETING = Block.build do
         length 5
         name "Greeting"
-        default_leader :fx1 and :fx2
+        default_leader :fx1
 
         facilitator do
           instruction "Greet people as they join - this is a chance to check their audio/video is working"
@@ -58,7 +58,7 @@ module BCF
         end
       end
 
-      STATE_CHECKIN = Block.build do
+      STATE_CHECKIN_TLM = Block.build do
         length 2
         default_leader :fx2
 
@@ -66,12 +66,16 @@ module BCF
           spoken "Now, let’s check-in with your state using the Traffic Light Model"
           spoken "Please put in the chat if you are green, amber/yellow or red"
           spoken <<~MD
-              Green – you’re good to go!
-              Amber/Yellow – you need to proceed with caution
-              Red – you need to stop, break
+              Green – you’re good to go!\ 
+              Amber/Yellow – you need to proceed with caution\ 
+              Red – you need to stop, break\ 
           MD
 
-          instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
+          instruction <<~MD
+              Accept whatever states are put in chat.\ 
+              Avoid saying that green state is best.\ 
+              If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready.
+          MD
         end
 
         producer do
