@@ -19,6 +19,20 @@ module BCF
         end
       end
 
+      GREETING = Block.build do
+        length 5
+        name "Greeting"
+        default_leader :fx1 and :fx2
+
+        facilitator do
+          instruction "Greet people as they join - this is a chance to check their audio/video is working"
+        end
+
+        producer do
+          instruction "Setup template Breakout Room for first breakout"
+        end
+      end
+
       SPONSOR_CLOSE = Block.build do
         length 16
         name "Sponsor Close"

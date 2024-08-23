@@ -21,24 +21,13 @@ Suggested learning outcomes for further trainings/interventions
 MD
 
   # TODO The app should know if there's a demo or not because it'll be declared
-  demo <<MD
-Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
-MD
+  demo <<~MD
+        Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
+          MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
-  # TODO I think this is always the same?
-  block(name: "Greeting", lead_by: [:fx1, :fx2]) do
-    length 5
-
-    facilitator do
-      instruction "Greet people as they join – this is a chance to check their audio/video"
-    end
-
-    producer do
-      instruction "Setup template Breakout Room for first breakout"
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::GREETING)
 
   block(name: "Welcome", lead_by: :fx1) do
     length 2

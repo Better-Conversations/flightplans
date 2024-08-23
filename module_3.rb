@@ -7,16 +7,16 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
   module_number 3
 
-  learning_outcomes <<MD
-Learners will be able to:
+  learning_outcomes <<~MD
+                      Learners will be able to:
 
-- Describe the elements of context in conversations
-- Link context, assumptions and state
+                      - Describe the elements of context in conversations
+                      - Link context, assumptions and state
 
-Suggested learning outcomes for further trainings/interventions
+                      Suggested learning outcomes for further trainings/interventions
 
-- Describe how social and cultural context affect conversations
-MD
+                      - Describe how social and cultural context affect conversations
+                      MD
 
   demo <<~MD
           No demo.
