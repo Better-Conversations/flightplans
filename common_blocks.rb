@@ -10,6 +10,18 @@ module BCF
     end
 
     module CommonBlocks
+      # Call this with `block BCF::FlightPlans::CommonBlocks::preflight_block(25)`
+      def self.pre_flight(length_value)
+        Block.build do
+          length(length_value)
+          name "Pre-Flight checklist"
+
+          producer do
+            instruction "Sponsor and producer run through the pre-flight checklist (above)"
+          end
+        end
+      end
+
       PRE_FLIGHT = Block.build do
         length 25
         name "Pre-Flight checklist"
