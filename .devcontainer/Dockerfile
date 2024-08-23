@@ -35,6 +35,6 @@ EOF
 RUN gem install bundler ruby-lsp debug 
 
 # Install our gem for converting Ruby flightplans from the git repo
-RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
-RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
-RUN rm -rf ./bcf-flightplans
+# RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
+# RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
+# RUN rm -rf ./bcf-flightplans

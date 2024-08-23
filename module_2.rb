@@ -68,12 +68,12 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      chat <<CHAT
-Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
+      chat <<~CHAT
+              Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
 
-- Were your assumptions in that conversation accurate?
-- Please answer Yes or No in the chat.
-CHAT
+              - Were your assumptions in that conversation accurate?
+              - Please answer Yes or No in the chat.
+              CHAT
     end
   end
 

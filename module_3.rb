@@ -165,25 +165,25 @@ MD
       instruction "Copy this to chat when you hear the facilitator introduce the questions:"
 
       # TODO: Add support for messages that are supposed to be copied piecemeal.
-      chat <<CHAT
-We are going to explore what happens when we share our context.
+      chat <<~CHAT
+                We are going to explore what happens when we share our context.
 
-One person will choose ONE of the starter questions below to ask your partner.
+                One person will choose ONE of the starter questions below to ask your partner.
 
-Continue the conversation and ask more questions to improve your understanding of the other person’s context.
+                Continue the conversation and ask more questions to improve your understanding of the other person’s context.
 
-Starter questions:
+                Starter questions:
 
-- Psychological: What would you like to have happen after attending this course?
+                - Psychological: What would you like to have happen after attending this course?
 
-- Historical: What have you learned so far on this course?
+                - Historical: What have you learned so far on this course?
 
-- Time: What were you doing before you came to the course today? What else do you have on today?
+                - Time: What were you doing before you came to the course today? What else do you have on today?
 
-- Environmental: Where are you in the world?
+                - Environmental: Where are you in the world?
 
-Manage the time so everyone gets a chance to try out one of the starter questions.
-CHAT
+                Manage the time so everyone gets a chance to try out one of the starter questions.
+                CHAT
 
       instruction "When the facilitator has finished giving the instructions/answering questions." \
                     "Tell the group you are going to send them into BORs for 6 minutes"
@@ -391,12 +391,12 @@ Thinking about the conversations you are going to have in the next week, and wha
     end
 
     producer do
-      chat <<CHAT
-Thinking about the conversations you are going to have in the next week, and what we have just learned on this module…
+      chat <<~CHAT
+              Thinking about the conversations you are going to have in the next week, and what we have just learned on this module…
 
-- What difference does understanding context make to having Better Conversations?
-- What will you do differently now you know this?
-CHAT
+              - What difference does understanding context make to having Better Conversations?
+              - What will you do differently now you know this?
+              CHAT
     end
   end
 

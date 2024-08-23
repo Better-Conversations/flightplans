@@ -19,21 +19,6 @@ module BCF
         end
       end
 
-      STATE_CHECKIN = Block.build do
-        length 5
-        name "State Check-in"
-        default_leader :fx2
-
-        facilitator do
-          spoken "Now, let’s check-in with your state using the Traffic Light Model"
-          spoken("Please put in the chat if you are green, amber/yellow or red")
-        end
-
-        producer do
-          instruction "Setup template Breakout Room for first breakout"
-        end
-      end
-
       GREETING = Block.build do
         length 5
         default_leader :fx2
