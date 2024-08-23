@@ -6,7 +6,7 @@ require_relative './common_resources'
 
 module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
-  module_number 3
+  module_number 2
 
   learning_outcomes <<~MD
     Learners will be able to:
