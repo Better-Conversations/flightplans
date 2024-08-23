@@ -47,88 +47,151 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
-      spoken "•	You will need a pen and paper today, so if you need to grab those, you can do it now."
+      spoken "You will need a pen and paper today, so if you need to grab those, you can do it now."
+      # TODO: Rewrite **'s as an BCF call. This will involve moving into cmarker
       spoken "In Module 1 we looked at state. Today, we are going to explore how quickly and easily we make assumptions, as making assumptions can cause misunderstandings between us and other people."
+
       instruction "Go through agenda on flip"
     end
   end
 
-  block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
+  # TODO: This can be a common block - taken from Module 2 flight plan
+  block(name: "Any Questions", lead_by: :fx1) do
+    length 2
 
-  block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN)
+    facilitator do
+      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
+      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
+
+      instruction "Respond to any questions/insights but keep it brief."
+      instruction "Handover to Fx2 for state check-in."
+    end
+  end
+
+  # TODO: This can be a common block - taken from Module 2 flight plan as a State Checkin with TLM (Module 1 is State Checkin with number scale)
+  block(name: "State Check-In", lead_by: :fx2) do
+    length 2
+
+    facilitator do
+      spoken "Now, let’s check-in with your state using the Traffic Light Model"
+      spoken("Please put in the chat if you are green, amber/yellow or red", fixed: true)
+      spoken("Green – you’re good to go!
+Amber/Yellow – you need to proceed with caution
+Red – you need to stop, break
+", fixed: true)
+
+      instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
+    end
+
+    producer do
+      chat <<CHAT
+State check-in:
+
+Green – you’re good to go!
+Amber/Yellow – you need to proceed with caution
+Red – you need to stop, break
+CHAT
+
+      instruction "Take note of states to help decide BOR participants"
+    end
+  end
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
 
     facilitator do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
-      spoken("Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t", fixed: true)
-      spoken("Were your assumptions in that conversation accurate?", fixed: true)
-      spoken("Just quickly put yes or no in the chat", fixed: true)
+      spoken_exact <<~MD
+                      Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t
+                      - What was your state before the conversation?
+                      - What was your state after the conversation?
+      
+                      Just quickly put the two states in the chat, for example green/amber or amber/green
+                      MD
 
-      instruction "If time permits, facilitator asks one person who answers “No” and one person who answers “Yes”:"
-      spoken "Without adding too much detail, when your assumption was/wasn’t accurate, then what happened?"
-      instruction "Handover to Fx1 for Context model."
+      instruction "If time permits, invite examples from 1-2 people"
+      spoken "Without adding too much detail, what caused the change in state?"
+      instruction "Handover to Fx1 for Assumptions model."
     end
 
     producer do
       chat <<~CHAT
               Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
+              - What was your state before the conversation?
+              - What was your state after the conversation?
 
-              - Were your assumptions in that conversation accurate?
-              - Please answer Yes or No in the chat.
+              e.g. green/amber or amber/green
               CHAT
     end
   end
 
-  block(name: "Context model", lead_by: :fx1) do
-    length 7
+  block(name: "Assumptions model", lead_by: :fx1) do
+    length 5
 
     resources do
       flipchart(
         :flip_2,
         "use to explain the model",
-        description: "Context diagram (as on handbook)",
+        description: "Assumptions diagram (as in handbook)",
         scribed_by: :fx1
       )
     end
 
     facilitator do
-      spoken "There is an explanation in the handbook in Section 3 to help you remember the diagram."
-      spoken "In Better Conversations, context means what surrounds the conversation, the setting for the conversation."
-      spoken "Context is important because it defines our subjective experience."
-      spoken "It helps us make meaning of our world. Each of us brings our own context to conversations. And we take it into our future conversations, so our context can change over time."
-      spoken "Context also determines what assumptions we make. We can make different assumptions in different contexts."
-      spoken "As an example, imagine you were in London and you saw people carrying umbrellas. You might think it was going to rain."
-      spoken "Now imagine you are in a country in South Asia. If you saw people carrying umbrellas, they might be wanting to use them as parasols. If it was monsoon season, you might think the umbrella has a dual use."
-      spoken "We have broken context down into 6 overlapping areas to help explain what it is."
+      spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
+      spoken <<~MD 
+                You can describe behaviour in a conversation using a simple stimulus-response model: 
+                -	I see/hear (external)
+                -	I think/feel (internal; what we are calling state)
+                -	I say/do (external)
+                MD
+      instruction "Point to each circle as you explain:"
 
-      spoken <<TYPST_SPOKEN
-Context can be:
-- #underline[Psychological] (for example, your perception of your state, your personal values)
-- #underline[Social] (for example, relationships and group behaviour)
-- #underline[Cultural] (for example, cultural values and beliefs)
-- #underline[Historical] (for example, what’s happened in the past, what’s documented or recorded)
-- #underline[Environmental] (for example, what’s going in the physical space you are in)
-- #underline[Time]-based (for example, temporal - time zone, whether it’s day or night)
-TYPST_SPOKEN
-
-      spoken <<MD
-Some examples of your context we have already covered so far in this course are:
-- Asking where in the world you are and what time zone you are in (environmental, cultural and time-based context)
-- Asking how you are feeling, when we do the state check-in (psychological context)
-MD
-
-      spoken "We look at psychological, time-based, historical, environmental context in this course."
-      spoken "We aren’t covering social or cultural context in this course in depth – these are beyond the scope of what we are doing here."
-      spoken "What we are going to do now is put you in breakout rooms to find out more about  the impact of knowing someone’s context."
-      instruction "Handover to Fx2 for context exercise."
-    end
+      spoken <<~MD
+                [I see/hear] \ 
+                We take in information from the outside world through our senses. Seeing and hearing are the main senses we use in conversations.
+                MD
+      spoken <<~MD
+                [I think/feel] \ 
+                We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
+                Thinking processes include: \ 
+                - What we pay attention to
+                - The meaning we make from things and the language we use
+                - The assumptions that we hold as true
+                - Reasoning and how we make judgements or inferences about things
+                MD
+      spoken <<~MD
+                [I say/do] \ 
+                We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding.
+                MD
+      spoken <<~MD
+                We are going to look at thinking processes first and come back to discuss feelings."
+                MD
+      end
 
     producer do
-      instruction "Prepare BORs in 2/3s for **6 minutes** if not already done"
+      instruction "Prepare BORs in 2/3s for **8 minutes** if not already done"
     end
   end
+
+# TODO: Insert names of producer/second facilitator if they are known
+# TODO: Add Fx1 as demo partner
+block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
+  facilitator do
+    spoken "We are going to demonstrate how easily and how quickly we can make assumptions."
+    spoken "You’ll need your pen and paper for this."
+    instruction "Facilitator to group:"
+    spoken "I’m going to ask [Producer/Co-facilitator] to pick an object in their space that we can’t see and tell me what that object is briefly…"
+    instruction "Facilitator to Producer/Co-facilitator"
+    spoken "[Producer/Co-facilitator], What object are you looking at?"
+    instruction "Producer/Co-facilitator:"
+    spoken "I can see a plant."
+  end
+  
+  producer do
+    instruction "Participate in demo if no co-facilitator"
+  end
+end
 
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx2) do
