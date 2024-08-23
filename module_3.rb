@@ -56,15 +56,6 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
-    facilitator do
-      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
-      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
-
-      instruction "Respond to any questions/insights but keep it brief."
-      instruction "Handover to Fx2 for state check-in."
-    end
-  end
-
   block(name: "State Check-In", lead_by: :fx2) do
     length 2
 
