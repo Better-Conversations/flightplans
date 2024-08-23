@@ -8,15 +8,15 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_number 3
 
   learning_outcomes <<~MD
-          Learners will be able to:
+                      Learners will be able to:
 
-          - Describe the elements of context in conversations
-          - Link context, assumptions and state
+                      - Describe the elements of context in conversations
+                      - Link context, assumptions and state
 
-          Suggested learning outcomes for further trainings/interventions
+                      Suggested learning outcomes for further trainings/interventions
 
-          - Describe how social and cultural context affect conversations
-          MD
+                      - Describe how social and cultural context affect conversations
+                      MD
 
   demo <<~MD
           No demo.
@@ -55,7 +55,41 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
-  block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN)
+    facilitator do
+      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
+      spoken "**And do you have anything you’d like to ask us about today’s topic?**"
+
+      instruction "Respond to any questions/insights but keep it brief."
+      instruction "Handover to Fx2 for state check-in."
+    end
+  end
+
+  block(name: "State Check-In", lead_by: :fx2) do
+    length 2
+
+    facilitator do
+      spoken "Now, let’s check-in with your state using the Traffic Light Model"
+      spoken_exact "Please put in the chat if you are green, amber/yellow or red"
+      spoken_exact "Green – you’re good to go!
+Amber/Yellow – you need to proceed with caution
+Red – you need to stop, break
+"
+
+      instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
+    end
+
+    producer do
+      chat <<CHAT
+State check-in:
+
+Green – you’re good to go!
+Amber/Yellow – you need to proceed with caution
+Red – you need to stop, break
+CHAT
+
+      instruction "Take note of states to help decide BOR participants"
+    end
+  end
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4

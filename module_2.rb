@@ -20,11 +20,13 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
                     - Explain how assumptions might lead to stereotyping and prejudice
                     MD
 
+  # TODO The app should know if there's a demo or not because it'll be declared
   demo <<~MD
-          Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
+        Prior to BOR1, Fx2 leads assumptions demo using an object (e.g. a plant). Fx1/Producer is the demo partner.
           MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
+
   block(BCF::FlightPlans::CommonBlocks::GREETING)
 
   block(name: "Welcome", lead_by: :fx1) do
@@ -33,13 +35,14 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       # Flipcharts should link to an image of the initial flipchart, in this repository, and
       # if useful examples of completed ones, and even ones at different stages of the flow
+
+      flipchart(
+        :flip_1,
+        "Flip#1 for agenda",
+        description: "Agenda (top half) and space for any questions or reflections",
+        scribed_by: :fx1
+      )
     end
-    flipchart(
-      :flip_1,
-      "Flip#1 for agenda",
-      description: "Agenda (top half) and space for any questions or reflections",
-      scribed_by: :fx1
-    )
 
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
@@ -376,12 +379,11 @@ CHAT
 
     facilitator do
       spoken "We have covered the context in which our conversations take place today. Let’s reflect on what you know now."
-      spoken fixed: true, <<~MD
-                Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
-                - What difference does understanding context make to having Better Conversations?
-                - What you will do differently now you know this?
-                MD
-
+      spoken_exact <<~MD
+        Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
+        - What difference does understanding context make to having Better Conversations?
+        - What you will do differently now you know this?
+      MD
 
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
@@ -424,3 +426,4 @@ CHAT
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
+end

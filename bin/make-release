@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'bundler/setup'
+
+FileUtils.rm_rf('json-outputs') if Dir.exist?('json-outputs')
+Dir.mkdir('json-outputs')
+
+# I don't know how entry-point discovery should work, so I'm just going to use a JSON file for now
+module_files = JSON.parse!(File.read('modules.json'))
+
+module_files.each do |module_file|
+  output_json_path = File.join("json-outputs", File.basename(module_file, '.rb') + '.json')
+
+  # We shell out to the CLI to keep the code isolated
+  `bundle exec bcf-fp-generate . "#{module_file}" > "#{output_json_path}"`
+end

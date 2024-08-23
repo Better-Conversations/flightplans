@@ -2,7 +2,7 @@
 #    docker build .devcontainer
 # And note, it'll cache the layers, which means if you're just messing around with the last few lines, it'll be fast.
 
-FROM mcr.microsoft.com/devcontainers/ruby:3.3
+FROM ghcr.io/rails/devcontainer/images/ruby:3.3.0
 
 ADD https://github.com/Enter-tainer/typstyle/releases/download/v0.11.28/typstyle-linux-arm64 /usr/bin/typstyle
 RUN chmod +x /usr/bin/typstyle
@@ -30,11 +30,3 @@ cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
 fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
-
-# Install the Ruby LSP server here so that it's available in the container in time for the VSCode extension to start
-RUN gem install bundler ruby-lsp debug 
-
-# Install our gem for converting Ruby flightplans from the git repo
-# RUN git clone https://github.com/Better-Conversations/ruby-flightplans.git
-# RUN cd ruby-flightplans && gem build ./bcf-flightplans.gemspec --output=bcf-flightplans.gem && gem install ./bcf-flightplans.gem
-# RUN rm -rf ./bcf-flightplans
