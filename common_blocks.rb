@@ -49,6 +49,7 @@ module BCF
       ANY_QUESTIONS = Block.build do
         length 2
         default_leader :fx2
+        name "Any Questions?"
 
         facilitator do
           spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
@@ -61,6 +62,7 @@ module BCF
       STATE_CHECKIN_TLM = Block.build do
         length 2
         default_leader :fx2
+        name "State Check-in"
 
         facilitator do
           spoken "Now, let’s check-in with your state using the Traffic Light Model"

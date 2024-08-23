@@ -141,6 +141,8 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 # TODO: Insert names of producer/second facilitator if they are known
 # TODO: Add Fx1 as demo partner
 block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
+  length 5
+  
   facilitator do
     spoken "We are going to demonstrate how easily and how quickly we can make assumptions."
     spoken "You’ll need your pen and paper for this."
