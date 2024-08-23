@@ -7,6 +7,8 @@ module BCF
 # Fieldwork
 # ================================================================
 # Fieldwork is an array of points to be covered in the fieldwork
+# Here's how you refer to them for module 3
+#     BCF::FlightPlans::CommonResources::FIELDWORK[3],
 
 FIELDWORK = []
 
