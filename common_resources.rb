@@ -19,9 +19,9 @@ FIELDWORK[1] = [
 
 
 FIELDWORK[2] = [
-  "Try noticing what context you bring to a conversation",
-  "What do you know about the other person’s context?",
-  "What impact does that have on the conversation?",
+  "Try noticing what you are seeing or hearing when you are interacting with someone.",
+  "What assumptions are you making in your interactions?",
+  "Are your assumptions accurate?"
 ]
 
 FIELDWORK[3] = [

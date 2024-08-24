@@ -19,7 +19,7 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     - Discuss where their own assumptions come from
     - Describe limiting and helpful assumptions they hold
     - Explain how assumptions might lead to stereotyping and prejudice
-    MD
+  MD
 
   # TODO The app should know if there's a demo or not because it'll be declared
   demo <<~MD
@@ -83,9 +83,8 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
         - What was your state before the conversation?
         - What was your state after the conversation?
-
-              e.g. green/amber or amber/green
-              CHAT
+        e.g. green/amber or amber/green
+      CHAT
     end
   end
 
@@ -108,30 +107,28 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         -	I see/hear (external)
         -	I think/feel (internal; what we are calling state)
         -	I say/do (external)
-        MD
+      MD
       instruction "Point to each circle as you explain:"
 
       spoken <<~MD
-                [I see/hear] \ 
-                We take in information from the outside world through our senses. Seeing and hearing are the main senses we use in conversations.
-                MD
+        [I see/hear] \ 
+        We take in information from the outside world through our senses. Seeing and hearing are the main senses we use in conversations.
+        MD
       spoken <<~MD
-                [I think/feel] \ 
-                We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
-                Thinking processes include: \ 
-                - What we pay attention to
-                - The meaning we make from things and the language we use
-                - The assumptions that we hold as true
-                - Reasoning and how we make judgements or inferences about things
-                MD
+        [I think/feel] \ 
+        We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
+        Thinking processes include: \ 
+        - What we pay attention to
+        - The meaning we make from things and the language we use
+        - The assumptions that we hold as true
+        - Reasoning and how we make judgements or inferences about things
+      MD
       spoken <<~MD
-                [I say/do] \ 
-                We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding.
-                MD
-      spoken <<~MD
-                We are going to look at thinking processes first and come back to discuss feelings."
-                MD
-      end
+        [I say/do] \ 
+        We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \ 
+      MD
+      spoken "We are going to look at thinking processes first and come back to discuss feelings."
+    end
 
     producer do
       instruction "Prepare BORs in 2/3s for **8 minutes** if not already done"
@@ -142,7 +139,7 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 # TODO: Add Fx1 as demo partner
 block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
   length 5
-  
+
   facilitator do
     spoken "We are going to demonstrate how easily and how quickly we can make assumptions."
     spoken "You’ll need your pen and paper for this."
@@ -152,6 +149,36 @@ block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
     spoken "[Producer/Co-facilitator], What object are you looking at?"
     instruction "Producer/Co-facilitator:"
     spoken "I can see a plant."
+
+    instruction "Facilitator to group:"
+    spoken "Think about what happened for the rest of you when you heard [Producer/Co-facilitator] say that?"
+    spoken "What are you imagining about that plant? What are you assuming about that plant?"
+    spoken "Whatever you’re thinking or imagining about that plant, draw that on your paper, adding as much or as little detail as you’d like."
+
+    instruction "Pause for drawing"
+    spoken "Everyone, please hold up your paper to the camera so we can see what you think this plant is like."
+    spoken "Now I am going to use some questions to check the assumptions I have about that plant."
+
+    instruction "Facilitator to Producer/Co-facilitator:"
+    spoken "[Producer/Co-facilitator], may I ask:"
+    spoken "What kind of plant is it?"
+    spoken "Whereabouts is that plant?"
+    spoken "And is there anything else about that plant?"
+
+    spoken "And now, please could you all add some more detail to your pictures and show them to the camera."
+    
+    instruction "Pause for sharing"
+    spoken "What happened for you after you had more information about the plant?"
+    instruction "Facilitate short discussion"
+
+    spoken "Now let’s find out what this plant is…"
+
+    instruction "Producer/Co-facilitator shows the plant."
+    instruction "Facilitator to group:"
+    spoken "How accurate was your drawing or description?"
+    spoken "On a scale of 1-5, where 1 is least accurate, and 5 is super accurate, let’s see a show of fingers as to how accurate your assumptions were about [Producer/Co-facilitator]’s plant."
+    instruction "Acknowledge what people score themselves at."
+    instruction "Handover to Fx1 to talk about breakout on assumptions."
   end
   
   producer do
@@ -161,71 +188,76 @@ end
 
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx2) do
-    length 8
+    length 9
 
     resources do
       breakout_room(:bor_1)
     end
 
+    # TODO: insert the parameter for length of the BOR in the spoken text to make it easier to change/less error-prone. Note the length of the block is 1-2 minutes longer than the BOR length to allow for the intro and final comments
+    # TODO: make all the BOR intros and final comments into common blocks so the only thing that needs to be changed is the exercise (mainly the spoken_exacts)
+    # TODO: All BOR exercises could be in a resources file to be able to easily compare them
     facilitator do
-      spoken "You will have 6 minutes to do this exercise in breakout rooms."
-      spoken "We are going to explore what happens when we share our context."
-      spoken "Please only ask what is appropriate for this setting and share only what you feel comfortable sharing in the group when we come back into the main room."
+      spoken "You will have **8 minutes** to do this exercise in breakout rooms."
+      spoken_exact "You will work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).  You’re going to do what we just did."
+      spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
+      spoken_exact "The Chooser picks an object they can see but the Asker(s) can’t and says “I can see a ___” without showing the object."
+      spoken_exact "The Asker(s) draws their version of the object on a piece of paper, then shows it to the Chooser."
+      spoken_exact <<~MD
+        The Asker(s) asks just two or three of these questions of the Chooser about the object:
+        - What kind of ___?
+        - Whereabouts is ___?
+        - Is there anything else about ___?
+      MD
+      spoken_exact "The Asker(s) updates their drawings based on the Chooser’s answers, then shows them to the Chooser again."
+      spoken_exact "The Chooser reveals the object and compares it with the Asker(s)’ drawings."
 
-      spoken("One person will choose ONE of the starter questions below to ask your partner. " \
-               "Continue the conversation and ask more questions to improve your understanding of the other person’s context.",
-             fixed: true)
-      spoken("Starter questions:
--	Psychological: What would you like to have happen after attending this course?
--	Historical: What have you learned so far on this course?
--	Time: What were you doing before you came to the course today? What else do you have on today?
--	Environmental: Where are you in the world?
-", fixed: true)
-
-      spoken("Manage the time so everyone gets a chance to try out one of the starter questions. ", fixed: true)
-
-      spoken "We will send a message into the rooms to let you know when you are halfway through the time"
-      spoken "When you come back we will talk about what it’s like when you are asked about your context and know more context about the other person"
+      spoken "Manage the time so everyone gets a chance to ask the questions"
+      spoken "Remember – this not about guessing the object, it’s about assumptions!"
+      spoken "When you come back, we’ll find out what you noticed about making assumptions."
       spoken "Any questions before we send you in?"
+          
     end
 
     producer do
       instruction "Copy this to chat when you hear the facilitator introduce the questions:"
 
-      # TODO: Add support for messages that are supposed to be copied piecemeal.
-      chat <<CHAT
-We are going to explore what happens when we share our context.
+      #TODO: Add support for messages that are supposed to be copied piecemeal.
+      #TODO: Sort out indentation of bullets and numbering
+      chat <<~CHAT
+        Work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).  
 
-One person will choose ONE of the starter questions below to ask your partner.
+        1. The Chooser picks an object they can see but the Asker(s) can’t and says “I can see a ___” without showing the object.
 
-Continue the conversation and ask more questions to improve your understanding of the other person’s context.
+        2. The Asker(s) draws their version of the object on a piece of paper, then shows it to the Chooser.
 
-Starter questions:
+        3. The Asker(s) asks just two or three of these questions of the Chooser about the object:
 
-- Psychological: What would you like to have happen after attending this course?
+          - What kind of ___?
+          - Whereabouts is ___?
+          - Is there anything else about ___?
 
-- Historical: What have you learned so far on this course?
+        4. The Asker(s) updates their drawings based on the Chooser’s answers, then shows them to the Chooser again.
 
-- Time: What were you doing before you came to the course today? What else do you have on today?
+        5. The Chooser reveals the object and compares it with the Asker(s)’ drawings.
 
-- Environmental: Where are you in the world?
+        Manage the time so everyone gets a chance to ask the questions.
 
-Manage the time so everyone gets a chance to try out one of the starter questions.
-CHAT
+      CHAT
 
       instruction "When the facilitator has finished giving the instructions/answering questions." \
-                    "Tell the group you are going to send them into BORs for 6 minutes"
+                  "Tell the group you are going to send them into BORs for 8 minutes"
 
       instruction "Send into BORs"
       instruction "Broadcast halfway message:"
 
       # TODO: Parameterize the time of a breakout room
-      chat "Halfway, 3 minutes remaining"
+      chat "Halfway, 4 minutes remaining"
     end
   end
 
   block(name: "Unpack Breakout activity", lead_by: :fx2) do
-    length 6
+    length 7
     section_comment "Fx1 scribes"
 
     resources do
@@ -233,90 +265,107 @@ CHAT
         :flip_3,
         "Add to Flip#3 for up to 3 people and/or use chat.",
         description: "Learnings on context",
-        scribed_by: :fx2
-      )
+        scribed_by: :fx2)
 
       breakout_room(:bor_1)
     end
 
     facilitator do
       spoken "Let’s find out what you discovered:"
-      spoken_fixed "What happened when you knew more about the other person’s context "
-      spoken_fixed "What was it like for you, when you were asked about your context?"
+      spoken_exact "What did you notice about making assumptions in that activity?"
+      spoken_exact "What impact might making assumptions have on your conversations?"
+      spoken "Who’s got something they want to share?"
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
-                    "Aim for 2-3 examples, with one from the chat."
-
-      instruction "Handover to Fx1 for exercise on improving conversations."
+                  "Aim for 2-3 examples, with one from the chat."
     end
 
     producer do
       instruction "Prepare BORs in same 2/3s for 6 minutes"
 
-      chat <<CHAT
-What happened when you knew more about the other person’s context?
-
-What was it like for you, when you were asked about your context?
-CHAT
+      chat <<~CHAT
+        What did you notice about making assumptions in that activity? \ 
+        What impact might making assumptions have on your conversations?
+      CHAT
     end
   end
 
-  block(name: "Breakout#2", lead_by: :fx1) do
-    length 8
+  block(name: "Recap model", lead_by: :fx1) do
+    length 3
+
+    resources do
+      flipchart(
+        :flip_2,
+        "use to explain how feelings are represented by the model",
+        description: "Assumptions diagram (as in handbook)",
+        scribed_by: :fx1
+      )
+    end
+
+    facilitator do
+      spoken "The reason we do this exercise is to show how easily and quickly we make assumptions. They may be right or wrong. "
+      spoken "We can easily verify whether we are right or wrong talking about a physical object."
+      spoken "It’s harder with abstract concepts like trust, fairness, justice and so on – this is where many misunderstanding occur between people."
+      spoken "The questions we suggested: What kind of? Whereabouts? Anything else? are useful to test assumptions."
+      spoken "Let’s now think about how our feelings affect our assumptions."
+      instruction "Point to the middle step on the assumptions model"
+      spoken "By feelings, I also mean sensations, emotions, and mood."
+      spoken "Our thinking processes are entwined with our feelings – we could say our thoughts are always coloured by our feelings."
+      spoken "This is why we use the traffic light model - red/amber(yellow)/green - on the middle step which is “I think/feel”"
+      instruction "Shade the “I think/feel step” on the diagram with red/orange/green pens (or use red/yellow/green Post-its or transparent sheets) to show what you mean."
+      spoken "Different emotions or feelings can affect our thinking differently."
+      spoken "For example, when we are in red, we might be more likely to perceive threat and act quickly."
+      spoken "When in green, we may be more creative in our thinking."
+      instruction "Handover to Fx2 to talk about state and assumptions breakout activity."
+    end
+  end
+  block(name: "Breakout#2", lead_by: :fx2) do
+    length 7
 
     resources do
       breakout_room(:bor_2)
     end
 
     facilitator do
-      spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
-      spoken_fixed "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_fixed "Historical, psychological, social, cultural, environmental, and time-based (temporal). "
-      spoken_fixed "Remember that context helps determine the assumptions we make."
-      spoken_fixed "For a conversation that you want to be better in the future,  "
-      spoken "Take a moment to think about what you would like to have happen in that conversation. "
+      spoken "We are going to put you in breakouts again for 6 minutes to talk about assumptions and state."
+      spoken_exact "At the beginning of the module, we asked you to think about a conversation you had and your state around that conversation. You can talk about a different conversation if you like."
+      spoken_exact <<~MD
+        Briefly discuss with each other:
+        - What was your state during that conversation?
+        - What were you assuming in that conversation?
+        - How your state affected your assumptions about the situation or person?
+      MD
 
-      instruction "[pause for thinking]"
-
-      spoken_fixed "
-- What might you have to consider about the other persons’ context when preparing for your conversation with them?
-- How would you find out about their context before and during the conversation?
-"
-
-      spoken_fixed "Manage the time so everyone has a chance to answer the questions."
-      spoken "When you’re in your breakout rooms, you don’t need to tell your partner what the conversation is about or who it’s with. "
-      spoken "Keep your answers brief. Please only share what you are comfortable sharing."
-      spoken "Any questions before we send you in? "
+      spoken_exact "Share only what you are comfortable sharing in the group."
+      spoken_exact "Manage the time so everyone has a chance to answer the questions."
+      spoken_exact "We’ll talk about how your state affected your assumptions when you come back."
     end
 
     producer do
       instruction "Copy to chat when you hear the facilitator giving the instructions:"
 
-      chat <<CHAT
-We are going to consider improving a conversation using the 6 elements of context:
+      chat <<~CHAT
+        At the beginning of the module, we asked you to think about a conversation you had and your state around that conversation. You can talk about a different conversation if you like.
+        Briefly discuss with each other:
+        - What was your state during that conversation?
+        - What were you assuming in that conversation?
+        - How your state affected your assumptions about the situation or person?
+        
+        Share only what you are comfortable sharing in the group.
+        Manage the time so everyone has a chance to answer the questions.
+        We’ll talk about how your state affected your assumptions when you come back.
+    CHAT
 
-Historical, psychological, social, cultural, environmental, and time-based (temporal)
-
-For a conversation that you want to be better in the future:
-
-- What might you have to consider about the other persons’ context when preparing for your conversation with them?
-- How would you find out about their context before and during the conversation?
-
-Manage the time so everyone has a chance to answer the questions.
-CHAT
-
-      instruction "When the facilitator has finished giving the instructions/answering questions." \
-                    "tell the group you are going to send them into BORs for 6 minutes"
-
+      instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
       instruction "Send into BORs"
       instruction "Broadcast halfway message:"
       chat "Halfway, 3 minutes remaining"
     end
   end
 
-  block(name: "Unpack Breakout#2 activity", lead_by: :fx1) do
-    length 7
-    section_comment "Fx2 scribes"
+  block(name: "Unpack Breakout#2 activity", lead_by: :fx2) do
+    length 5
+    section_comment "Fx1 scribes"
 
     resources do
       flipchart(
@@ -329,102 +378,46 @@ CHAT
     end
 
     facilitator do
-      spoken "Let’s find out what you just noticed."
-      spoken_fixed "
-When preparing for your conversation:
-- What might you have to consider about another person and their context?
-- How might you find out about their context before and during the conversation?
-"
-
+      spoken_exact "Let’s discuss how your state affected your assumptions"
+      spoken "Who's got something they want to share?"
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
-
-      instruction "If there is time extend the discussion e.g.:"
-
-      spoken "Do you think it is easier to make assumptions about a someone you know well or someone you don’t know?"
-      spoken "What kind of assumptions might you make?"
-      spoken "How easy it to correct your assumptions?"
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychological, social, cultural, environmental, and time-based (temporal)."
-      spoken "State is an important aspect of psychological context."
-      spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
-      spoken "
-We’d like you to consider these questions, *thinking about what you know about state, assumptions and context*:
-- *What will you do to manage your state before a conversation?*
-- *How might your context affect your state*
-"
-
-      instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
       instruction "Handover to Fx2 for reflection, fieldwork and close."
     end
 
     producer do
-      instruction "Copy in chat (when you hear facilitator say these):"
+      instruction "Copy in chat (when you hear facilitator say this):"
 
-      chat <<CHAT
-When preparing for your conversation:
-
-- What might you have to consider about another person and their context?
-
-- How might you find out about their context before and during the conversation?
-CHAT
+      chat <<~CHAT
+        How did your state affect your assumptions? 
+      CHAT
     end
   end
 
-  block(name: "Link to state", lead_by: :fx1) do
-    length 5
-
-    facilitator do
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychological, social, cultural, environmental, and time-based (temporal)."
-      spoken "State is an important aspect of psychological context."
-      spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
-
-      spoken <<MD
-We’d like you to consider these questions, *thinking about what you know about state, assumptions and context*:
--	*What will you do to manage your state before a conversation?*
--	*How might your context affect your state*
-MD
-
-      instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
-      instruction "Handover to Fx2 for reflection, fieldwork and close."
-    end
-
-    producer do
-      instruction "Copy in chat (when you hear facilitator say these):"
-
-      chat <<CHAT
-6 elements of context: Historical, psychological, social, cultural, environmental, and time-based (temporal)
-
-Thinking about what you know about state, assumptions and context:
-
-- What will you do to manage your state before a conversation?
-
-- How might your context affect your state?
-CHAT
-    end
-  end
-
-  block(name: "Reflect on the learning in this session", lead_by: :fx2) do
+  block(name: "Reflect on the learning in this session", lead_by: :fx1) do
     length 5
 
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "We have covered the context in which our conversations take place today. Let’s reflect on what you know now."
+      spoken "We’re nearly at the end of the session, so let’s reflect on what you know now. "
+      spoken "Here are some questions to guide your thinking."
+      spoken "Please put your answers in the chat."
       spoken_exact <<~MD
-        Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
-        - What difference does understanding context make to having Better Conversations?
-        - What you will do differently now you know this?
+        Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat
+        -	What you know now about having better conversations 
+        -	Is there something you may do differently now you know this?
       MD
-
+      instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat. \ 
+                  Aim for 2-3 examples, with one from the chat."
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
 
     producer do
-      chat <<CHAT
-Thinking about the conversations you are going to have in the next week, and what we have just learned on this module…
-
-- What difference does understanding context make to having Better Conversations?
-- What will you do differently now you know this?
-CHAT
+      chat <<~CHAT
+      Thinking about the conversations you are going to have in the next week, and what we have just learned on this module:
+      - What do you know now about having better conversations? 
+      - Is there something you may do differently now you know this? 
+      CHAT
     end
   end
 
@@ -432,10 +425,10 @@ CHAT
     BCF::FlightPlans::CommonResources::FIELDWORK[2],
     id: :context_fieldwork,
     description: "",
-    length: 2
-  ), lead_by: :fx2)
+    length: 2), 
+    lead_by: :fx1)
 
-  block(lead_by: :fx2) do
+  block(lead_by: :fx1) do
     length 1
     name "Close"
 

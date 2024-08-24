@@ -68,9 +68,9 @@ module BCF
           spoken "Now, let’s check-in with your state using the Traffic Light Model"
           spoken "Please put in the chat if you are green, amber/yellow or red"
           spoken <<~MD
-              Green – you’re good to go!\ 
-              Amber/Yellow – you need to proceed with caution\ 
-              Red – you need to stop, break\ 
+                - Green – you’re good to go!
+                - Amber/Yellow – you need to proceed with caution
+                - Red – you need to stop, break
           MD
 
           instruction <<~MD
