@@ -130,15 +130,15 @@ CHAT
       spoken "Now imagine you are in a country in South Asia. If you saw people carrying umbrellas, they might be wanting to use them as parasols. If it was monsoon season, you might think the umbrella has a dual use."
       spoken "We have broken context down into 6 overlapping areas to help explain what it is."
 
-      spoken <<TYPST_SPOKEN
-Context can be:
-- #underline[Psychological] (for example, your perception of your state, your personal values)
-- #underline[Social] (for example, relationships and group behaviour)
-- #underline[Cultural] (for example, cultural values and beliefs)
-- #underline[Historical] (for example, what’s happened in the past, what’s documented or recorded)
-- #underline[Environmental] (for example, what’s going in the physical space you are in)
-- #underline[Time]-based (for example, temporal - time zone, whether it’s day or night)
-TYPST_SPOKEN
+      spoken <<~TYPST_SPOKEN
+        Context can be:
+        - _Psychological_ (for example, your perception of your state, your personal values)
+        - _Social_ (for example, relationships and group behaviour)
+        - _Cultural_ (for example, cultural values and beliefs)
+        - _Historical_ (for example, what’s happened in the past, what’s documented or recorded)
+        - _Environmental_ (for example, what’s going in the physical space you are in)
+        - _Time_-based (for example, temporal - time zone, whether it’s day or night)
+      TYPST_SPOKEN
 
       spoken <<MD
 Some examples of your context we have already covered so far in this course are:
@@ -339,32 +339,9 @@ When preparing for your conversation:
       spoken "Do you think it is easier to make assumptions about a someone you know well or someone you don’t know?"
       spoken "What kind of assumptions might you make?"
       spoken "How easy it to correct your assumptions?"
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychological, social, cultural, environmental, and time-based (temporal)."
-      spoken "State is an important aspect of psychological context."
-      spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
-      spoken "
-We’d like you to consider these questions, *thinking about what you know about state, assumptions and context*:
-- *What will you do to manage your state before a conversation?*
-- *How might your context affect your state*
-"
-
-      instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
-      instruction "Handover to Fx2 for reflection, fieldwork and close."
-    end
-
-    producer do
-      instruction "Copy in chat (when you hear facilitator say these):"
-
-      chat <<CHAT
-When preparing for your conversation:
-
-- What might you have to consider about another person and their context?
-
-- How might you find out about their context before and during the conversation?
-CHAT
     end
   end
-
+  
   block(name: "Link to state", lead_by: :fx1) do
     length 5
 
