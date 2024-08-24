@@ -170,17 +170,15 @@ MD
       spoken "We are going to explore what happens when we share our context."
       spoken "Please only ask what is appropriate for this setting and share only what you feel comfortable sharing in the group when we come back into the main room."
 
-      spoken("One person will choose ONE of the starter questions below to ask your partner. " \
-               "Continue the conversation and ask more questions to improve your understanding of the other person’s context.",
-             fixed: true)
-      spoken("Starter questions:
+      spoken_exact "One person will choose ONE of the starter questions below to ask your partner. " \
+               "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
+      spoken_exact "Starter questions:
 -	Psychological: What would you like to have happen after attending this course?
 -	Historical: What have you learned so far on this course?
 -	Time: What were you doing before you came to the course today? What else do you have on today?
--	Environmental: Where are you in the world?
-", fixed: true)
+-	Environmental: Where are you in the world?"
 
-      spoken("Manage the time so everyone gets a chance to try out one of the starter questions. ", fixed: true)
+      spoken_exact "Manage the time so everyone gets a chance to try out one of the starter questions. "
 
       spoken "We will send a message into the rooms to let you know when you are halfway through the time"
       spoken "When you come back we will talk about what it’s like when you are asked about your context and know more context about the other person"
@@ -239,8 +237,8 @@ MD
 
     facilitator do
       spoken "Let’s find out what you discovered:"
-      spoken_fixed "What happened when you knew more about the other person’s context "
-      spoken_fixed "What was it like for you, when you were asked about your context?"
+      spoken_exact "What happened when you knew more about the other person’s context "
+      spoken_exact "What was it like for you, when you were asked about your context?"
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
@@ -268,20 +266,20 @@ CHAT
 
     facilitator do
       spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
-      spoken_fixed "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_fixed "Historical, psychological, social, cultural, environmental, and time-based (temporal). "
-      spoken_fixed "Remember that context helps determine the assumptions we make."
-      spoken_fixed "For a conversation that you want to be better in the future,  "
+      spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
+      spoken_exact "Historical, psychological, social, cultural, environmental, and time-based (temporal). "
+      spoken_exact "Remember that context helps determine the assumptions we make."
+      spoken_exact "For a conversation that you want to be better in the future,  "
       spoken "Take a moment to think about what you would like to have happen in that conversation. "
 
       instruction "[pause for thinking]"
 
-      spoken_fixed "
+      spoken_exact "
 - What might you have to consider about the other persons’ context when preparing for your conversation with them?
 - How would you find out about their context before and during the conversation?
 "
 
-      spoken_fixed "Manage the time so everyone has a chance to answer the questions."
+      spoken_exact "Manage the time so everyone has a chance to answer the questions."
       spoken "When you’re in your breakout rooms, you don’t need to tell your partner what the conversation is about or who it’s with. "
       spoken "Keep your answers brief. Please only share what you are comfortable sharing."
       spoken "Any questions before we send you in? "
@@ -328,7 +326,7 @@ CHAT
 
     facilitator do
       spoken "Let’s find out what you just noticed."
-      spoken_fixed "
+      spoken_exact "
 When preparing for your conversation:
 - What might you have to consider about another person and their context?
 - How might you find out about their context before and during the conversation?
@@ -407,11 +405,10 @@ CHAT
 
     facilitator do
       spoken "We have covered the context in which our conversations take place today. Let’s reflect on what you know now."
-      spoken("
+      spoken_exact "
 Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat:
 - What difference does understanding context make to having Better Conversations?
-- What you will do differently now you know this?
-", fixed: true)
+- What you will do differently now you know this?"
 
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
