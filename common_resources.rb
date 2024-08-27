@@ -25,8 +25,10 @@ FIELDWORK[2] = [
 ]
 
 FIELDWORK[3] = [
-  "Something here",
-  "And something more"
+  "Try noticing what context you bring to a conversation",
+  "What do you know about the other person’s context?",
+  "What impact does that have on the conversation?"
+
 ]
 
 FIELDWORK[4] = [
