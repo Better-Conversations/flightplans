@@ -48,7 +48,7 @@ module BCF
 
       ANY_QUESTIONS = Block.build do
         length 2
-        default_leader :fx2
+        default_leader :fx1
         name "Any Questions?"
 
         facilitator do
