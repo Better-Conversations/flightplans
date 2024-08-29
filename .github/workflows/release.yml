@@ -18,6 +18,9 @@ jobs:
         with:
           ruby-version: '3.3'
 
+      # Install typst to allow for the generation of the PDFs outputs
+      - uses: typst-community/setup-typst@v3
+
       - name: Install dependencies
         run: |
           gem install bundler
