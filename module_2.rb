@@ -128,6 +128,7 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \ 
       MD
       spoken "We are going to look at thinking processes first and come back to discuss feelings."
+      instruction "Handover to Fx2 for the assumptions demo."
     end
 
     producer do
