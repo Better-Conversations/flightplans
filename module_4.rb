@@ -416,4 +416,8 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2
   ), lead_by: :fx2)
 
+  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
+  block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
+
 end
