@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Better-Conversations/ruby-flightplans.git
-  revision: a1836e7c98105ea05eb9681188f585571045861d
+  revision: b2fd0adca7895b9ffae4d2f6c045c8eac8e4c7f6
   specs:
     bcf-flightplans (0.3.0)
       redcarpet (~> 3.6)
