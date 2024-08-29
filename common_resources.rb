@@ -32,8 +32,9 @@ FIELDWORK[3] = [
 ]
 
 FIELDWORK[4] = [
-  "Something here",
-  "And something more"
+  "Try out some of the questions on page 20 of the handbook in your conversations",
+  "What kind of listening do you do in a conversation?",
+  "What impact does that have on the conversation?"
 ]
 
 FIELDWORK[5] = [
