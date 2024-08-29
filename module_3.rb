@@ -395,21 +395,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2
   ), lead_by: :fx2)
 
-  block(lead_by: :fx2) do
-    length 1
-    name "Close"
-
-    #TODO: Parameterize the module name and make this a common block
-    facilitator do
-      spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
-      spoken "Otherwise, we will see you next time where we will be exploring listening."
-      instruction "Handover to Sponsor"
-    end
-
-    producer do
-      instruction "If leaving the session early, make facilitator a host first."
-    end
-  end
+  block(BCF::FlightPlans::CommonBlocks::CLOSING)
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

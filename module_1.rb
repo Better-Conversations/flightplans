@@ -462,6 +462,9 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
   end
+  
+  #TODO: Make fx1 lead
+  block(BCF::FlightPlans::CommonBlocks::CLOSING)
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

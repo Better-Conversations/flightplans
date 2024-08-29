@@ -108,6 +108,23 @@ module BCF
         end
       end
 
+      CLOSING = Block.build do
+        length 1 
+        name "Close"
+        default_leader :fx2
+
+        facilitator do
+          spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished. "
+          spoken "Otherwise, we will see you next time on the next module which will cover Feedback."
+          instruction "Handover to Sponsor"
+        end
+
+        producer do
+          instruction "If leaving the session early, make facilitator a host first."
+        end
+
+      end
+
       SPONSOR_DEBRIEF = Block.build do
         length 15
         name "Debrief"
