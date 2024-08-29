@@ -70,7 +70,7 @@ Passing in `fixed: true)` to `spoken` or `instruction` will render the text high
       spoken("Green – you’re good to go!
 Amber/Yellow – you need to proceed with caution
 Red – you need to stop, break
-"), 
+", 
 
       instruction "Accept whatever states are put in chat. Avoid saying that green state is best. If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready."
     end
