@@ -29,8 +29,12 @@ jobs:
       - name: ZIP JSON outputs
         run: zip -r json-outputs.zip json-outputs
 
+      - name: ZIP PDF outputs
+        run: zip -r pdf-outputs.zip pdf-outputs
+
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             json-outputs.zip
+            pdf-outputs.zip
