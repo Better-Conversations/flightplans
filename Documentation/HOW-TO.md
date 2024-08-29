@@ -51,6 +51,8 @@ For the Facilitator you can declare:
 
 - `instruction`, a string, the instruction for the facilitator
 - `spoken`, a string, the spoken content for the facilitator
+- `spoken_exact`, a string, the content which must be spoken word for word by the facilitator 
+# for spoken you should have each bulletpoint in its own spoken or spoken_exact call
 
 For the Producer you can declare:
 
