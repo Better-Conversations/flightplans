@@ -20,7 +20,7 @@ jobs:
 
       - name: Install font
         run: |
-          apt-get install -y --no-install-recommends fontconfig
+          sudo apt-get install -y --no-install-recommends fontconfig
 
           # Add Source Sans Pro font
           # Adpated from https://gist.github.com/jacksonpradolima/840b4a20c617204a65b15da61e124bf6
@@ -33,9 +33,9 @@ jobs:
           
           wget https://github.com/adobe-fonts/source-sans-pro/archive/2.020R-ro/1.075R-it.zip
           unzip 1.075R-it.zip
-          cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
+          sudo cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
           
-          fc-cache -f -v
+          sudo fc-cache -f -v
           rm -rf $TEMP_DIR
 
 
