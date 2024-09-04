@@ -19,8 +19,12 @@ module_files.each do |module_file|
   output_json_path = File.join("json-outputs", File.basename(module_file, '.rb') + '.json')
   output_pdf_path = File.join("pdf-outputs", File.basename(module_file, '.rb') + '.pdf')
 
+  puts "Rendering #{module_file}..."
+
   # We shell out to the CLI to keep the code isolated
-  output, status = Open3.capture2e("bundle exec bcf-fp-generate . #{module_file}")
+  output, stderr, status = Open3.capture3("bundle exec bcf-fp-generate . #{module_file}")
+
+  puts stderr
 
   if status.success?
     File.write(output_json_path, output)
