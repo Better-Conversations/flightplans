@@ -3,7 +3,7 @@ module BCF
     class ConventionalFlightPlan < BCF::FlightPlans::FlightPlan
       def initialize
         super
-        @total_length = 90 # TODO this should be 120?
+        @total_length = 90 # TODO this should be 120? This should be 60 minutes if pasted in the table with the session overview.
         @initial_time = -30
         @organisation = "Better Conversations"
       end
@@ -48,7 +48,7 @@ module BCF
 
       ANY_QUESTIONS = Block.build do
         length 2
-        default_leader :fx2
+        default_leader :fx1
         name "Any Questions?"
 
         facilitator do
@@ -63,14 +63,15 @@ module BCF
         length 2
         default_leader :fx2
         name "State Check-in"
+        section_comment "Chat"
 
         facilitator do
           spoken "Now, let’s check-in with your state using the Traffic Light Model"
           spoken "Please put in the chat if you are green, amber/yellow or red"
-          spoken <<~MD
-                - Green – you’re good to go!
-                - Amber/Yellow – you need to proceed with caution
-                - Red – you need to stop, break
+          spoken_exact <<~MD
+            Green – you’re good to go! \ 
+            Amber/Yellow – you need to proceed with caution \ 
+            Red – you need to stop, break
           MD
 
           instruction <<~MD
@@ -106,6 +107,24 @@ module BCF
           instruction "Say they are welcome to stay for 15 minutes or so if they have any questions for the team or any insights they’d like to share. After that the delivery team will debrief."
           instruction "Sponsor to facilitate discussion with attendees"
         end
+      end
+
+      #TODO: Parameterize the module names and pass the next module name as a parameter
+      CLOSING = Block.build do
+        length 1 
+        name "Close"
+        default_leader :fx2
+
+        facilitator do
+          spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished. "
+          spoken "Otherwise, we will see you next time on the next module which will cover [next module name]."
+          instruction "Handover to Sponsor"
+        end
+
+        producer do
+          instruction "If leaving the session early, make facilitator a host first."
+        end
+
       end
 
       SPONSOR_DEBRIEF = Block.build do

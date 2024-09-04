@@ -128,6 +128,7 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \ 
       MD
       spoken "We are going to look at thinking processes first and come back to discuss feelings."
+      instruction "Handover to Fx2 for the assumptions demo."
     end
 
     producer do
@@ -428,20 +429,9 @@ end
     length: 2), 
     lead_by: :fx1)
 
-  block(lead_by: :fx1) do
-    length 1
-    name "Close"
+    #TODO: Make fx1 lead
+    block(BCF::FlightPlans::CommonBlocks::CLOSING)
 
-    facilitator do
-      spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
-      spoken "Otherwise, we will see you next time where we will be exploring listening."
-      instruction "Handover to Sponsor"
-    end
-
-    producer do
-      instruction "If leaving the session early, make facilitator a host first."
-    end
-  end
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
