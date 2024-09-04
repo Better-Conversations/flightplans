@@ -140,7 +140,7 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "For this first breakout exercise, you will have 6 minutes to practise listening to accept what the other person is saying."
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
-      spoken "Whilst you are listening, we would like to you to avoid judging or interrupting the other person."
+      spoken "Whilst you are listening, we would like to you to _avoid judging or interrupting the other person_."
       spoken "Just to be clear, please do acknowledge each other with a nod or smile or “mmm”. However, don’t comment or ask any questions If you are listening."
     
       spoken_exact "Decide who is going to talk first. That person will talk about something that interests them (like a hobby or a pet), something that happened recently or what they might be doing after this session."
@@ -238,24 +238,26 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       spoken_exact <<~MD
-        And we have got three more here for you to try to ask about meaning: 
+        And we have got another for to ask about meaning: 
         - When you say___ I imagine___. Is that what you mean?
       MD
 
       spoken_exact <<~MD
-       Sometimes, especially when someone seems to be stuck on a problem, it is useful to ask these questions: 
+       Sometimes, especially when someone seems to be stuck on a problem, it is useful to ask these questions about outcomes or next steps: 
        - What would you like to have happen? 
        - Then what happens?
       MD
 
       spoken "We are going to do a quick demo "
 
-      instruction <<~MD
-      Facilitator to co-facilitator or producer to demo the questions:
+      instruction "Facilitator to co-facilitator or producer to demo the questions:"
 
-      And what are you doing today after the session? Or any other easy question.
+      spoken "And what are you doing today after the session?"
+      
+      instruction <<~MD 
+        Or any other easy question.
 
-      Ask one or two of the questions in the chat as a follow-up. If you can’t think what to say, ask the “Is there anything else about that?” question twice.
+        Ask one or two of the questions listed in the chat as a follow-up. If you can’t think what to say, ask the “Is there anything else about that?” question twice.
       
       MD
     end
@@ -380,6 +382,7 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
+  #TODO: Sort out indentation of second level of bullets
   block(name: "Reflect on learning in this session", lead_by: :fx2) do
     length 6
     section_comment " Gather comments in chat and pick out some examples"
@@ -387,8 +390,8 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
         spoken "In the last three modules, we have covered state, assumptions, context. Today we’ve covered listening with curiosity.  Here are some questions to guide your thinking."
         
+        spoken "Please put in the chat:"
         spoken_exact <<~MD
-          Please put in the chat: 
           -	What do you know now about listening well and responding with the questions we’ve introduced to you? 
           -	What difference does knowing this make?
           -	What’s one thing you’re taking away or might do differently now?

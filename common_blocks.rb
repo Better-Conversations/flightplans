@@ -63,14 +63,15 @@ module BCF
         length 2
         default_leader :fx2
         name "State Check-in"
+        section_comment "Chat"
 
         facilitator do
           spoken "Now, let’s check-in with your state using the Traffic Light Model"
           spoken "Please put in the chat if you are green, amber/yellow or red"
-          spoken <<~MD
-                - Green – you’re good to go!
-                - Amber/Yellow – you need to proceed with caution
-                - Red – you need to stop, break
+          spoken_exact <<~MD
+            Green – you’re good to go! \ 
+            Amber/Yellow – you need to proceed with caution \ 
+            Red – you need to stop, break
           MD
 
           instruction <<~MD
@@ -108,6 +109,7 @@ module BCF
         end
       end
 
+      #TODO: Parameterize the module names and pass the next module name as a parameter
       CLOSING = Block.build do
         length 1 
         name "Close"
@@ -115,7 +117,7 @@ module BCF
 
         facilitator do
           spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished. "
-          spoken "Otherwise, we will see you next time on the next module which will cover Feedback."
+          spoken "Otherwise, we will see you next time on the next module which will cover [next module name]."
           instruction "Handover to Sponsor"
         end
 
