@@ -3,7 +3,7 @@ require_relative './common_blocks'
 require_relative './common_resources'
 
 module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
-  module_title "Context"
+  module_title "Listening with Curiosity"
   module_number 4
 
   learning_outcomes <<~MD 
