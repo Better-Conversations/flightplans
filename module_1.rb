@@ -435,7 +435,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Fieldwork", lead_by: :fx1) do
-    length 2 
+    length 3 
     
 
     facilitator do
