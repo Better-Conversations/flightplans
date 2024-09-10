@@ -80,6 +80,8 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Feedback
 
         The sixth module will consolidate the learning and explore what you would like to do next.
+        
+        Please do also book in with us for an inidivual session around modules 5 or 6 to discuss next steps and how we can support you.
 
         We will be following the same pattern of activities each time
       MD
@@ -109,11 +111,10 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  #TODO: Common block has inccorect timing for module 1
   block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
   block(name: "State Check-in", lead_by: :fx2) do
-    length 3 
+    length 4  
     section_comment "Gather comments in chat"
 
     facilitator do
@@ -181,6 +182,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "In the chat give lables to these conversations."
       spoken "It might be something like 'neighbour' or 'colleague'. A word that will help you remember these conversations."
+      instruction "Pause"
       spoken "Now give us a number to show how these conversations are going for you on a scale of 0-10. 0 terrible and 10 brilliant."
 
       instruction "Pick out 1-2 examples from chat or allow people to speak. Ackowledge what they say."
@@ -213,10 +215,12 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_2,
         "to explain the model",
-        description: "Traffic Light Model on LHS, Space for findings on RHS"
+        description: "Traffic Light Model on LHS, Space for findings on RHS",
+        scribed_by: :fx1
       )
     end
 
+    #TODO: When Handbook goes on website, check talking about the space in the handbook is still relevant in all flight plans
     facilitator do
       spoken "Now for the traffic light model which is an easy way to represent state. There is also an explanation in the Course Handbook in Section 1 to help you remember the model."
       spoken "We have an inverted traffic light here. The colours represent different states of our thinking and feeling, which will impact our conversations. Green is at the top as usually we have better conversations when in a green state."
@@ -228,6 +232,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
+#TODO: Add scribed by section to block as well
  block(name: "Demonstrate Breakout exercises", lead_by: :fx1) do
     length 5
     section_comment "Add to Flip#2 in the red state section for up to 3 people"
@@ -242,6 +247,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "[Co-facilitator] When I am in red, I think___, I feel ___. "
 
+      #TODO: move this instruction to beforeco-facilitator asked.
       instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn’t have to be about anger or fear."
 
       instruction "To group"
@@ -316,6 +322,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     
   end
 
+  #TODO: Add scribed by section to block as well
   block(name: "Unpack Breakout 1 ", lead_by: :fx2) do
     length 5 
     section_comment "Add to Flip#2 in green section for up to 3 people"
@@ -339,7 +346,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
   end
-#TODO: Add scribed by section to block as well as allowing for discription without flipchart page
+
   block(name:"Breakout 2", lead_by: :fx2) do
     length 5
     section_comment "1 Minute breifing, 4 minutes in BORs"
@@ -375,7 +382,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     
     Add to Flip 2 in amber section for up to 3 people"
 
-
+#TODO: Add scribed by section to block as well as allowing for discription without flipchart page
     facilitator do 
       spoken "Now let’s get 2-3 examples of amber/yellow state"
 
@@ -434,6 +441,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
+  #TODO: Check this can use the common fieldwork block and array - wording is different at start
   block(name: "Fieldwork", lead_by: :fx1) do
     length 2 
     

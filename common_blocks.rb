@@ -46,6 +46,7 @@ module BCF
         end
       end
 
+      # TODO = consider whether we want to include a handover instruction here - it would create a dependency on the next block. There are several instances of handovers to look at across the flight plans.
       ANY_QUESTIONS = Block.build do
         length 2
         default_leader :fx1
