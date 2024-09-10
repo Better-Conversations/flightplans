@@ -47,6 +47,9 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Lint flight plans
+        run: bin/lint-flight-plans
+
       - name: Make release artifacts
         run: bin/make-release ${{ github.ref_name }}
 
