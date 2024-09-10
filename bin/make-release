@@ -4,11 +4,15 @@ require 'json'
 require 'bundler/setup'
 require 'open3'
 
-FileUtils.rm_rf('json-outputs') if Dir.exist?('json-outputs')
-Dir.mkdir('json-outputs')
+suffix = ARGV[0] ? "-#{ARGV[0]}" : ""
+json_output = "json-outputs#{suffix}"
+pdf_output = "pdf-outputs#{suffix}"
 
-FileUtils.rm_rf('pdf-outputs') if Dir.exist?('pdf-outputs')
-Dir.mkdir('pdf-outputs')
+FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
+Dir.mkdir(json_output)
+
+FileUtils.rm_rf(pdf_output) if Dir.exist?(pdf_output)
+Dir.mkdir(pdf_output)
 
 # I don't know how entry-point discovery should work, so I'm just going to use a JSON file for now
 module_files = JSON.parse!(File.read('modules.json'))
@@ -16,8 +20,8 @@ module_files = JSON.parse!(File.read('modules.json'))
 module_files.each do |module_file|
   next unless File.exist?(module_file)
 
-  output_json_path = File.join("json-outputs", File.basename(module_file, '.rb') + '.json')
-  output_pdf_path = File.join("pdf-outputs", File.basename(module_file, '.rb') + '.pdf')
+  output_json_path = File.join(json_output, File.basename(module_file, '.rb') + '.json')
+  output_pdf_path = File.join(pdf_output, File.basename(module_file, '.rb') + '.pdf')
 
   puts "Rendering #{module_file}..."
 

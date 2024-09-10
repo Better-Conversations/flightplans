@@ -37,9 +37,9 @@ jobs:
           
           sudo fc-cache -f -v
           rm -rf $TEMP_DIR
+      
 
-
-# Install typst to allow for the generation of the PDFs outputs
+      # Install typst to allow for the generation of the PDFs outputs
       - uses: typst-community/setup-typst@v3
 
       - name: Install dependencies
@@ -48,13 +48,13 @@ jobs:
           bundle install
 
       - name: Make release artifacts
-        run: bin/make-release
+        run: bin/make-release ${{ github.ref_name }}
 
       - name: ZIP JSON outputs
-        run: zip -r json-outputs.zip json-outputs
+        run: zip -r json-outputs-${{ github.ref_name }}.zip json-outputs-${{ github.ref_name }}
 
       - name: ZIP PDF outputs
-        run: zip -r pdf-outputs.zip pdf-outputs
+        run: zip -r pdf-outputs-${{ github.ref_name }}.zip pdf-outputs-${{ github.ref_name }}
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -62,3 +62,14 @@ jobs:
           files: |
             json-outputs.zip
             pdf-outputs.zip
+
+      - name: Notify coordinator of the new release
+        env:
+          PRODUCTION_URL: ${{ secrets.PRODUCTION_URL }}
+          PRODUCTION_SECRET: ${{ secrets.PRODUCTION_SECRET }}
+          PREVIEW_URL: ${{ secrets.PREVIEW_URL }}
+          PREVIEW_SECRET: ${{ secrets.PREVIEW_SECRET }}
+          VERSION: ${{ github.ref_name }}
+        run: |
+          curl -X POST "$PRODUCTION_URL?version=$VERSION" -H "Authorization: Bearer $PRODUCTION_SECRET"
+          curl -X POST "$PREVIEW_URL?version=$VERSION" -H "Authorization: Bearer $PREVIEW_SECRET"

@@ -1,6 +1,6 @@
 /.idea/
 *.pdf
 .bundle
-json-outputs
+json-outputs*
 build-context
-pdf-outputs
+pdf-outputs*
