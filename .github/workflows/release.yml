@@ -18,6 +18,30 @@ jobs:
         with:
           ruby-version: '3.3'
 
+      - name: Install font
+        run: |
+          sudo apt-get install -y --no-install-recommends fontconfig
+
+          # Add Source Sans Pro font
+          # Adpated from https://gist.github.com/jacksonpradolima/840b4a20c617204a65b15da61e124bf6
+          # The RUN <<EOF set -e ... EOF has the effect of chaining all the commands together, so that if one fails, the whole RUN
+          # command fails, but only one layer is created.
+          set -e
+          
+          cd $(mktemp -d)
+          TEMP_DIR=$(pwd)
+          
+          wget https://github.com/adobe-fonts/source-sans-pro/archive/2.020R-ro/1.075R-it.zip
+          unzip 1.075R-it.zip
+          sudo cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
+          
+          sudo fc-cache -f -v
+          rm -rf $TEMP_DIR
+
+
+# Install typst to allow for the generation of the PDFs outputs
+      - uses: typst-community/setup-typst@v3
+
       - name: Install dependencies
         run: |
           gem install bundler
@@ -29,8 +53,12 @@ jobs:
       - name: ZIP JSON outputs
         run: zip -r json-outputs.zip json-outputs
 
+      - name: ZIP PDF outputs
+        run: zip -r pdf-outputs.zip pdf-outputs
+
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             json-outputs.zip
+            pdf-outputs.zip

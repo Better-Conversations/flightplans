@@ -7,8 +7,8 @@ require 'bcf/flightplans'
 require 'tmpdir'
 require 'open3'
 
-if ARGV.length != 1
-  puts "Usage: render-pdf <flightplan>"
+unless [1, 2].include? ARGV.length
+  puts "Usage: render-pdf <flightplan> [output-pdf]"
   exit 1
 end
 
@@ -24,4 +24,5 @@ if flight_plan.nil?
   exit 1
 end
 
-flight_plan.render_pdf(File.basename(ARGV[0], '.rb') + '.pdf')
+pdf_file = ARGV[1] || File.basename(ARGV[0], '.rb') + '.pdf'
+flight_plan.render_pdf(pdf_file)

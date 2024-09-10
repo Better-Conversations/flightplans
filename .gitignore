@@ -2,3 +2,5 @@
 *.pdf
 .bundle
 json-outputs
+build-context
+pdf-outputs
