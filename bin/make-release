@@ -18,24 +18,15 @@ Dir.mkdir(pdf_output)
 module_files = JSON.parse!(File.read('modules.json'))
 
 module_files.each do |module_file|
-  next unless File.exist?(module_file)
+  load module_file
+end
 
-  output_json_path = File.join(json_output, File.basename(module_file, '.rb') + '.json')
-  output_pdf_path = File.join(pdf_output, File.basename(module_file, '.rb') + '.pdf')
+BCF::FlightPlans::FLIGHT_PLANS.each do |flight_plan|
+  output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
+  output_pdf_path = File.join(pdf_output, "module_#{flight_plan.module_number}.pdf")
 
-  puts "Rendering #{module_file}..."
+  puts "Rendering Flight Plan for Module #{flight_plan.module_number}..."
 
-  # We shell out to the CLI to keep the code isolated
-  output, stderr, status = Open3.capture3("bundle exec bcf-fp-generate . #{module_file}")
-
-  puts stderr
-
-  if status.success?
-    File.write(output_json_path, output)
-  else
-    warn "Error generating JSON for #{module_file}: #{output}"
-  end
-
-  # Generate the PDF
-  `bundle exec bin/render-pdf "#{module_file}" "#{output_pdf_path}"`
+  flight_plan.write_json(output_json_path)
+  flight_plan.render_pdf(output_pdf_path)
 end
