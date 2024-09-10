@@ -13,8 +13,9 @@ module BCF
 FIELDWORK = []
 
 FIELDWORK[1] = [
-  "Something here",
-  "And something more"
+  "Notice your state, and how and when it changes for  you.",
+  "Try mapping it to the Traffic Light Model.",
+  "What’s your state like, before and after your conversations?"
 ]
 
 
