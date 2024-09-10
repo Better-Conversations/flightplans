@@ -443,7 +443,7 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   #TODO: Check this can use the common fieldwork block and array - wording is different at start
   block(name: "Fieldwork", lead_by: :fx1) do
-    length 3 
+    length 2 
     
 
     facilitator do
