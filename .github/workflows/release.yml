@@ -44,8 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
-          bundle install
+          bundle install --without development
 
       - name: Lint flight plans
         run: bin/lint-flight-plans
