@@ -32,3 +32,15 @@ module_files.each do |module_file|
     puts "::error file=#{module_file}::#{error}"
   end
 end
+
+already_loaded.map { _1.module_title }.uniq.each do |title|
+  if already_loaded.count { _1.module_title == title } > 1
+    puts "::error::Multiple flight plans found with module title '#{title}'"
+  end
+end
+
+already_loaded.map { _1.module_number }.uniq.each do |module_number|
+  if already_loaded.count { _1.module_number == module_number } > 1
+    puts "::error::Multiple flight plans found with module number '#{module_number}'"
+  end
+end
