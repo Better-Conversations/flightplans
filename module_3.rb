@@ -246,8 +246,8 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
       spoken_exact "Historical, psychological, social, cultural, environmental, and time-based (temporal). "
       spoken "Remember that context helps determine the assumptions we make."
-      spoken_exact "For a conversation that you want to be better in the future,  "
-      spoken "Take a moment to think about what you would like to have happen in that conversation. "
+      spoken_exact "Think about a conversation you'd like to be better."
+      spoken "What you would like to have happen in that conversation?"
 
       instruction "[pause for thinking]"
 
@@ -270,7 +270,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Historical, psychological, social, cultural, environmental, and time-based (temporal)
 
-        For a conversation that you want to be better in the future:
+        Think about a conversation you'd like to be better:
 
         - What might you have to consider about the other persons’ context when preparing for your conversation with them?
         - How would you find out about their context before and during the conversation?
