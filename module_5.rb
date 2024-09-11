@@ -9,17 +9,16 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
   learning_outcomes <<~MD
     Learners will be able to:
       -	Describe why intention is different to impact
-      -	Apply feedback sequence and practice feedback
+      -	Practice preparing for an intentional conversation
     
     Suggested learning outcomes for further trainings/interventions
-      -	Feedback in different contexts
+      -	Different types of intentional conversations e.g. sales, performance management, compliance
   
   MD
 
   demo <<~MD
-    Before BOR1, Fx1 gives feedback to Fx2 or producer using the feedback sequence. Please ensure the feedback is around something that happened in the course as that is what we want from participants.MD
+    Fx1 to ask Fx2 questions to demo the outcome-intention-impact-motivation loop to prepare for a conversation with a colleague. Make sure that the example is something easy to understand and not likely to trigger strong emotions in you or the group.
   MD
-
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
@@ -32,7 +31,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_1,
         "for agenda",
-        description: "Agenda (top half) and space for any questions or reflections",
+        description: "Course outline and agenda",
         scribed_by: :fx1
       )
     end
@@ -41,43 +40,23 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction <<~MD
       Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
       
-      Go through agenda on flip mentioning these points:
+      Point out this where this module is on the course overview on the flip.
       
       MD
 
-      spoken "Last time we looked at listening with curiosity. We will do a quick review of that in just a bit. "
-
-      spoken "Today, we are going to take listening and responding further and explore a way of giving feedback."
-
-      spoken "Clear feedback gives the other person information about how you make sense of your experiences. It also models how the other person might share what is going on for them."
+      spoken "Last time we looked at listening with curiosity. We will do a quick review of that in just a bit."
+      spoken "Today we are going to consider intentional conversations. Conversations where there is a clear purpose and outcome needed."
     
-    end
-
-  end
-
-  block(name: "Any Questions?", lead_by: :fx1) do
-    length 2
-    section_comment "Flip 1 bottom half for comments"
-
-    facilitator do
-      spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
       spoken "We’ve covered some key factors affecting conversations in Modules 1-4:"
       spoken_exact <<~MD
-        State
-        Assumptions
-
-        Context
-
+        State \ 
+        Assumptions \ 
+        Context \ 
         How you listen and respond
       MD
-      spoken "And do you have anything you’d like to ask us about today’s topic?"
+      spoken "We are going to these further by considering intention, impact, outcomes and motivations"
 
-      instruction <<~MD
-      Respond to any questions/insights but keep it brief.
-
-      Handover to Fx2 for state check-in.
-      
-      MD
+      instruction "Go through agenda on flip"
     end
 
     producer do
@@ -98,6 +77,8 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
   end
+
+  block(BCF::FlightPlans::CommonBlocks::ANY_QUESTIONS)
 
   block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN_TLM)
 
@@ -136,7 +117,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Conversation Model", lead_by: :fx1) do
-    length 9
+    length 6
     resources do
       flipchart(
         :flip_2,
@@ -147,47 +128,57 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "Let’s bring up the conversation model we looked at last time to illustrate an important point about feedback. There is an explanation in the handbook in Section 5."
-      spoken "Feedback is a way of sharing our own context, and our experiences."
-      spoken "Feedback may be intended to be helpful, but we don’t know how this will impact the other person."
-      spoken "For example, think about this phrase:"
+      spoken "We are going to consider how intention and impact are different."
+      spoken "I'm going to give you a phrase. Think about what happens for you when you hear it." 
+      instruction "Pause to let people prepare to think about the phrase."
+
       spoken "“You have so much potential”"
       spoken "What happens for you when you hear that?"
 
       instruction "Facilitate brief discussion on impact of statement, how it can be viewed as criticism or praise depending on context."
 
-      spoken "What I want to highlight is that intention is different to impact "
+      spoken "Let's look at the conversation model from Module 4 to see how that phrase lands."
+      spoken "We have the LHS and RHS of the model representing two people in a conversation."
 
-      instruction "You can point to the LHS of the model as you say this:"
+      instruction "Point to the steps on the LHS as you say this:"
 
       spoken <<~MD
         When we are in conversation with someone, we can know:
         -	What we see/hear
         -	We think and feel (our state)
         -	What we say or do as a result
-      
       MD
 
-      instruction "You can point to the RHS of the model as you say this:"
+      instruction "Point to the RHS of the model as you say this:"
 
-      spoken "We don’t know what other people pay attention to, or what they really think and feel although their behaviour might give us clues about that. "
-    
-      instruction "Place blue Post-it or paper labelled ‘intention’ next to ‘I think/feel’"
+      spoken <<~MD
+        We don’t know:
+        - What other people pay attention to (what they see and hear)
+        - What they really think and feel 
+        - Although their behaviour (what they say and do) might give us clues about that if we know them well.
+      MD
+
+      instruction "Place a blue Post-it note labelled ‘Intention’ next to the ‘I think/feel’ step on the LHS"
+      spoken "Our intention represents what we plan to say or do in a conversation. We may not be conscious of it, but it’s there."
 
       spoken "The impact on the other person, what they think or feel about what we say or do, may or may not be what we intended."
-        spoken "You may think your feedback will land in green, however it could mean they go into an amber/yellow or red state depending on how they interpret it."
+      spoken "You may think your feedback will land in green"
+      
+      instruction "Place a green post labelled 'Impact' next to the 'They think/feel' step on the RHS"
+      
+      spoken "However they could go into an amber/yellow or red state if they interpret it a different way."
 
-      instruction "Add amber/yellow and red Post-its to ‘they think/feel’"
+      instruction "Add amber/yellow and red Post-its next to ‘They think/feel’ on the RHS"
 
-      spoken "And it works the other way around…how many times has someone given you feedback, and you experience an amber/yellow or red state?  "
+      spoken "And it works the other way around."
 
       instruction <<~MD
-      Swap blue intention and red/yellow/green impact Post-its around so the intention Post-it sits with they think/feel and impact Post-its sit with I think/feel
-
-      Handover to Fx2 for exercise on intention and impact
-      
+        Swap blue intention and red/yellow/green impact Post-its around so the intention Post-it sits with they think/feel and impact Post-its sit with I think/feel
       MD
-    
+      
+      spoken "How many times has someone given you feedback, and you experience an amber/yellow or red state?"
+
+      instruction "Handover to Fx2 for exercise on intention and impact"
     end
 
     producer do
@@ -197,23 +188,26 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Breakout 1", lead_by: :fx2) do
-    length 8
-    section_comment "(2 min briefing)"
+    length 7
+    section_comment "(1 min briefing)"
 
     facilitator do
       spoken "We’re going to send you into breakout rooms for 6 minutes to explore intention and impact."
-      spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
-    
-      spoken_exact "Think of a situation where you might give your opinion or feedback to someone."
-      spoken_exact "Ask each other these questions:"
-      spoken_exact "What’s your intention for this conversation?"
-      spoken_exact "What are you assuming about the impact of this conversation on the other person?"
-      spoken_exact "What might you do to hold your assumptions lightly?"
-      spoken_exact "Manage the time so everyone gets a chance to talk about their intention and assumptions around a conversation they might have."
+      spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
+      spoken_exact <<~MD
+  
+        Think of one conversation you had recently where someone gave you their opinion or some feedback.
 
-      spoken "We will send a message into the rooms to let you know when you are halfway through the time."
-      spoken "When you come back we will talk about intentions and assumptions."
+        Ask each other these questions:
+        
+        - Briefly, what happened? What did you see or hear?
+        - What impact did that have on you?
+        - Based on that, what did you assume about them and their intentions?
+        
+        Manage the time so everyone gets a chance to talk about their experience.
+      MD
+      spoken_exact "When we come back we will briefly share how we might make assumptions about intentions from the impact we experience."
       spoken "Any questions before we send you in?"
     end
 
@@ -222,18 +216,15 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when you hear the facilitator say this: "
 
       chat <<~CHAT
-        Think of a situation where you might give your opinion or feedback to someone.
+        Think of one conversation you had recently where someone gave you their opinion or some feedback.
 
         Ask each other these questions:
         
-        - What is your intention for this conversation?
+        - Briefly, what happened? What did you see or hear?
+        - What impact did that have on you?
+        - Based on that, what did you assume about them and their intentions?
         
-        - What are you assuming about the impact of this conversation on the other person?
-        
-        - What might you do to hold your assumptions lightly?
-        
-        Manage the time so everyone gets a chance to talk about their intention and assumptions around a conversation they might have
-        
+        Manage the time so everyone gets a chance to talk about their experience
       CHAT
 
       instruction <<~MD
@@ -263,20 +254,20 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
 
     facilitator do
-      spoken "Let’s find out what you discovered:"
+      spoken "Let’s find out what you noticed:"
 
       spoken_exact <<~MD
-        What’s your intention for this conversation?
-        -	What are you assuming about the impact of this conversation on the other person?
-        -	What might you do to hold your assumptions lightly?
-      
+        - What was the impact of being told someone's opinion?
+        -	Based on this, What did you assume about the person and their intentions?
       MD
       
       instruction <<~MD
-        Facilitate brief discussion. Suggest asking questions about context before giving people feedback if it hasn’t been mentioned.
+        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+
+        If time allows, ask 
+        - **How might you hold your assumptions lightly?**
 
         Handover to Fx1 for demonstration of feedback
-      
       MD
 
     end
@@ -285,48 +276,50 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as you hear the facilitator mention each of these questions:"
 
       chat <<~CHAT
-      - What is your intention for the conversation?
-
-      - What are you assuming about the impact of this conversation on the other person?
-      
-      - What might you do to hold your assumptions lightly?
-      
+        - What was the impact of being told someone's opinion?
+        -	Based on this, What did you assume about the person and their intentions?
       CHAT
 
-      instruction "Prepare BORs in different 2/3s for 8 minutes"
+      instruction "Prepare BORs in same 2/3s for 8 minutes"
     end
   end
 
   block(name: "Demonstrate Breakout 2", lead_by: :fx1) do
-    length 3
+    length 6
 
     facilitator do
-      spoken "I am going to demo a way of giving feedback that helps separate intention and impact. "
-      spoken "This helps the other person understand how you experienced a situation, which might be different to what they intended or expected. "
+      spoken "We are going to practise a way of separating intention and impact. "
+      spoken "This helps us to be clear about what we want to say and what we think the impact will be."
     
       instruction <<~MD
-        Facilitator to demo giving feedback  with producer or co-facilitator on something that happened recently. 
+        Facilitator to demo outcome-intention-impact-motivation loop. 
         
-        Make sure that the feedback is around something that happened in the course as that is what we want from participants:
-      
+        Make sure that the example is something easy to understand and not likely to trigger strong emotions in you or the group.
       MD
-      #TODO: Make this highlighted? Fixed true doesnt work as in Docs
-      instruction <<~MD
-        When [something that happened]
-        
-        I saw/heard ___
 
-        I took that to mean ___
+      instruction "Facilitator to co-facilitator or producer to demo the questions:"
+    
+      spoken_exact "Briefly, what's the context?"
+      spoken_exact "What would you like to have happen? Then what happens?"
+      spoken_exact "What will you say or do?"
+      spoken_exact "What might the impact be?"
+      spoken_exact "What's important here?"
+    
+      instruction "Let's see how this works on the conversation model."
+      instruction "Place a blue Post-it note labelled 'What would you like to have happen (OUTCOME)' over the ‘I think/feel’ step on the LHS"
+      spoken "This is the outcome you want from the conversation. What you'd like to have happen."
+      instruction "Place a blue Post-it note labelled 'What will you say or do (INTENTION)' between the ‘I think/feel' and 'I say/do’ steps on the LHS"
+      spoken "This is what you plan to say or do in the conversation. Your intention"
+      spoken "Then we consider what the impact might be on the other person."
+      instruction "Place a blue Post-it note labelled 'What might the impact be (IMPACT)' over the ‘They think/feel’ step on the RHS"
+      spoken "Then we consider what’s important for both of you. (MOTIVATIONS)"
+      instruction "Place a blue Post-it note labelled 'What's important here (MOTIVATION)' in the middle of the model above the think/feel steps"
 
-        The impact that had on me was ___
-
-        My intention in giving you this feedback is ___
-      
-      MD
+      instruction "Handover to Fx2 for the next exercise"
     end
-
+    
     producer do
-      instruction "The Facilitator demo the exercise with the producer or co-facilitator."
+      instruction "Participate in the demo if there is no co-facilitator"
     end
   end
 
@@ -337,49 +330,42 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you into breakouts again. You will have 8 minutes for this exercise"
 
-      spoken_exact "Help each other construct some feedback for us."
-      spoken_exact "One person will think about some feedback about how we have delivered the course or how you have experienced the course. It might be what went well, or what could have been better for them."
-      spoken_exact "The other person(s) will ask:"
-      spoken_exact "Briefly, what happened?"
-      spoken_exact "What did you see or hear that tells you that?"
-      spoken_exact "What did you take that to mean?"
-      spoken_exact "What impact did that have on you?"
-      spoken_exact "What is your intention in giving this feedback?"
-      spoken_exact "Manage the time so everyone has a chance to practise the questions. Please only share what you are comfortable sharing."
+      spoken_exact <<~MD
+        Think about a conversation you'd like to be better.
+        Help each other prepare for that conversation. Ask each other these questions:
+        - Briefly, what happened?
+        - What would you like to have happen? Then what happens?
+        - What will you say or do?
+        - What might the impact be?
+        - What's important here?
+      
+        Manage the time so everyone gets a chance to practice these questions.
+      MD
 
-      spoken "Remember, we are just practising here so it is a chance to try these questions out."
-      spoken "When you return, you can give us your feedback."
+      spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
+      spoken "When you return, we will briefly share what we noticed about the process of moving between these questions."
       spoken "Any questions before we send you in?"
     end
 
     producer do
       chat <<~CHAT
-      Help each other construct some feedback for us. 
-
-      One person will think about some feedback  about how we have delivered the course or how you have experienced the course. It might be what went well, or what could have been better for them. 
+        Think about a conversation you'd like to be better.
+        Help each other prepare for that conversation. Ask each other these questions:
+        - Briefly, what happened?
+        - What would you like to have happen? Then what happens?
+        - What will you say or do?
+        - What might the impact be?
+        - What's important here?
       
-      The other person(s) will ask:
-      
-      - Briefly, what happened?
-      
-      - What did you see or hear that tells you that?
-      
-      - What did you take that to mean?
-      
-      - What impact did that have on you?
-      
-      - What is your intention in giving this feedback?
-      
-      Manage the time so everyone has a chance to practise the questions. Please only share what you are comfortable sharing.
-      
+        Manage the time so everyone gets a chance to practice these questions.
       CHAT
 
       instruction <<~MD
-      When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes
-      
-      Send into BORs
-      
-      Broadcast halfway message 
+        When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes
+        
+        Send into BORs
+        
+        Broadcast halfway message 
       
       MD
 
@@ -393,7 +379,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_4,
         "Comments from up to 3 people and/or use chat",
-        description: "Course feedback",
+        description: "Preparing for an intentional conversation",
         scribed_by: :fx2
       )
     end
@@ -401,36 +387,28 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       
-      spoken "Let’s get some feedback from you on how we’ve delivered the course or how you have experienced the course."
-      spoken "The feedback sequence is going in the chat to help you."
-      spoken "Who would like to share their feedback?"
+      spoken "Let’s find out what you noticed. We are going to focus on the _process_ you just used."
+      spoken "What did you notice about moving from outcome to intention?"
+      spoken "What did you notice about moving from intention to impact?"
 
-      instruction <<~MD
-      Ask 2-3 people to give feedback. Suggest people can also put their feedback in the chat. 
-      
-      Help people  to separate the feedback into the four elements (I saw/heard, I took that to mean etc.). 
-      
-      Ask what they saw or heard, what they took that to mean and what the impact on them was. Ask them what the intention of their feedback is.
-      
-      Handover to Fx2 for reflections and close.
-      
+      instruction <<~MD 
+        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+
+        Stick to the process and don't get into the content of the examples they give (to keep it safe for them).
+
+        If time allows, ask
+        - **And is there anything else that you noticed about this process?**
+        - **What might be the benefits of using this process?**
+
+        Handover to Fx2 for reflection and close
       MD
     end
 
     producer do
-      chat <<~CHAT  
-        Feedback sequence:
-
-        When ___
-        
-        I saw/heard ___
-        
-        I took that to mean___
-        
-        The impact on me was ___
-        
-        My intention is in giving this feedback is to ___
-      
+      chat <<~CHAT
+        Thinking about the process you just used:
+        - What did you notice about moving from outcome to intention?
+        - What did you notice about moving from intention to impact?
       CHAT
     end
   end
@@ -440,7 +418,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "We are at the end of this module and the standard Better Conversations course. We’d like you to reflect on what you have learned. Here are some questions to guide your thinking."
+      spoken "We are at the end of this module and the core Better Conversations course. We’d like you to reflect on what you have learned. Here are some questions to guide your thinking."
       spoken "Please put in the chat:"
       spoken_exact "What do you know now about Better Conversations?"
       spoken_exact "What difference does that make?"
@@ -450,12 +428,10 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     producer do
       chat <<~CHAT
-        What do you know now about Better Conversations?
-
-        What difference does that make?
-          
-        What’s one thing you might do differently now you know this?
-        
+        - What do you know now about Better Conversations?
+        - What difference does that make?
+        - What’s one thing you might do differently now you know this?
+      
       CHAT
     end
     
@@ -463,11 +439,20 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
 
   block(name: "Closing", lead_by: :fx2) do
-    length 1
+    length 2
 
     facilitator do
-      spoken "There’s no fieldwork for this module, however you can of course continue to apply the fieldwork from the first four modules to help you embed the skills we have covered."
-      spoken "We have an optional sixth module coming up which will consolidate Modules 1-5 and what you would like to have happen next."
+      spoken "There’s no fieldwork for this module, however you can practice preparing for intentional conversations using the guidance in the handbook."
+      
+      spoken "There's a link in the chat to the Better Conversations Community - please do visit it if you haven't already. We are here to help!"
+      
+      spoken <<~MD 
+        We have an optional sixth module coming up which will:
+        - Consolidate Modules 1-5
+        - Discuss next steps for you and how we can support you
+        - Consider how you might use Better Conversations in your work or communities"
+      MD
+
       spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
       spoken "We will send out a short survey after the course to gather any more thoughts you have."
       spoken "And if you’d like to write us a testimonial or be interviewed on video for it, that will help us spread Better Conversations further."
@@ -476,6 +461,10 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
+      chat <<~CHAT
+        Please visit our community [Better Conversations Community](https://community.betterconversations.foundation/) and join the conversations there. We're here to help!
+      CHAT
+
       instruction "If leaving the session early, make facilitator a host first."
     end
     
@@ -483,7 +472,5 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
-
-
 
 end

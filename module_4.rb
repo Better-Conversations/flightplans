@@ -31,7 +31,7 @@ module_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_1,
         "for agenda",
-        description: "Agenda (top half) and space for any questions or reflections",
+        description: "Course outline and agenda",
         scribed_by: :fx1
       )
     end
