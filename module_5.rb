@@ -352,8 +352,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Think about a conversation you'd like to be better.
         Help each other prepare for that conversation. Ask each other these questions:
         - Briefly, what happened?
-        - What would you like to have happen?
-        - Then what happens?
+        - What would you like to have happen? Then what happens?
         - What will you say or do?
         - What might the impact be?
         - What's important here?
