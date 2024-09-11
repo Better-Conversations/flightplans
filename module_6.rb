@@ -3,11 +3,11 @@ require_relative './common_blocks'
 require_relative './common_resources'
 
 module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
-  module_title "Context"
+  module_title "Applications"
   module_number 6
 
   learning_outcomes <<~MD
-  Learners will be able to: 
+  Learners will be able to:
     -	Describe the personal impact of the Better Conversations course
     -	Explain what they would like to have happen now
 
@@ -34,17 +34,17 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       instruction <<~MD
         Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
-        
+
         Point out this where this module is on the course overview on the flip
 
-        
+
       MD
 
       spoken "We are on Module 6, which is an optional module on our Experience course."
       spoken "We wanted to create another way for people from the Better Conversations Community to connect and reconnect."
       spoken "You are also welcome to come to any of the sessions again and observe the delivery team, and perhaps practice delivery with us, if that’s helpful."
       spoken "Today, we are going to consider what we’ve covered in Modules 1-5, the impact that has and discuss what might support you in taking Better Conversations out into the world."
-      
+
       instruction "Go through agenda on flip"
     end
 
@@ -65,12 +65,12 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "Thinking about what you explored on these modules…"
       spoken_exact "What surprised you?"
       spoken "If you’ve delivered the course recently, you can share observations from those experiences too."
-    
+
       instruction <<~MD
       If time, invite examples from 1-2 people.
 
       Handover to Fx1 for BOR on personal impact
-      
+
       MD
     end
 
@@ -79,11 +79,11 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Thinking about what you explored on these modules…
 
         What surprised you?
-      
+
       CHAT
     end
 
-    
+
   end
 
   block(name: "Breakout 1", lead_by: :fx1) do
@@ -93,14 +93,14 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We’re going to send you into breakout rooms for 8 minutes to explore the impact the course has had on you personally."
       spoken "There are some questions going into the chat that will help you discuss that impact. You don’t have to cover every question."
       spoken "It should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
-      spoken_exact <<~MD 
-      
+      spoken_exact <<~MD
+
       Thinking of your personal experience of the course, and the conversations you have had recently:
-      
+
        -What do you know now about having Better Conversations that you didn’t know before?
-      
-        -What do you do differently now? 
-      
+
+        -What do you do differently now?
+
         -Knowing this, what difference does this make to you?
         MD
 
@@ -118,34 +118,34 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       Thinking of your personal experience of the course, and the conversations you have had recently:
 
       - What do you know now about having Better Conversations that you didn’t know before?
-      
+
       - What do you do differently now?
-      
+
       - Knowing this, what difference does this make to you?
-      
-      Manage the time so everyone has a chance to contribute. You don’t have to cover every question. 
+
+      Manage the time so everyone has a chance to contribute. You don’t have to cover every question.
       Please only share what you are comfortable sharing.
-      
+
       CHAT
 
       instruction <<~MD
-      
+
       When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes
-      
+
       Send into BORs
-      
-      Broadcast halfway message 
-      
+
+      Broadcast halfway message
+
       MD
 
       chat "Halfway, 4 minutes remaining"
-      
+
     end
   end
 
   block(name: "Unpack Breakout 1", lead_by: :fx1) do
     length 6
-   
+
     resources do
       flipchart(
         :flip_2,
@@ -172,7 +172,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What do you know now about the personal impact of Better Conversations?
 
         - Knowing that, what difference does that make, to you?
-        
+
       CHAT
 
       instruction "Prepare BORs in 2/3s for 6 minutes"
@@ -208,7 +208,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "I’m going to handover to Fx2 to take you through to the next breakout."
       instruction "Handover to Fx2 for BOR on what people would like to have happen now"
     end
-    
+
   end
 
   block(name: "Unpack impact of Foundation model", lead_by: :fx2) do
@@ -219,7 +219,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
     end
-    
+
     producer do
       chat "What was the impact on you, seeing and hearing that?"
     end
@@ -231,11 +231,11 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "We are going to put you into breakouts again. You will have 6 minutes for this exercise"
-    
-      
-      spoken_exact <<~MD  
+
+
+      spoken_exact <<~MD
       Thinking about using and/or delivering Better Conversations:
-        
+
         - What would you like to do now?
 
         - What support do you need for that to happen?
@@ -244,7 +244,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "Manage the time so everyone has a chance to reflect on the questions. Please only share what you are comfortable sharing."
       spoken "When you return, we will discuss what you found out."
       spoken "Any questions before we send you in?"
-      
+
     end
 
     producer do
@@ -252,26 +252,26 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       Thinking about using and/or delivering Better Conversations:
 
       - What would you like to do now?
-      
+
       - What support do you need for that to happen?
-      
+
       Manage the time so everyone has a chance to reflect on the questions. Please only share what you are comfortable sharing.
-      
+
       CHAT
 
       instruction <<~MD
       When the facilitator has finished giving the instructions/answering questions. tell the group you are going to send them into BORs for 6 minutes
 
-      Send into BORs  
+      Send into BORs
 
-      Broadcast halfway message 
+      Broadcast halfway message
 
       MD
 
       chat "Halfway, 3 minutes remaining"
-      
+
     end
-    
+
   end
 
   block(name: "Unpack Breakout 2", lead_by: :fx2) do
@@ -292,10 +292,10 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction <<~MD
       Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
-      
+
       Handover to Fx1 for reflections and close.
 
-          
+
         MD
     end
 
@@ -304,10 +304,10 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What would you like to do now?
 
         - What support do you need for that to happen?
-        
+
       CHAT
     end
-    
+
   end
 
   block(name: "Reflect on learning in this session", lead_by: :fx1) do
@@ -327,7 +327,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       chat "How can we find more people like you?"
     end
-    
+
   end
 
   block(name: "Close", lead_by: :fx1) do
@@ -349,5 +349,5 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
-    
+
 end

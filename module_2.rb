@@ -5,7 +5,7 @@ require_relative './common_resources'
 # This is from Version 2.2.3 in Box
 
 module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
-  module_title "Context"
+  module_title "Assumptions"
   module_number 2
 
   learning_outcomes <<~MD
@@ -102,8 +102,8 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
-      spoken <<~MD 
-        You can describe behaviour in a conversation using a simple stimulus-response model: 
+      spoken <<~MD
+        You can describe behaviour in a conversation using a simple stimulus-response model:
         -	I see/hear (external)
         -	I think/feel (internal; what we are calling state)
         -	I say/do (external)
@@ -111,21 +111,21 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Point to each circle as you explain:"
 
       spoken <<~MD
-        [I see/hear] \ 
+        [I see/hear] \
         We take in information from the outside world through our senses. Seeing and hearing are the main senses we use in conversations.
         MD
       spoken <<~MD
-        [I think/feel] \ 
+        [I think/feel] \
         We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
-        Thinking processes include: \ 
+        Thinking processes include: \
         - What we pay attention to
         - The meaning we make from things and the language we use
         - The assumptions that we hold as true
         - Reasoning and how we make judgements or inferences about things
       MD
       spoken <<~MD
-        [I say/do] \ 
-        We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \ 
+        [I say/do] \
+        We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \
       MD
       spoken "We are going to look at thinking processes first and come back to discuss feelings."
       instruction "Handover to Fx2 for the assumptions demo."
@@ -167,7 +167,7 @@ block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
     spoken "And is there anything else about that plant?"
 
     spoken "And now, please could you all add some more detail to your pictures and show them to the camera."
-    
+
     instruction "Pause for sharing"
     spoken "What happened for you after you had more information about the plant?"
     instruction "Facilitate short discussion"
@@ -181,7 +181,7 @@ block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
     instruction "Acknowledge what people score themselves at."
     instruction "Handover to Fx1 to talk about breakout on assumptions."
   end
-  
+
   producer do
     instruction "Participate in demo if no co-facilitator"
   end
@@ -217,7 +217,7 @@ end
       spoken "Remember – this not about guessing the object, it’s about assumptions!"
       spoken "When you come back, we’ll find out what you noticed about making assumptions."
       spoken "Any questions before we send you in?"
-          
+
     end
 
     producer do
@@ -226,7 +226,7 @@ end
       #TODO: Add support for messages that are supposed to be copied piecemeal.
       #TODO: Sort out indentation of bullets and numbering
       chat <<~CHAT
-        Work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).  
+        Work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).
 
         1. The Chooser picks an object they can see but the Asker(s) can’t and says “I can see a ___” without showing the object.
 
@@ -285,7 +285,7 @@ end
       instruction "Prepare BORs in same 2/3s for 6 minutes"
 
       chat <<~CHAT
-        What did you notice about making assumptions in that activity? \ 
+        What did you notice about making assumptions in that activity? \
         What impact might making assumptions have on your conversations?
       CHAT
     end
@@ -351,7 +351,7 @@ end
         - What was your state during that conversation?
         - What were you assuming in that conversation?
         - How your state affected your assumptions about the situation or person?
-        
+
         Share only what you are comfortable sharing in the group.
         Manage the time so everyone has a chance to answer the questions.
         We’ll talk about how your state affected your assumptions when you come back.
@@ -389,7 +389,7 @@ end
       instruction "Copy in chat (when you hear facilitator say this):"
 
       chat <<~CHAT
-        How did your state affect your assumptions? 
+        How did your state affect your assumptions?
       CHAT
     end
   end
@@ -405,10 +405,10 @@ end
       spoken "Please put your answers in the chat."
       spoken_exact <<~MD
         Thinking about the conversations you are going to have in the next week, and what we have just learned on this module, please put in the chat
-        -	What you know now about having better conversations 
+        -	What you know now about having better conversations
         -	Is there something you may do differently now you know this?
       MD
-      instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat. \ 
+      instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat. \
                   Aim for 2-3 examples, with one from the chat."
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
@@ -416,8 +416,8 @@ end
     producer do
       chat <<~CHAT
       Thinking about the conversations you are going to have in the next week, and what we have just learned on this module:
-      - What do you know now about having better conversations? 
-      - Is there something you may do differently now you know this? 
+      - What do you know now about having better conversations?
+      - Is there something you may do differently now you know this?
       CHAT
     end
   end
@@ -426,7 +426,7 @@ end
     BCF::FlightPlans::CommonResources::FIELDWORK[2],
     id: :context_fieldwork,
     description: "",
-    length: 2), 
+    length: 2),
     lead_by: :fx1)
 
     #TODO: Make fx1 lead
