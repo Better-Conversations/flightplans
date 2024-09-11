@@ -65,13 +65,20 @@ jobs:
             json-outputs.zip
             pdf-outputs.zip
 
-      - name: Notify coordinator of the new release
+      - name: Notify production coordinator of the new release
+        if: secrets.PRODUCTION_URL && secrets.PRODUCTION_SECRET
         env:
-          PRODUCTION_URL: ${{ secrets.PRODUCTION_URL }}
-          PRODUCTION_SECRET: ${{ secrets.PRODUCTION_SECRET }}
-          PREVIEW_URL: ${{ secrets.PREVIEW_URL }}
-          PREVIEW_SECRET: ${{ secrets.PREVIEW_SECRET }}
+          COORDINATOR_URL: ${{ secrets.PRODUCTION_URL }}
+          URL_SECRET: ${{ secrets.PRODUCTION_SECRET }}
           VERSION: ${{ github.ref_name }}
         run: |
-          curl -X POST "$PRODUCTION_URL?version=$VERSION" -H "Authorization: Bearer $PRODUCTION_SECRET"
-          curl -X POST "$PREVIEW_URL?version=$VERSION" -H "Authorization: Bearer $PREVIEW_SECRET"
+          curl -X POST "$COORDINATOR_URL?version=$VERSION" -H "Authorization: Bearer $URL_SECRET"
+
+      - name: Notify preview coordinator of the new release
+        if: secrets.PREVIEW_URL && secrets.PREVIEW_SECRET
+        env:
+          COORDINATOR_URL: ${{ secrets.PREVIEW_URL }}
+          URL_SECRET: ${{ secrets.PREVIEW_SECRET }}
+          VERSION: ${{ github.ref_name }}
+        run: |
+          curl -X POST "$COORDINATOR_URL?version=$VERSION" -H "Authorization: Bearer $URL_SECRET"
