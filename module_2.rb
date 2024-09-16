@@ -108,12 +108,14 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         -	I think/feel (internal; what we are calling state)
         -	I say/do (external)
       MD
+
       instruction "Point to each circle as you explain:"
 
       spoken <<~MD
         [I see/hear] \
         We take in information from the outside world through our senses. Seeing and hearing are the main senses we use in conversations.
-        MD
+      MD
+
       spoken <<~MD
         [I think/feel] \
         We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
@@ -123,10 +125,12 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - The assumptions that we hold as true
         - Reasoning and how we make judgements or inferences about things
       MD
+
       spoken <<~MD
         [I say/do] \
-        We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding. \
+        We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding.
       MD
+
       spoken "We are going to look at thinking processes first and come back to discuss feelings."
       instruction "Handover to Fx2 for the assumptions demo."
     end
@@ -136,56 +140,56 @@ module_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-# TODO: Insert names of producer/second facilitator if they are known
-# TODO: Add Fx1 as demo partner
-block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
-  length 5
+  # TODO: Insert names of producer/second facilitator if they are known
+  # TODO: Add Fx1 as demo partner
+  block(name: "Demonstrate Breakout#1 activity", lead_by: :fx2) do
+    length 5
 
-  facilitator do
-    spoken "We are going to demonstrate how easily and how quickly we can make assumptions."
-    spoken "You’ll need your pen and paper for this."
-    instruction "Facilitator to group:"
-    spoken "I’m going to ask [Producer/Co-facilitator] to pick an object in their space that we can’t see and tell me what that object is briefly…"
-    instruction "Facilitator to Producer/Co-facilitator"
-    spoken "[Producer/Co-facilitator], What object are you looking at?"
-    instruction "Producer/Co-facilitator:"
-    spoken "I can see a plant."
+    facilitator do
+      spoken "We are going to demonstrate how easily and how quickly we can make assumptions."
+      spoken "You’ll need your pen and paper for this."
+      instruction "Facilitator to group:"
+      spoken "I’m going to ask [Producer/Co-facilitator] to pick an object in their space that we can’t see and tell me what that object is briefly…"
+      instruction "Facilitator to Producer/Co-facilitator"
+      spoken "[Producer/Co-facilitator], What object are you looking at?"
+      instruction "Producer/Co-facilitator:"
+      spoken "I can see a plant."
 
-    instruction "Facilitator to group:"
-    spoken "Think about what happened for the rest of you when you heard [Producer/Co-facilitator] say that?"
-    spoken "What are you imagining about that plant? What are you assuming about that plant?"
-    spoken "Whatever you’re thinking or imagining about that plant, draw that on your paper, adding as much or as little detail as you’d like."
+      instruction "Facilitator to group:"
+      spoken "Think about what happened for the rest of you when you heard [Producer/Co-facilitator] say that?"
+      spoken "What are you imagining about that plant? What are you assuming about that plant?"
+      spoken "Whatever you’re thinking or imagining about that plant, draw that on your paper, adding as much or as little detail as you’d like."
 
-    instruction "Pause for drawing"
-    spoken "Everyone, please hold up your paper to the camera so we can see what you think this plant is like."
-    spoken "Now I am going to use some questions to check the assumptions I have about that plant."
+      instruction "Pause for drawing"
+      spoken "Everyone, please hold up your paper to the camera so we can see what you think this plant is like."
+      spoken "Now I am going to use some questions to check the assumptions I have about that plant."
 
-    instruction "Facilitator to Producer/Co-facilitator:"
-    spoken "[Producer/Co-facilitator], may I ask:"
-    spoken "What kind of plant is it?"
-    spoken "Whereabouts is that plant?"
-    spoken "And is there anything else about that plant?"
+      instruction "Facilitator to Producer/Co-facilitator:"
+      spoken "[Producer/Co-facilitator], may I ask:"
+      spoken "What kind of plant is it?"
+      spoken "Whereabouts is that plant?"
+      spoken "And is there anything else about that plant?"
 
-    spoken "And now, please could you all add some more detail to your pictures and show them to the camera."
+      spoken "And now, please could you all add some more detail to your pictures and show them to the camera."
 
-    instruction "Pause for sharing"
-    spoken "What happened for you after you had more information about the plant?"
-    instruction "Facilitate short discussion"
+      instruction "Pause for sharing"
+      spoken "What happened for you after you had more information about the plant?"
+      instruction "Facilitate short discussion"
 
-    spoken "Now let’s find out what this plant is…"
+      spoken "Now let’s find out what this plant is…"
 
-    instruction "Producer/Co-facilitator shows the plant."
-    instruction "Facilitator to group:"
-    spoken "How accurate was your drawing or description?"
-    spoken "On a scale of 1-5, where 1 is least accurate, and 5 is super accurate, let’s see a show of fingers as to how accurate your assumptions were about [Producer/Co-facilitator]’s plant."
-    instruction "Acknowledge what people score themselves at."
-    instruction "Handover to Fx1 to talk about breakout on assumptions."
+      instruction "Producer/Co-facilitator shows the plant."
+      instruction "Facilitator to group:"
+      spoken "How accurate was your drawing or description?"
+      spoken "On a scale of 1-5, where 1 is least accurate, and 5 is super accurate, let’s see a show of fingers as to how accurate your assumptions were about [Producer/Co-facilitator]’s plant."
+      instruction "Acknowledge what people score themselves at."
+      instruction "Handover to Fx1 to talk about breakout on assumptions."
+    end
+
+    producer do
+      instruction "Participate in demo if no co-facilitator"
+    end
   end
-
-  producer do
-    instruction "Participate in demo if no co-facilitator"
-  end
-end
 
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx2) do
@@ -223,8 +227,8 @@ end
     producer do
       instruction "Copy this to chat when you hear the facilitator introduce the questions:"
 
-      #TODO: Add support for messages that are supposed to be copied piecemeal.
-      #TODO: Sort out indentation of bullets and numbering
+      # TODO: Add support for messages that are supposed to be copied piecemeal.
+      # TODO: Sort out indentation of bullets and numbering
       chat <<~CHAT
         Work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).
 
@@ -247,7 +251,7 @@ end
       CHAT
 
       instruction "When the facilitator has finished giving the instructions/answering questions." \
-                  "Tell the group you are going to send them into BORs for 8 minutes"
+                    "Tell the group you are going to send them into BORs for 8 minutes"
 
       instruction "Send into BORs"
       instruction "Broadcast halfway message:"
@@ -278,7 +282,7 @@ end
       spoken "Who’s got something they want to share?"
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
-                  "Aim for 2-3 examples, with one from the chat."
+                    "Aim for 2-3 examples, with one from the chat."
     end
 
     producer do
@@ -355,7 +359,7 @@ end
         Share only what you are comfortable sharing in the group.
         Manage the time so everyone has a chance to answer the questions.
         We’ll talk about how your state affected your assumptions when you come back.
-    CHAT
+      CHAT
 
       instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
       instruction "Send into BORs"
@@ -415,9 +419,9 @@ end
 
     producer do
       chat <<~CHAT
-      Thinking about the conversations you are going to have in the next week, and what we have just learned on this module:
-      - What do you know now about having better conversations?
-      - Is there something you may do differently now you know this?
+        Thinking about the conversations you are going to have in the next week, and what we have just learned on this module:
+        - What do you know now about having better conversations?
+        - Is there something you may do differently now you know this?
       CHAT
     end
   end
@@ -427,11 +431,10 @@ end
     id: :context_fieldwork,
     description: "",
     length: 2),
-    lead_by: :fx1)
+        lead_by: :fx1)
 
-    #TODO: Make fx1 lead
-    block(BCF::FlightPlans::CommonBlocks::CLOSING)
-
+  # TODO: Make fx1 lead
+  block(BCF::FlightPlans::CommonBlocks::CLOSING)
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
