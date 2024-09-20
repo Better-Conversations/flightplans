@@ -9,15 +9,15 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_number 3
 
   learning_outcomes <<~MD
-    Learners will be able to:
+      Learners will be able to:
 
-    - Describe the elements of context in conversations
-    - Link context, assumptions and state
+      - Describe the elements of context in conversations
+      - Link context, assumptions and state
 
-    Suggested learning outcomes for further trainings/interventions
+      Suggested learning outcomes for further trainings/interventions
 
-    - Describe how social and cultural context affect conversations
-                      MD
+      - Describe how sociocultural context affects conversations
+    MD
 
   demo <<~MD
     No demo.
@@ -109,22 +109,23 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken <<~TYPST_SPOKEN
         Context can be:
-        - _Psychological_ (for example, your perception of your state, your personal values)
-        - _Social_ (for example, relationships and group behaviour)
-        - _Cultural_ (for example, cultural values and beliefs)
+        - _Psychobiological_ (for example, your perception of your state, your personal values)
+        - _Sociocultural_ (for example, relationships and group behaviour, cultural values and beliefs)
         - _Historical_ (for example, what’s happened in the past, what’s documented or recorded)
         - _Environmental_ (for example, what’s going in the physical space you are in)
         - _Time_-based (for example, temporal - time zone, whether it’s day or night)
+        - _Method_ (for example, the way you are communicating, the process for communicating)
       TYPST_SPOKEN
 
       spoken <<~MD
         Some examples of your context we have already covered so far in this course are:
         - Asking where in the world you are and what time zone you are in (environmental, cultural and time-based context)
-        - Asking how you are feeling, when we do the state check-in (psychological context)
+        - Asking how you are feeling, when we do the state check-in (psychobiological context)
       MD
 
-      spoken "We look at psychological, time-based, historical, environmental context in this course."
-      spoken "We aren’t covering social or cultural context in this course in depth – these are beyond the scope of what we are doing here."
+      spoken "We look at psychobiological, time-based, historical, environmental context in this course."
+      spoken "We practice verbal communication in this course however you can apply the concepts to written communication."
+      spoken "We aren’t covering sociocultural context in this course in depth – this is beyond the scope of what we are doing here."
       spoken "What we are going to do now is put you in breakout rooms to find out more about the impact of knowing someone’s context."
       instruction "Handover to Fx2 for context exercise."
     end
@@ -151,7 +152,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
       spoken_exact <<~MD
         Starter questions:
-        -	Psychological: What would you like to have happen after attending this course?
+        -	Psychobiological: What would you like to have happen after attending this course?
         -	Historical: What have you learned so far on this course?
         -	Time: What were you doing before you came to the course today? What else do you have on today?
         -	Environmental: Where are you in the world?"
@@ -177,7 +178,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Starter questions:
 
-        - Psychological: What would you like to have happen after attending this course?
+        - Psychobiological: What would you like to have happen after attending this course?
 
         - Historical: What have you learned so far on this course?
 
@@ -244,7 +245,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
       spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_exact "Historical, psychological, social, cultural, environmental, and time-based (temporal). "
+      spoken_exact "Historical, psychobiological, sociocultural, environmental, time-based (temporal), method. "
       spoken "Remember that context helps determine the assumptions we make."
       spoken_exact "Think about a conversation you'd like to be better."
       spoken "What you would like to have happen in that conversation?"
@@ -252,7 +253,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "[pause for thinking]"
 
       spoken_exact <<~MD 
-        - What might you have to consider about the other persons’ context when preparing for your conversation with them?
+        - What might you have to consider about the other person’s context when preparing for your conversation with them?
         - How would you find out about their context before and during the conversation?
       MD
 
@@ -268,7 +269,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         We are going to consider improving a conversation using the 6 elements of context:
 
-        Historical, psychological, social, cultural, environmental, and time-based (temporal)
+        Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method.
 
         Think about a conversation you'd like to be better:
 
@@ -334,8 +335,8 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 5
 
     facilitator do
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychological, social, cultural, environmental, and time-based (temporal)."
-      spoken "State is an important aspect of psychological context."
+      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method."
+      spoken "State is an important aspect of psychobiological context."
       spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
 
       spoken <<~MD
@@ -352,7 +353,7 @@ module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy in chat (when you hear facilitator say these):"
 
       chat <<~CHAT
-        6 elements of context: Historical, psychological, social, cultural, environmental, and time-based (temporal)
+        6 elements of context: Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method.
 
         Thinking about what you know about state, assumptions and context:
 
