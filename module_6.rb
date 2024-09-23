@@ -89,6 +89,10 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
   block(name: "Breakout 1", lead_by: :fx1) do
     length 10
 
+    resources do
+      breakout_room(:bor_1, default_duration: 8)
+    end
+
     facilitator do
       spoken "We’re going to send you into breakout rooms for 8 minutes to explore the impact the course has had on you personally."
       spoken "There are some questions going into the chat that will help you discuss that impact. You don’t have to cover every question."
@@ -138,8 +142,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       MD
 
-      chat "Halfway, 4 minutes remaining"
-
+      broadcast "Halfway, 4 minutes remaining"
     end
   end
 
@@ -229,6 +232,10 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 7
     section_comment "(1 min briefing)"
 
+    resources do
+      breakout_room(:bor_1, default_duration: 6)
+    end
+
     facilitator do
       spoken "We are going to put you into breakouts again. You will have 6 minutes for this exercise"
 
@@ -268,7 +275,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       MD
 
-      chat "Halfway, 3 minutes remaining"
+      broadcast "Halfway, 3 minutes remaining"
 
     end
 
