@@ -1,0 +1,3 @@
+#! /bin/sh
+zip -r json-outputs-$1.zip json-outputs-$1
+zip -r pdf-outputs-$1.zip pdf-outputs-$1

@@ -52,13 +52,9 @@ jobs:
         run: echo "SAFE_TAG_NAME=$(echo ${{ github.ref_name }} | sed 's/\//-/g')" >> $GITHUB_ENV
 
       - name: Make release artifacts
-        run: bin/make-release ${{ env.SAFE_TAG_NAME }}
-
-      - name: ZIP JSON outputs
-        run: zip -r json-outputs-${{ env.SAFE_TAG_NAME }}.zip json-outputs-${{ env.SAFE_TAG_NAME }}
-
-      - name: ZIP PDF outputs
-        run: zip -r pdf-outputs-${{ env.SAFE_TAG_NAME }}.zip pdf-outputs-${{ env.SAFE_TAG_NAME }}
+        run: |
+          bin/make-release ${{ env.SAFE_TAG_NAME }}
+          bin/zip-outputs ${{ env.SAFE_TAG_NAME }}
 
       - name: Release
         uses: softprops/action-gh-release@v2
