@@ -191,6 +191,10 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 7
     section_comment "(1 min briefing)"
 
+    resources do
+      breakout_room(:bor_1, default_duration: 6)
+    end
+
     facilitator do
       spoken "We’re going to send you into breakout rooms for 6 minutes to explore intention and impact."
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
@@ -236,7 +240,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       MD
 
-      chat "Halfway, 3 minutes remaining"
+      broadcast "Halfway, 3 minutes remaining"
     end
 
   end
@@ -327,6 +331,10 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 9
     section_comment "(1 min briefing)"
 
+    resources do
+      breakout_room(:bor_1, default_duration: 8)
+    end
+
     facilitator do
       spoken "We are going to put you into breakouts again. You will have 8 minutes for this exercise"
 
@@ -369,7 +377,7 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       MD
 
-      chat "Halfway, 4 minutes remaining"
+      broadcast "Halfway, 4 minutes remaining"
     end
   end
 

@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'bcf-flightplans', git: 'https://github.com/Better-Conversations/ruby-flightplans.git'
+# gem 'bcf-flightplans', path: '../ruby-flightplans'
 
 group :development do
   gem 'prism'

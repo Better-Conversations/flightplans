@@ -286,7 +286,11 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 1", lead_by: :fx2) do
     length 6
-    section_comment "1 Minute breifing, 5 minutes in BORs"
+    section_comment "1 Minute briefing, 5 minutes in BORs"
+
+    resources do
+      breakout_room(:bor_1, default_duration: 5, notify_halfway: true)
+    end
 
     facilitator do
       spoken "We are going to send you into breakout rooms for 5 minutes."
@@ -311,15 +315,12 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       Send into BORs
 
       Broadcast halfway message
-
       MD
 
-      chat <<~CHAT
+      broadcast <<~CHAT
         Halfway, you have 2.5 minutes remaining
       CHAT
-
     end
-
   end
 
   #TODO: Add scribed by section to block as well
@@ -350,6 +351,10 @@ module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   block(name:"Breakout 2", lead_by: :fx2) do
     length 5
     section_comment "1 Minute breifing, 4 minutes in BORs"
+
+    resources do
+      breakout_room(:bor_2, default_duration: 4, notify_halfway: true)
+    end
 
     facilitator do
       spoken "Now we are going to do the same for amber/yellow"
