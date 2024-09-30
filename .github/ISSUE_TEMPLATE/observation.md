@@ -1,7 +1,7 @@
 ---
 name: Observation
 about: An observation from a live session
-title: "[OBS}"
+title: "[OBS]"
 labels: observation
 assignees: ''
 
