@@ -24,6 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
+          apt-get update
+          apt-get install -y aspell libaspell-dev aspell-en
           bundle install --without development
 
       - name: Run lint-flight-plans
