@@ -9,10 +9,12 @@ end
 require_relative '../validations/course_structure'
 require_relative '../validations/flight_plan_structure'
 require_relative '../validations/block_structure'
+require_relative '../validations/note_spelling'
 
 require_relative '../experience_course'
 
 validations = Validations.constants.map do |validator|
+  puts "Loading validator: #{validator}"
   klass = Validations.const_get(validator)
   klass.new
 end
