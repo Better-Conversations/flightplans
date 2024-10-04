@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'bcf-flightplans', git: 'https://github.com/Better-Conversations/ruby-flightplans.git', branch: 'joshuac/bcf-47-linting'
 # gem 'bcf-flightplans', path: '../ruby-flightplans'
+gem 'ffi-aspell'
 
 group :development do
   gem 'prism'
@@ -13,5 +14,4 @@ group :development do
   gem 'redcarpet'
   gem 'debug'
   gem 'bundler'
-  gem 'ffi-aspell'
 end
