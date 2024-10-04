@@ -1,46 +1,35 @@
 #!/usr/bin/env ruby
 
-require 'json'
 require 'bundler/setup'
-require 'open3'
+require 'bcf/flightplans'
 
-suffix = ARGV[0] ? "-#{ARGV[0]}" : ""
-json_output = "json-outputs#{suffix}"
-pdf_output = "pdf-outputs#{suffix}"
+module Validations
+end
 
-FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
-Dir.mkdir(json_output)
+require_relative '../validations/course_structure'
+require_relative '../validations/flight_plan_structure'
+require_relative '../validations/block_structure'
 
-FileUtils.rm_rf(pdf_output) if Dir.exist?(pdf_output)
-Dir.mkdir(pdf_output)
+require_relative '../experience_course'
 
-# I don't know how entry-point discovery should work, so I'm just going to use a JSON file for now
-module_files = JSON.parse!(File.read('modules.json'))
+validations = Validations.constants.map do |validator|
+  klass = Validations.const_get(validator)
+  klass.new
+end
 
-already_loaded = []
+validator = BCF::FlightPlans::Validator.new(
+  EXPERIENCE_COURSE,
+  validations,
+)
 
-module_files.each do |module_file|
-  load module_file
+unless validator.is_valid?
+  warn "Course is invalid"
 
-  new_flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
-
-  next if already_loaded.include?(new_flight_plan)
-  already_loaded << new_flight_plan
-
-  validator = BCF::FlightPlans::FlightPlan::Validator.new(new_flight_plan)
   validator.errors.each do |error|
-    puts "::error file=#{module_file}::#{error}"
+    warn error
   end
+
+  exit 1
 end
 
-already_loaded.map { _1.module_title }.uniq.each do |title|
-  if already_loaded.count { _1.module_title == title } > 1
-    puts "::error::Multiple flight plans found with module title '#{title}'"
-  end
-end
-
-already_loaded.map { _1.module_number }.uniq.each do |module_number|
-  if already_loaded.count { _1.module_number == module_number } > 1
-    puts "::error::Multiple flight plans found with module number '#{module_number}'"
-  end
-end
+puts "Course is valid"
