@@ -13,10 +13,10 @@ class Validations::FlightPlanStructure
     expect(subject.total_length).to be_an Integer
     expect(subject.initial_time).to be_an Integer
 
-    runtime = flight_plan.blocks.reduce(flight_plan.initial_time) do |time, block|
+    runtime = subject.blocks.reduce(subject.initial_time) do |time, block|
       time + (block.length || 0)
     end
 
-    expect(runtime).to eq(flight_plan.total_length)
+    expect(runtime).to eq(subject.total_length)
   end
 end
