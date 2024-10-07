@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'bcf/flightplans'
+
+dir = ARGV[0] || 'json-outputs'
+
+Dir.glob(File.join(dir, '*.json')).each do |file|
+  puts "Parsing... #{file}"
+  JSON.parse(File.read(file), create_additions: true)
+  puts "Parsed!"
+end
