@@ -24,6 +24,5 @@ Filewatcher.new(ARGV[0]).watch do |filename, event|
   load(ARGV[0])
 
   flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
-  flight_plan.validate
   flight_plan.render_pdf(File.basename(ARGV[0], '.rb') + '.pdf')
 end

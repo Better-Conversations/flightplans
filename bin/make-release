@@ -1,32 +1,18 @@
 #!/usr/bin/env ruby
 
-require 'json'
 require 'bundler/setup'
-require 'open3'
+
+require_relative '../experience_course'
 
 suffix = ARGV[0] ? "-#{ARGV[0]}" : ""
 json_output = "json-outputs#{suffix}"
-pdf_output = "pdf-outputs#{suffix}"
 
 FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
 Dir.mkdir(json_output)
 
-FileUtils.rm_rf(pdf_output) if Dir.exist?(pdf_output)
-Dir.mkdir(pdf_output)
-
-# I don't know how entry-point discovery should work, so I'm just going to use a JSON file for now
-module_files = JSON.parse!(File.read('modules.json'))
-
-module_files.each do |module_file|
-  load module_file
-end
-
-BCF::FlightPlans::FLIGHT_PLANS.each do |flight_plan|
-  output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
-  output_pdf_path = File.join(pdf_output, "module_#{flight_plan.module_number}.pdf")
-
+EXPERIENCE_COURSE.modules.each do |flight_plan|
   puts "Rendering Flight Plan for Module #{flight_plan.module_number}..."
 
+  output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
   flight_plan.write_json(output_json_path)
-  flight_plan.render_pdf(output_pdf_path)
 end

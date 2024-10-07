@@ -4,7 +4,7 @@ require_relative './common_resources'
 
 # Flightplan version 2.2.3
 
-module_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
+MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "State"
   module_number 1
 

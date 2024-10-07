@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'bcf-flightplans', git: 'https://github.com/Better-Conversations/ruby-flightplans.git'
 # gem 'bcf-flightplans', path: '../ruby-flightplans'
+gem 'ffi-aspell'
 
 group :development do
   gem 'prism'

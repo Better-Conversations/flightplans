@@ -4,7 +4,7 @@ require_relative './common_resources'
 
 # TODO check this is the same as version 2.2.3 here https://amphora.app.box.com/folder/158341017039?s=46iq09ejyhjjq6fkp2jgbw0jg4pjiu6h
 
-module_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
+MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Context"
   module_number 3
 
