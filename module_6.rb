@@ -26,7 +26,7 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_1,
         "for agenda",
-        description: "Agenda (top half) and space for any questions or reflections",
+        description: "Course outline and agenda",
         scribed_by: :fx1
       )
     end
@@ -37,13 +37,11 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Point out this where this module is on the course overview on the flip
 
-
       MD
 
-      spoken "We are on Module 6, which is an optional module on our Experience course."
-      spoken "We wanted to create another way for people from the Better Conversations Community to connect and reconnect."
-      spoken "You are also welcome to come to any of the sessions again and observe the delivery team, and perhaps practice delivery with us, if that’s helpful."
-      spoken "Today, we are going to consider what we’ve covered in Modules 1-5, the impact that has and discuss what might support you in taking Better Conversations out into the world."
+      spoken "We are on Module 6, where we consider the personal impact of the course and what you would like to have happen next. You'll need to customise this one for your own audience."
+      spoken "We also wanted to create another way for people from the Better Conversations Community to connect and reconnect."
+      spoken "You are welcome to come to any of the sessions again and observe the delivery team, and perhaps practice delivery with us, if that’s helpful."
 
       instruction "Go through agenda on flip"
     end
@@ -200,14 +198,24 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "Thank you for giving up your time over the last few weeks. And thank you to those of you coming back to add your voice to the discussion."
       spoken "This is the bit you’ll customise for your own audience. You could introduce your other offerings, or link back to project goals, organisational strategy etc."
-      spoken "This course is designed to spread. We are making the materials available under Creative Commons so it can spread."
-      spoken "(Draw diagram) 8 billion people in the world…"
-      spoken "We want people to take this out into their communities, teams, organisations."
+
+      spoken "We'll share a little more about our strategy and approach, as an example."
+      spoken "This course is designed to spread. We are making the materials available under Creative Commons which will help that."
+      spoken "Here's an overview. There's three main components to this: the Foundation, the Community and our Partners."
+
+      instruction "Point to the Foundation."
+      spoken "The Foundation is here to support you with Open Source materials and guidance. We are volunteer-led."
+      spoken "We run these Experience Courses to find people who want to take these skills further."
+
+      instruction "Point to Partners"
+      spoken "We are looking for people who want to spread this into their communities, teams, organisations."
       spoken "You can take as much or as little as you want - some people just take the traffic light module, some people give the 5 modules as we do, some people stretch sessions to 90 minutes."
-      spoken "We’ve set up the Foundation to support you."
       spoken "There are ways of learning to give this course. You can come back and observe. Observers get to turn up in our preparation time and participate in the post-course debrief."
-      spoken "You can also talk with us about doing one or more sessions as Fx1 or Fx2 for us on a voluntary basis. It’s a great way to get some experience before you do it on your own."
-      spoken "We are also trying to create a mutually supportive community. The world can feel a big place, and it can be a lonely existence whether you are freelancing or trying to change an organisation from within. So please use the community to get the help you might need and to support other people."
+      spoken "You can also practice delivering with us on a voluntary basis. It’s a great way to get some experience before you do it on your own."
+
+      instruction "Point to Community"
+      spoken "We want to encourage community around this to get the help you might need and to support other people. If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there. You don't need to train to be a facilitator to join the community."
+      
       spoken "I’m going to handover to Fx2 to take you through to the next breakout."
       instruction "Handover to Fx2 for BOR on what people would like to have happen now"
     end
@@ -322,10 +330,9 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "We are near the end of this module and our extended course. We’d like to thank you all, and our Faculty for enabling these conversations – we hope you’ll take something from the course and share it with your family, friends, teams or organisations. Our aim is to spread these skills."
-      spoken "We’ve set up the Foundation to support that – and we hope that you understand a little more about it now."
-      spoken "These Experience Courses are invite-only, partly so there’s no risk of us competing with people delivering the course commercially, but mainly because they are intended for people who will join our community to take this forward."
-      spoken "Those invites can come from you as well!"
+      spoken "We are near the end of this module and our extended course. We’d like to thank you all, and our Faculty for enabling these conversations – we hope you’ll take something from the course and share it with your family, friends, teams or organisations."
+      spoken "We hope that you understand a little more about the Foundation and what we do now."
+      spoken "These Experience Courses are invite-only. Those invites can come from you as well!"
       spoken_exact "So, we’d like to know: How can we find more people like you?"
 
       instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat."
@@ -342,6 +349,8 @@ module_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There’s no fieldwork for this module. We’d love to continue the conversations in the community though – there’s a link going in the chat for that."
+      spoken "We will send out a short survey after the course to gather any more thoughts you have."
+      spoken "And if you’d like to write us a testimonial or be interviewed on video for it, that will help us spread Better Conversations further."
       spoken "If you have any further questions or anything you’d like to share today, we will stay on the Zoom call for a few minutes after the session has finished"
 
       instruction "Handover to Sponsor"

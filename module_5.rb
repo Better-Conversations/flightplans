@@ -304,20 +304,27 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Facilitator to co-facilitator or producer to demo the questions:"
 
       spoken_exact "Briefly, what's the context?"
+      spoken_exact "What's important here? For you and for them?"
       spoken_exact "What would you like to have happen? Then what happens?"
       spoken_exact "What will you say or do?"
       spoken_exact "What might the impact be?"
-      spoken_exact "What's important here?"
-
+  
       instruction "Let's see how this works on the conversation model."
+
+      instruction "Place a blue Post-it note labelled 'What's important here? (MOTIVATIONS)' between the 'I think/feel' and 'they think/feel' steps"
+      spoken "We consider what’s important for both of you."
+  
       instruction "Place a blue Post-it note labelled 'What would you like to have happen (OUTCOME)' over the ‘I think/feel’ step on the LHS"
-      spoken "This is the outcome you want from the conversation. What you'd like to have happen."
+      spoken "This is the outcome you want from the conversation. What you'd like to have happen. Asking 'Then what happens?' extends this."
+
       instruction "Place a blue Post-it note labelled 'What will you say or do (INTENTION)' between the ‘I think/feel' and 'I say/do’ steps on the LHS"
-      spoken "This is what you plan to say or do in the conversation. Your intention"
+      spoken "This is what you plan to say or do in the conversation. Your intention."
+
+      instruction "Place a blue Post-it note labelled 'What might the impact be (IMPACT ON THEM?)' over the ‘They think/feel’ step on the RHS"
       spoken "Then we consider what the impact might be on the other person."
-      instruction "Place a blue Post-it note labelled 'What might the impact be (IMPACT)' over the ‘They think/feel’ step on the RHS"
-      spoken "Then we consider what’s important for both of you. (MOTIVATIONS)"
-      instruction "Place a blue Post-it note labelled 'What's important here (MOTIVATION)' in the middle of the model above the think/feel steps"
+      
+      
+      spoken "Bear in mind that you are making assumptions about their motivations and the impact on them."
 
       instruction "Handover to Fx2 for the next exercise"
     end
@@ -341,17 +348,17 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact <<~MD
         Think about a conversation you'd like to be better.
         Help each other prepare for that conversation. Ask each other these questions:
-        - Briefly, what happened?
+        - Briefly, what's the context?
+        - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
         - What will you say or do?
         - What might the impact be?
-        - What's important here?
 
         Manage the time so everyone gets a chance to practice these questions.
       MD
 
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
-      spoken "When you return, we will briefly share what we noticed about the process of moving between these questions."
+      spoken "When you return, we will briefly share what we noticed about moving between these questions."
       spoken "Any questions before we send you in?"
     end
 
@@ -359,11 +366,12 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         Think about a conversation you'd like to be better.
         Help each other prepare for that conversation. Ask each other these questions:
-        - Briefly, what happened?
+        - Briefly, what's the context?
+        - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
         - What will you say or do?
         - What might the impact be?
-        - What's important here?
+
 
         Manage the time so everyone gets a chance to practice these questions.
       CHAT
@@ -395,9 +403,9 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
 
-      spoken "Let’s find out what you noticed. We are going to focus on the _process_ you just used."
-      spoken "What did you notice about moving from outcome to intention?"
-      spoken "What did you notice about moving from intention to impact?"
+      spoken "Let’s find out what you noticed. We are going to focus on the _process_ you just used, focusing on outcomes, intentions and impact."
+      spoken_exact "What did you notice about moving from outcome to intention?"
+      spoken_exact "What did you notice about moving from intention to impact?"
 
       instruction <<~MD
         Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
@@ -455,16 +463,14 @@ module_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There's a link in the chat to the Better Conversations Community - please do visit it if you haven't already. We are here to help!"
 
       spoken <<~MD
-        We have an optional sixth module coming up which will:
+       Our sixth and final module will:
         - Consolidate Modules 1-5
         - Discuss next steps for you and how we can support you
         - Consider how you might use Better Conversations in your work or communities"
       MD
 
       spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
-      spoken "We will send out a short survey after the course to gather any more thoughts you have."
-      spoken "And if you’d like to write us a testimonial or be interviewed on video for it, that will help us spread Better Conversations further."
-
+      
       instruction "Handover to Sponsor"
     end
 
