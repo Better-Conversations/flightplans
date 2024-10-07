@@ -9,7 +9,7 @@ end
 require_relative '../validations/course_structure'
 require_relative '../validations/flight_plan_structure'
 require_relative '../validations/block_structure'
-require_relative '../validations/note_spelling'
+# require_relative '../validations/note_spelling'
 
 require_relative '../experience_course'
 
