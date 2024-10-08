@@ -8,20 +8,33 @@ require 'bcf/flightplans'
 require 'filewatcher'
 require 'httparty'
 
-if ARGV.length != 1
-  puts "Usage: render-pdf <flightplan>"
+if ARGV.length != 2
+  warn "Usage: #{__FILE__} <flightplan.rb> <flightplan_version>"
   exit 1
 end
 
-Filewatcher.new(ARGV[0]).watch do |filename, event|
-  puts "Rendering PDF for #{ARGV[0]}"
-
+def push_change(file)
   # Each load will re-run the code in this ruby process.
   # This means that we may have pre-existing state that messes things up.
   # But for now to allow for vscode to run things we want it to be a ruby file
   # not a shell script so this will work.
-  load(ARGV[0])
+  load(file)
 
   flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
-  flight_plan.render_pdf(File.basename(ARGV[0], '.rb') + '.pdf')
+  HTTParty.post(
+    "http://localhost:3000/flightplans/development_live_reload_flightplan",
+    headers: {
+      "Content-Type" => "application/json"
+    },
+    body: {
+      flightplan_version: ARGV[1],
+      flight_plan: flight_plan
+    }.to_json
+  )
+end
+
+push_change(ARGV[0])
+
+Filewatcher.new(ARGV[0]).watch do |changes|
+  push_change(ARGV[0])
 end
