@@ -3,7 +3,7 @@ module BCF
     class ConventionalFlightPlan < BCF::FlightPlans::FlightPlan
       def initialize
         super
-        @total_length = 90 # TODO this should be 120? This should be 60 minutes if pasted in the table with the session overview.
+        @total_length = 120
         @initial_time = -30
         @organisation = "Better Conversations"
       end
