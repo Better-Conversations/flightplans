@@ -8,10 +8,12 @@ require 'bcf/flightplans'
 require 'filewatcher'
 require 'httparty'
 
-if ARGV.length != 2
-  warn "Usage: #{__FILE__} <flightplan.rb> <flightplan_version>"
+if ARGV.length != 3
+  warn "Usage: #{__FILE__} <flightplan.rb> <flightplan_version> <host>"
   exit 1
 end
+
+DEV_HOST = ARGV[2]
 
 def push_change(file)
   # Each load will re-run the code in this ruby process.
@@ -22,7 +24,7 @@ def push_change(file)
 
   flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
   HTTParty.post(
-    "http://localhost:3000/flightplans/development_live_reload_flightplan",
+    "http://#{DEV_HOST}/flightplans/development_live_reload_flightplan",
     headers: {
       "Content-Type" => "application/json"
     },
