@@ -96,6 +96,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
         email:help@betterconversations.foundation
+
         phone: +44 118 234 9811
       CHAT
 
@@ -138,6 +139,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
         How are you feeling?
+
         0 – not OK at all, 10 – wonderful.
       CHAT
 
@@ -202,6 +204,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
       How are these conversations are going for you? Give us a number on a scale of 0-10.
+
       (0 – terrible, 10 – brilliant).
       CHAT
     end
@@ -376,7 +379,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       MD
 
-      chat "Halfway, you have 2 minutes remaining"
+      broadcast "Halfway, you have 2 minutes remaining"
     end
 
   end
@@ -477,7 +480,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   #TODO: Make fx1 lead
-  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :fx1)
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
