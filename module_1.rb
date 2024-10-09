@@ -372,7 +372,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Send into BORs
 
         Broadcast halfway message:
-
       MD
     end
 
