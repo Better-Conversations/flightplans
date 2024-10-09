@@ -33,9 +33,20 @@ def push_change(file)
       flight_plan: flight_plan
     }.to_json
   )
+
+  puts "Pushed changes"
+  flight_plan.module_number
 end
 
-push_change(ARGV[0])
+module_number = push_change(ARGV[0])
+
+test_url = URI.parse("http://#{DEV_HOST}/flightplans/test_flightplan")
+test_url.query = URI.encode_www_form(
+  'flightplan_delivery_testing[version]': ARGV[1],
+  'flightplan_delivery_testing[module_number]': module_number
+)
+
+puts "Test URL\n#{test_url}"
 
 Filewatcher.new(ARGV[0]).watch do |changes|
   push_change(ARGV[0])
