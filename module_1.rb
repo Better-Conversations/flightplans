@@ -292,7 +292,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "1 Minute briefing, 5 minutes in BORs"
 
     resources do
-      breakout_room(:bor_1, default_duration: 5, notify_halfway: true)
+      breakout_room(:bor_1, default_duration: 5, notify_halfway: true, halfway_message: true)
     end
 
     facilitator do
@@ -319,10 +319,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       Broadcast halfway message
       MD
-
-      broadcast <<~CHAT
-        Halfway, you have 2.5 minutes remaining
-      CHAT
     end
   end
 
@@ -356,7 +352,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "1 Minute breifing, 4 minutes in BORs"
 
     resources do
-      breakout_room(:bor_2, default_duration: 4, notify_halfway: true)
+      breakout_room(:bor_2, default_duration: 4, notify_halfway: true, halfway_message: true)
     end
 
     facilitator do
@@ -378,8 +374,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Broadcast halfway message:
 
       MD
-
-      broadcast "Halfway, you have 2 minutes remaining"
     end
 
   end
