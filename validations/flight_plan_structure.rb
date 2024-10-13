@@ -18,5 +18,8 @@ class Validations::FlightPlanStructure
     end
 
     expect(runtime).to eq(subject.total_length)
+
+    expect(subject.instruction_starts).to be(30).or(be_nil)
+    expect(subject.instruction_ends).to be(90).or(be_nil)
   end
 end
