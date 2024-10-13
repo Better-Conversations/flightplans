@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/Better-Conversations/ruby-flightplans.git
   revision: bea7e088f78d09e914b0c86ee201c99087a6a986
+  branch: main
   specs:
     bcf-flightplans (0.9.0)
       dry-struct (~> 1.6)
