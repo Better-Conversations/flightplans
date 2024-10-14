@@ -6,9 +6,7 @@ class Validations::FlightPlanLength
   end
 
   def validate(subject)
-    runtime = subject.blocks.reduce(subject.initial_time) do |time, block|
-      time + (block.length || 0)
-    end
+    runtime = subject.blocks.sum { |block| block.length || 0 }
 
     expect(runtime).to eq(subject.total_length)
 

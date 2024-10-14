@@ -13,7 +13,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     Suggested learning outcomes for further trainings/interventions
       -	Different types of intentional conversations e.g. sales, performance management, compliance
-
   MD
 
   demo <<~MD
@@ -350,6 +349,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact <<~MD
         Think about a conversation you'd like to be better.
         Help each other prepare for that conversation. Ask each other these questions:
+
         - Briefly, what's the context?
         - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
@@ -368,6 +368,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         Think about a conversation you'd like to be better.
         Help each other prepare for that conversation. Ask each other these questions:
+
         - Briefly, what's the context?
         - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
@@ -415,6 +416,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Stick to the process and don't get into the content of the examples they give (to keep it safe for them).
 
         If time allows, ask
+
         - **And is there anything else that you noticed about this process?**
         - **What might be the benefits of using this process?**
 
@@ -425,6 +427,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       chat <<~CHAT
         Thinking about the process you just used:
+
         - What did you notice about moving from outcome to intention?
         - What did you notice about moving from intention to impact?
       CHAT
@@ -449,7 +452,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What do you know now about Better Conversations?
         - What difference does that make?
         - What’s one thing you might do differently now you know this?
-
       CHAT
     end
 
@@ -466,6 +468,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken <<~MD
        Our sixth and final module will:
+
         - Consolidate Modules 1-5
         - Discuss next steps for you and how we can support you
         - Consider how you might use Better Conversations in your work or communities"
@@ -490,5 +493,4 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
-
 end
