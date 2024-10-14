@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/Better-Conversations/ruby-flightplans.git
+  remote: https://github.com/Better-Conversations/bcf-flightplans-dsl.git
   revision: 4f50931b6c4b234480098fb69f48e58c98db024a
   specs:
     bcf-flightplans (0.10.0)
