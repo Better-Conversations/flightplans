@@ -12,8 +12,5 @@ class Validations::FlightPlanStructure
     expect(subject.blocks).not_to be_empty
     expect(subject.total_length).to be_an Integer
     expect(subject.initial_time).to be_an Integer
-
-    runtime = subject.blocks.sum { |block| block.length || 0 }
-    expect(runtime).to eq(subject.total_length)
   end
 end

@@ -23,6 +23,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::GREETING)
 
+  instruction_starts
+
   block(name: "Welcome", lead_by: :fx1) do
     length 2
     #TODO: Fix how to show flipchart as comments
@@ -486,6 +488,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
   end
+
+  instruction_ends
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

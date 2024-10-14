@@ -32,6 +32,8 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::GREETING)
 
+  instruction_starts
+
   block(name: "Welcome", lead_by: :fx1) do
     length 2
 
@@ -397,6 +399,8 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   ), lead_by: :fx2)
 
   block(BCF::FlightPlans::CommonBlocks::CLOSING)
+
+  instruction_ends
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

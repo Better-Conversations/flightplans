@@ -19,15 +19,17 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     - Discuss some of the causes for being in the red, amber/yelllow and green state
     - Describe their models for being at their best and worst
     - Discuss strategies for changing their state to be at their best
-    MD
+  MD
 
   demo <<~MD
-  Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state 
+    Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state 
   MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
   block(BCF::FlightPlans::CommonBlocks::GREETING)
+
+  instruction_starts
 
   block(name: "Welcome to the course", lead_by: :fx1) do
     length 4
@@ -67,7 +69,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Observers etc. can type in the chat. "
 
-      #TODO: Spoken <<-MD Doesnt add a bullet point every new line however adds different styling to bullet points put in
+      # TODO: Spoken <<-MD Doesnt add a bullet point every new line however adds different styling to bullet points put in
       spoken <<~MD
         You can use translated captions to follow more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on.
 
@@ -135,7 +137,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      instruction"Copy to chat when facilitator mentions scale for check-in"
+      instruction "Copy to chat when facilitator mentions scale for check-in"
 
       chat <<~CHAT
         How are you feeling?
@@ -151,8 +153,8 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Motivation for being on the course", lead_by: :fx2) do
-   length 5
-   section_comment "Gather comments in chat"
+    length 5
+    section_comment "Gather comments in chat"
 
     facilitator do
       spoken " In the chat, let's hear from you all in a few words..."
@@ -198,14 +200,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions this:"
 
       chat <<~CHAT
-      What kind of conversations would you like to be better after this course? Give a label to these conversations.
-      e.g. neighbour
+        What kind of conversations would you like to be better after this course? Give a label to these conversations.
+        e.g. neighbour
       CHAT
 
       chat <<~CHAT
-      How are these conversations are going for you? Give us a number on a scale of 0-10.
+        How are these conversations are going for you? Give us a number on a scale of 0-10.
 
-      (0 – terrible, 10 – brilliant).
+        (0 – terrible, 10 – brilliant).
       CHAT
     end
 
@@ -223,7 +225,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       )
     end
 
-    #TODO: When Handbook goes on website, check talking about the space in the handbook is still relevant in all flight plans
+    # TODO: When Handbook goes on website, check talking about the space in the handbook is still relevant in all flight plans
     facilitator do
       spoken "Now for the traffic light model which is an easy way to represent state. There is also an explanation in the Course Handbook in Section 1 to help you remember the model."
       spoken "We have an inverted traffic light here. The colours represent different states of our thinking and feeling, which will impact our conversations. Green is at the top as usually we have better conversations when in a green state."
@@ -235,8 +237,8 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-#TODO: Add scribed by section to block as well
- block(name: "Demonstrate Breakout exercises", lead_by: :fx1) do
+  # TODO: Add scribed by section to block as well
+  block(name: "Demonstrate Breakout exercises", lead_by: :fx1) do
     length 5
     section_comment "Add to Flip#2 in the red state section for up to 3 people"
 
@@ -250,7 +252,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "[Co-facilitator] When I am in red, I think___, I feel ___. "
 
-      #TODO: move this instruction to beforeco-facilitator asked.
+      # TODO: move this instruction to beforeco-facilitator asked.
       instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn’t have to be about anger or fear."
 
       instruction "To group"
@@ -271,7 +273,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "What are you noticing about these experiences?"
 
-      instruction"Handover to Fx2 for BOR1 on green state"
+      instruction "Handover to Fx2 for BOR1 on green state"
     end
 
     producer do
@@ -280,10 +282,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when facilitator mentions this: "
 
       chat <<~CHAT
-      What might you be thinking or feeling that lets you know you’re in a red state?
+        What might you be thinking or feeling that lets you know you’re in a red state?
       CHAT
     end
-
 
   end
 
@@ -313,16 +314,16 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       CHAT
 
       instruction <<~MD
-      When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes
+        When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes
 
-      Send into BORs
+        Send into BORs
 
-      Broadcast halfway message
+        Broadcast halfway message
       MD
     end
   end
 
-  #TODO: Add scribed by section to block as well
+  # TODO: Add scribed by section to block as well
   block(name: "Unpack Breakout 1 ", lead_by: :fx2) do
     length 5
     section_comment "Add to Flip#2 in green section for up to 3 people"
@@ -347,7 +348,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  block(name:"Breakout 2", lead_by: :fx2) do
+  block(name: "Breakout 2", lead_by: :fx2) do
     length 5
     section_comment "1 Minute breifing, 4 minutes in BORs"
 
@@ -377,13 +378,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  block(name:"Unpack Breakout 2", lead_by: :fx2) do
+  block(name: "Unpack Breakout 2", lead_by: :fx2) do
     length 5
     section_comment " Fx1 Scribes
 
     Add to Flip 2 in amber section for up to 3 people"
 
-#TODO: Add scribed by section to block as well as allowing for discription without flipchart page
+    # TODO: Add scribed by section to block as well as allowing for discription without flipchart page
     facilitator do
       spoken "Now let’s get 2-3 examples of amber/yellow state"
 
@@ -407,7 +408,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  block(name:"Reflect on learning in this session", lead_by: :fx1) do
+  block(name: "Reflect on learning in this session", lead_by: :fx1) do
     length 5
     section_comment "Gather comments in chat"
 
@@ -429,23 +430,22 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions fieldwork: "
 
       chat <<~CHAT
-      Thinking about conversations that have and haven’t gone well and what you know now about state
+        Thinking about conversations that have and haven’t gone well and what you know now about state
 
-      - What are you noticing?
+        - What are you noticing?
 
-      - What difference does this make?
+        - What difference does this make?
 
-      - Is there something you may do differently now you know this?
+        - Is there something you may do differently now you know this?
 
       CHAT
     end
 
   end
 
-  #TODO: Check this can use the common fieldwork block and array - wording is different at start
+  # TODO: Check this can use the common fieldwork block and array - wording is different at start
   block(name: "Fieldwork", lead_by: :fx1) do
     length 2
-
 
     facilitator do
       spoken "We have fieldwork that is optional but very useful to consolidate what we cover in each module. We will send this out by email."
@@ -472,8 +472,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  #TODO: Make fx1 lead
   block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :fx1)
+
+  instruction_ends
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
