@@ -414,7 +414,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What difference does this make?"
       spoken_exact "Is there something you may do differently now you know this?"
 
-      instruction "If time permits, pick 1-2 examples and allow people to speak."
+      instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
 
       spoken "We are almost at the end of this first module. There is space in the Course Handbook to capture any more thoughts you might have from today. "
 
