@@ -36,13 +36,13 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 2
 
     resources do
-      # Flipcharts should link to an image of the initial flipchart, in this repository, and
+      # TODO Flipcharts should link to an image of the initial flipchart, in this repository, and
       # if useful examples of completed ones, and even ones at different stages of the flow
 
       flipchart(
         :flip_1,
         "Flip#1 for agenda",
-        description: "Agenda (top half) and space for any questions or reflections",
+        description: "Course outline and agenda",
         scribed_by: :fx1
       )
     end
@@ -50,6 +50,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       instruction "Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles."
       spoken "You will need a pen and paper today, so if you need to grab those, you can do it now."
+
+      instruction "Point out this where this module is on the course overview on the flip."
 
       # TODO: Rewrite **'s as an BCF call. This will involve moving into cmarker
       spoken "In Module 1 we looked at state. Today, we are going to explore how quickly and easily we make assumptions, as making assumptions can cause misunderstandings between us and other people."
@@ -104,12 +106,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
-      spoken <<~MD
-        You can describe behaviour in a conversation using a simple stimulus-response model:
-        -	I see/hear (external)
-        -	I think/feel (internal; what we are calling state)
-        -	I say/do (external)
-      MD
+      spoken "You can describe behaviour in a conversation using a simple stimulus-response model."
+      spoken "Think of it as a snapshot of what's happening for someone in a conversation."
 
       instruction "Point to each circle as you explain:"
 
@@ -133,7 +131,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         We act on our thoughts or feelings. Often unconsciously reacting, sometimes consciously responding.
       MD
 
-      spoken "We are going to look at thinking processes first and come back to discuss feelings."
+      spoken "We are going to look at assumptions first and then how feelings can influence assumptions."
       instruction "Handover to Fx2 for the assumptions demo."
     end
 
@@ -194,7 +192,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   # TODO: Escape the in strings, Typst uses it as a control character
-  block(name: "Breakout#1", lead_by: :fx2) do
+  block(name: "Breakout#1", lead_by: :fx1) do
     length 9
 
     resources do
@@ -240,9 +238,9 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         3. The Asker(s) asks just two or three of these questions of the Chooser about the object:
 
-          - What kind of ___?
-          - Whereabouts is ___?
-          - Is there anything else about ___?
+            - What kind of ___?
+            - Whereabouts is ___?
+            - Is there anything else about ___?
 
         4. The Asker(s) updates their drawings based on the Chooser’s answers, then shows them to the Chooser again.
 
@@ -263,15 +261,15 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  block(name: "Unpack Breakout activity", lead_by: :fx2) do
+  block(name: "Unpack Breakout activity", lead_by: :fx1) do
     length 7
-    section_comment "Fx1 scribes"
+    section_comment "Fx2 scribes"
 
     resources do
       flipchart(
         :flip_3,
         "Add to Flip#3 for up to 3 people and/or use chat.",
-        description: "Learnings on context",
+        description: "Learnings on assumptions",
         scribed_by: :fx2)
 
       breakout_room(:bor_1)
@@ -285,6 +283,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
+        
+      instruction "Handover to Fx1 for disucssion on assumptions and feelings."
     end
 
     producer do
@@ -303,14 +303,14 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "use to explain how feelings are represented by the model",
-        description: "Assumptions diagram (as in handbook)",
+        "",
+        description: "Use assumptions diagram to explain how feelings are represented by the model",
         scribed_by: :fx1
       )
     end
 
     facilitator do
-      spoken "The reason we do this exercise is to show how easily and quickly we make assumptions. They may be right or wrong. "
+      spoken "The reason we do this exercise is to show how easily and quickly we make assumptions. They may be right or wrong. They can change when we have new information."
       spoken "We can easily verify whether we are right or wrong talking about a physical object."
       spoken "It’s harder with abstract concepts like trust, fairness, justice and so on – this is where many misunderstanding occur between people."
       spoken "The questions we suggested: What kind of? Whereabouts? Anything else? are useful to test assumptions."
@@ -323,7 +323,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Different emotions or feelings can affect our thinking differently."
       spoken "For example, when we are in red, we might be more likely to perceive threat and act quickly."
       spoken "When in green, we may be more creative in our thinking."
-      instruction "Handover to Fx2 to talk about state and assumptions breakout activity."
+      instruction "Handover to Fx2 to talk about assumptions and feelings breakout activity."
     end
   end
   block(name: "Breakout#2", lead_by: :fx2) do
@@ -334,18 +334,18 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "We are going to put you in breakouts again for 6 minutes to talk about assumptions and state."
+      spoken "We are going to put you in breakouts again for 6 minutes to talk about assumptions and feelings."
       spoken_exact "At the beginning of the module, we asked you to think about a conversation you had and your state around that conversation. You can talk about a different conversation if you like."
       spoken_exact <<~MD
-        Briefly discuss with each other:
-        - What was your state during that conversation?
-        - What were you assuming in that conversation?
-        - How your state affected your assumptions about the situation or person?
+        Briefly discuss:
+        - What your state was during that conversation.
+        - What you might have been assuming in that conversation.
+        - How your feelings related to your assumptions about the situation or person.
       MD
 
       spoken_exact "Share only what you are comfortable sharing in the group."
       spoken_exact "Manage the time so everyone has a chance to answer the questions."
-      spoken_exact "We’ll talk about how your state affected your assumptions when you come back."
+      spoken_exact "We’ll talk about what you noticed about feelings and assumptions when you come back."
     end
 
     producer do
@@ -353,14 +353,14 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
         At the beginning of the module, we asked you to think about a conversation you had and your state around that conversation. You can talk about a different conversation if you like.
+        
         Briefly discuss with each other:
-        - What was your state during that conversation?
-        - What were you assuming in that conversation?
-        - How your state affected your assumptions about the situation or person?
+        - What your state was during that conversation.
+        - What you might have been assuming in that conversation.
+        - How your feelings related to your assumptions about the situation or person.
 
-        Share only what you are comfortable sharing in the group.
         Manage the time so everyone has a chance to answer the questions.
-        We’ll talk about how your state affected your assumptions when you come back.
+        
       CHAT
 
       instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
@@ -378,14 +378,14 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_4,
         "Add to Flip#4 for up to 3 people and/or use chat.",
-        description: "Learnings on context",
-        scribed_by: :fx2
+        description: "Learnings on state and assumptions",
+        scribed_by: :fx1
       )
       breakout_room(:bor_2)
     end
 
     facilitator do
-      spoken_exact "Let’s discuss how your state affected your assumptions"
+      spoken_exact "What did you notice about feelings and assumptions?"
       spoken "Who's got something they want to share?"
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
       instruction "Handover to Fx2 for reflection, fieldwork and close."
@@ -395,7 +395,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy in chat (when you hear facilitator say this):"
 
       chat <<~CHAT
-        How did your state affect your assumptions?
+        What did you notice about feelings and assumptions?
       CHAT
     end
   end
@@ -414,8 +414,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         -	What you know now about having better conversations
         -	Is there something you may do differently now you know this?
       MD
-      instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat. \
-                  Aim for 2-3 examples, with one from the chat."
+      instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
 

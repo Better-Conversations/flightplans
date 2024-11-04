@@ -53,7 +53,7 @@ module BCF
         name "Any Questions?"
 
         facilitator do
-          spoken "And is there anything you need to tell us before we start the topic? For example, if you need to leave early or if you are having any problems with Zoom."
+          spoken "And is there anything you need to tell us before we start today's topic? For example, if you need to leave early or if you are having any problems with Zoom."
           spoken "And do you have anything you’d like to ask us about today’s topic?"
 
           instruction "Respond to any questions/insights but keep it brief."
@@ -158,7 +158,7 @@ module BCF
             end
 
             facilitator do
-              spoken "We will send out the fieldwork by email. The suggested fieldwork for this module is to..."
+              spoken "We will send out the fieldwork by email. The suggested fieldwork for this module is:"
               spoken(points_body, fixed: true)
             end
 
