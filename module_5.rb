@@ -16,7 +16,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
   MD
 
   demo <<~MD
-    Fx1 to ask Fx2 questions to demo the outcome-intention-impact-motivation loop to prepare for a conversation with a colleague. Make sure that the example is something easy to understand and not likely to trigger strong emotions in you or the group.
+    Fx1 to ask Fx2 questions to demo the motivation-outcome-intention-impact loop to prepare for a conversation with a colleague. Make sure that the example is something easy to understand and not likely to trigger strong emotions in you or the group.
   MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
@@ -46,16 +46,17 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       spoken "Last time we looked at listening with curiosity. We will do a quick review of that in just a bit."
-      spoken "Today we are going to consider intentional conversations. Conversations where there is a clear purpose and outcome needed."
+      spoken "Today we are going to consider intentional conversations. These are conversations where there is a clear purpose and outcome needed."
 
-      spoken "We’ve covered some key factors affecting conversations in Modules 1-4:"
+      spoken "We’ve covered what impacts conversations in Modules 1-4:"
       spoken_exact <<~MD
-        State \
-        Assumptions \
-        Context \
-        How you listen and respond
+        The key factors are:
+        - State
+        - Assumptions
+        - Context
+        - How you listen and how you respond
       MD
-      spoken "We are going to these further by considering intention, impact, outcomes and motivations"
+      spoken "We are going to these further by considering intention, impact, motivations and outcomes."
 
       instruction "Go through agenda on flip"
     end
@@ -65,15 +66,10 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
         Factors that affect conversations:
-
-        State
-
-        Assumptions
-
-        Context
-
-        How you listen and respond
-
+        - State
+        - Assumptions
+        - Context
+        - How you listen and how you respond
       CHAT
     end
 
@@ -98,7 +94,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction <<~MD
         If time, invite examples from 1-2 people.
-        Handover to Fx1 for considering the difference between our intention and the impact of our feedback.
+        Handover to Fx1 for considering the difference between intentions and impact.
 
       MD
 
@@ -109,7 +105,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Think of one conversation you had recently
 
         - What kind of listening did you do?
-
         - What impact did that have on the conversation?
 
       CHAT
@@ -117,8 +112,23 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
+  block(name: "Example of difference in intention and impact", lead_by: :fx1) do
+    length 4
+    facilitator do
+      spoken "We are going to consider how intention and impact are different."
+      spoken "I'm going to give you a phrase. Think about what happens for you when you hear it."
+      instruction "Pause to let people prepare to think about the phrase."
+
+      spoken "“You have so much potential”"
+      spoken "What happens for you when you hear that?"
+
+      instruction "Facilitate brief discussion on impact of statement, how it can be viewed as criticism or praise depending on context."
+      spoken "This is an example of how the same phrase can have different impacts depending on the context and the person hearing it."
+    end
+  end
+
   block(name: "Conversation Model", lead_by: :fx1) do
-    length 6
+    length 3
     resources do
       flipchart(
         :flip_2,
@@ -129,16 +139,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "We are going to consider how intention and impact are different."
-      spoken "I'm going to give you a phrase. Think about what happens for you when you hear it."
-      instruction "Pause to let people prepare to think about the phrase."
-
-      spoken "“You have so much potential”"
-      spoken "What happens for you when you hear that?"
-
-      instruction "Facilitate brief discussion on impact of statement, how it can be viewed as criticism or praise depending on context."
-
-      spoken "Let's look at the conversation model from Module 4 to see how that phrase lands."
+      
+      spoken "Let's look at the conversation model from Module 4 to see how that phrase might land."
       spoken "We have the LHS and RHS of the model representing two people in a conversation."
 
       instruction "Point to the steps on the LHS as you say this:"
@@ -159,11 +161,12 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - Although their behaviour (what they say and do) might give us clues about that if we know them well.
       MD
 
+      spoken "Now let's map intention and impact on this diagram"
       instruction "Place a blue Post-it note labelled ‘Intention’ next to the ‘I think/feel’ step on the LHS"
       spoken "Our intention represents what we plan to say or do in a conversation. We may not be conscious of it, but it’s there."
 
       spoken "The impact on the other person, what they think or feel about what we say or do, may or may not be what we intended."
-      spoken "You may think your feedback will land in green"
+      spoken "You may think what you say or do will land in green"
 
       instruction "Place a green post labelled 'Impact' next to the 'They think/feel' step on the RHS"
 
@@ -177,7 +180,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Swap blue intention and red/yellow/green impact Post-its around so the intention Post-it sits with they think/feel and impact Post-its sit with I think/feel
       MD
 
-      spoken "How many times has someone given you feedback, and you experience an amber/yellow or red state?"
+      spoken "For example, think about ahen someone given you their opinion or some feedback, and you experience an amber/yellow or red state."
 
       instruction "Handover to Fx2 for exercise on intention and impact"
     end
@@ -253,7 +256,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         :flip_3,
         "Comments from up to 3 people and/or use chat",
         description: "Learnings on intention and impact",
-        scribed_by: :fx2
+        scribed_by: :fx1
       )
     end
 
@@ -272,7 +275,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         If time allows, ask
         - **How might you hold your assumptions lightly?**
 
-        Handover to Fx1 for demonstration of feedback
+        Handover to Fx1 for discussion on intentional conversations
       MD
 
     end
@@ -293,11 +296,11 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 6
 
     facilitator do
-      spoken "We are going to practise a way of separating intention and impact. "
-      spoken "This helps us to be clear about what we want to say and what we think the impact will be."
+      spoken "We are going to practise a way of separating intention and impact to help us prepare for intentional conversations. "
+      spoken "This helps us to be clear about what we want to say and consider what the impact might be on the other person."
 
       instruction <<~MD
-        Facilitator to demo outcome-intention-impact-motivation loop.
+        Facilitator to demo motivation-outcome-intention-impact loop.
 
         Make sure that the example is something easy to understand and not likely to trigger strong emotions in you or the group.
       MD
@@ -326,8 +329,9 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       
       
       spoken "Bear in mind that you are making assumptions about their motivations and the impact on them."
+      spoken "You can repeat this loop as many times as you like to explore what you might say or do."
 
-      instruction "Handover to Fx2 for the next exercise"
+      instruction "Handover to Fx2 for the next exercise on preparing for intentional conversations."
     end
 
     producer do
@@ -335,7 +339,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  block(name: "Breakout 2", lead_by: :fx1) do
+  block(name: "Breakout 2", lead_by: :fx2) do
     length 9
     section_comment "(1 min briefing)"
 
@@ -360,7 +364,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
-      spoken "When you return, we will briefly share what we noticed about moving between these questions."
+      spoken "When you return, we will briefly share what we noticed about moving around the loop."
       spoken "Any questions before we send you in?"
     end
 
@@ -392,14 +396,14 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  block(name: "Unpack Breakout 2", lead_by: :fx1) do
-    length 7
+  block(name: "Unpack Breakout 2", lead_by: :fx2) do
+    length 6
     resources do
       flipchart(
         :flip_4,
         "Comments from up to 3 people and/or use chat",
-        description: "Preparing for an intentional conversation",
-        scribed_by: :fx2
+        description: "Learnings on preparing for an intentional conversation",
+        scribed_by: :Fx1
       )
     end
 
@@ -420,7 +424,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - **And is there anything else that you noticed about this process?**
         - **What might be the benefits of using this process?**
 
-        Handover to Fx2 for reflection and close
+        Handover to Fx1 for reflection and close
       MD
     end
 
@@ -434,7 +438,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  block(name: "Reflect on learning in this session", lead_by: :fx2) do
+  block(name: "Reflect on learning in this session", lead_by: :fx1) do
     length 6
     section_comment "Gather comments in chat and pick out some examples"
 
@@ -458,7 +462,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
 
-  block(name: "Closing", lead_by: :fx2) do
+  block(name: "Closing", lead_by: :fx1) do
     length 2
 
     facilitator do
