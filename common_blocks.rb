@@ -53,7 +53,7 @@ module BCF
         name "Any Questions?"
 
         facilitator do
-          spoken "And is there anything you need to tell us before we begin? For example, if you need to leave early or if you are having any problems with Zoom."
+          spoken "And is there anything you need to tell us before we start the topic? For example, if you need to leave early or if you are having any problems with Zoom."
           spoken "And do you have anything you’d like to ask us about today’s topic?"
 
           instruction "Respond to any questions/insights but keep it brief."
@@ -106,7 +106,7 @@ module BCF
           instruction "Mention to attendees that they are here to learn to deliver the course, as well as experience it as an attendee"
           instruction "Let attendees know that the session is finished and thank them."
           instruction "Say they are welcome to stay for 15 minutes or so if they have any questions for the team or any insights they’d like to share. After that the delivery team will debrief."
-          instruction "Sponsor to facilitate discussion with attendees"
+          instruction "Facilitate discussion with attendees"
         end
       end
 
@@ -134,7 +134,7 @@ module BCF
         default_leader :sponsor
 
         facilitator do
-          instruction "Sponsor to facilitate debrief with delivery team on how session has gone and note any further observations, learnings etc."
+          instruction "Facilitate debrief with delivery team on how session has gone and note any further observations, learnings etc."
         end
       end
 

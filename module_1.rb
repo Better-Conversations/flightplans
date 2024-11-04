@@ -22,7 +22,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   MD
 
   demo <<~MD
-    Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state 
+    Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state (strong and unpleasant emotions). This doesn't have to be anger or fear. It could be sadness or extreme frustration.
   MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
@@ -45,17 +45,17 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       instruction <<~MD
-        Welcome People.
-
-        Introduce facilitators, producers, and observers. Briefly explain their roles (See above).
+        Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
 
         Explain that the course attendees are invited to learn any of these roles too, by working with the Foundation.
       MD
       spoken "There are some contact details going in the chat if you need to get in touch. These are also in the Course Handbook"
 
       spoken "Does everyone have experience with Zoom?"
-
+      
       instruction "Adjust response as necessary."
+
+      spoken "You can use translated captions to follow us more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on."
 
       spoken "The producer is on hand to help with any technical issues."
 
@@ -65,21 +65,17 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken_exact "Please let us know where you are in the world by typing in chat."
 
-      instruction "Facilitators give an example of where they are."
-
-      instruction "Observers etc. can type in the chat. "
+      instruction "Facilitators and Observers type where they are in the chat."
 
       # TODO: Spoken <<-MD Doesnt add a bullet point every new line however adds different styling to bullet points put in
       spoken <<~MD
-        You can use translated captions to follow more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on.
-
         We also ask that everyone respect confidentiality of what is shared by the group this course, to allow people to fully engage with the learning.
       MD
 
       instruction "Go through the course overview on flip"
 
       spoken <<~MD
-        There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Feedback
+        There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Intentional Conversations.
 
         The sixth module will consolidate the learning and explore what you would like to do next.
 
@@ -101,8 +97,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         phone: +44 118 234 9811
       CHAT
-
-      instruction "Enable Captions when facilitator mentions it"
 
       instruction "Copy to chat when the facilitator mentions location"
 
@@ -180,11 +174,11 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "And now let's think about outcomes from this course. Please take a moment to think about:"
-      spoken_exact "What kind of conversations would you like to be better after this course?"
+      spoken_exact "What kind of conversation would you like to be better after this course?"
 
       instruction "Pause"
 
-      spoken "In the chat give labels to these conversations."
+      spoken "In the chat give a label to these conversations."
       spoken "It might be something like 'neighbour' or 'colleague'. A word that will help you remember these conversations."
       instruction "Pause"
       spoken "Now give us a number to show how these conversations are going for you on a scale of 0-10. 0 terrible and 10 brilliant."
@@ -200,7 +194,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions this:"
 
       chat <<~CHAT
-        What kind of conversations would you like to be better after this course? Give a label to these conversations.
+        What kind of conversation would you like to be better after this course? Give a label to these conversations.
         e.g. neighbour
       CHAT
 
@@ -413,7 +407,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat"
 
     facilitator do
-      spoken "You’ve had some conversations and learned a model to describe state. This is the basis for Better Conversations."
+      spoken "You’ve had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
       spoken "Take a moment now to reflect and put your thoughts in the chat. Here are some questions to guide your thinking:"
 
       spoken_exact "Thinking about conversations that have and haven’t gone well and what you know now about state, what are you noticing?"
