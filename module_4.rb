@@ -8,8 +8,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   learning_outcomes <<~MD 
     Learners will be able to:
-      -	Demonstrate listening without interruption
-      - Demonstrate use of Clean Language Questions to accept and extend understanding of the other person
+      -	Demonstrate listening to understand
+      - Demonstrate use of questions to enquire and extend understanding of the other person's context
 
     Suggested learning outcomes for further trainings/interventions
       - Apply Clean Language Questions to defining a challenge at work or in your community
@@ -109,26 +109,30 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 4 to help you remember the diagram."
-      spoken "We are extending the stimulus-response model slightly to include the other person. We’ve drawn the diagram to show information flowing in a loop between the two people. It’s a simplification of what’s happening – think of it as a snapshot in time."
-      spoken "And, each person sees/hears, thinks/feels and says/does – they are taking the stimulus from each other and the surroundings and respond to each other and the surroundings."
-      spoken "In a conversation each person brings their own context and acts within that context."
+      spoken "We are extending the stimulus-response-context model to include the other person. We’ve drawn the diagram to show information flowing in a loop between the two people. It’s a simplification of what’s actually happening – think of it as a snapshot in time."
+      spoken "And, each person sees/hears, thinks/feels and says/does – they are taking the stimulus from each other and the surroundings and responding to each other and the surroundings."
+      spoken "In a conversation each person brings their own context, makes meaning, makes assumptions and acts from that context."
       spoken "This means we can make assumptions based on our own context, and forget the other person has a different context. So we might judge other people based on our context without realising we are doing that."
       spoken "In this course we are asking you to be aware of what you are influencing and notice what might be happening for the other person (holding your assumptions lightly, of course!)."
       spoken "We think of this as creating a container for a better conversation. You might have a different metaphor for it."
-      
-      instruction "Point to the model where it says “I see/hear” and “I say/do” and “their context” as you say this:"
+        
+      spoken "We are going to do a couple of exercises now."
+        
+      instruction "Point to the model where it says 'I see/hear' and 'they say/do' as you say this:"
     
-      spoken "We are going to do a couple of exercises now. The first one helps you pay attention to what you are seeing and hearing the other person say or do. "
-      spoken "And the second exercise focuses on what you can be saying to find out more about their context.   "
+      spoken "The first one helps you pay attention to what you see and hear them say and do."
+        
+      instruction "Point to the model where it says 'I say/do' and 'their context' as you say this:"
+      spoken "And the second exercise focuses on what you can be saying to find out more about their context."
     
-      instruction "Handover to Fx2 for breakout exercise on listening to accept."
+      instruction "Handover to Fx2 for breakout exercise on listening to understand."
     end
 
     producer do
       instruction <<~MD
       Prepare BORs in 2/3s for 6 minutes if not already done.
 
-      Note that it is not recommended that this BOR timing is increased (unless there is a group of 3) as it is a listening without interrupting exercise.
+      Note that it is not recommended that this BOR timing is increased (unless there is a group of 3) as it is a listening only exercise.
       
       MD
     end
@@ -143,11 +147,11 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "For this first breakout exercise, you will have 6 minutes to practise listening to accept what the other person is saying."
+      spoken "For this first breakout exercise, you will have 6 minutes to practise listening to understand what the other person is saying and doing."
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
       spoken "Whilst you are listening, we would like to you to _avoid judging or interrupting the other person_."
-      spoken "Just to be clear, please do acknowledge each other with a nod or smile or “mmm”. However, don’t comment or ask any questions If you are listening."
+      spoken "Just to be clear, please do acknowledge each other with a nod or smile or “mmm”. However, don’t comment or ask any questions if you are listening."
     
       spoken_exact "Decide who is going to talk first. That person will talk about something that interests them (like a hobby or a pet), something that happened recently or what they might be doing after this session."
       spoken_exact "The other person or people will listen and pay close attention to what is said and done. Accept this without judgement or interruption."
@@ -202,7 +206,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Let’s find out what you experienced just now."
 
       spoken_exact "What did  you notice about your state when you were talking about your topic?"
-      spoken_exact "And what did you notice about your state when you were listening to accept what the other person was saying?"
+      spoken_exact "And what did you notice about your state when you were listening to understand what the other person was saying and doing?"
 
       instruction <<~MD
       Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
@@ -218,7 +222,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
       What did  you notice about your state when you were talking about your topic?
 
-      And what did you notice about your state when you were listening to accept what the other person was saying?
+      And what did you notice about your state when you were listening to understand what the other person was saying and doing?
       
       CHAT
 
@@ -232,19 +236,19 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 3
 
     facilitator do
-      spoken "You’ve practised paying attention to what the other person is saying or doing without judging or interrupting them. Listening to accept."
-      spoken "Now you are going to use questions to respond and improve your understanding of what the other person thinks or wants."
+      spoken "You’ve practised paying attention to what the other person is saying or doing without judging or interrupting them. Listening to understand."
+      spoken "Now you are going to use questions to respond and extend your understanding of the other person’s context."
       spoken "There are some questions going into the chat. These questions are constructed to remove assumptions and biases in the way you ask them."
       spoken "They can quickly uncover someone’s thinking. We advise you don’t use more than two of these questions at a time to avoid the other person feeling like they are being interrogated!"
 
       spoken_exact <<~MD
-        We have seen the first two questions before in Module 2, to check assumptions. These are: 
+        We have seen the first two questions before in Module 2, where we used them to check our assumptions. These are: 
         - What kind of ___ is that? 
         - Is there anything else about that ___?
       MD
 
       spoken_exact <<~MD
-        And we have got another for to ask about meaning: 
+        And we have got another for to ask about the meaning of something: 
         - When you say___ I imagine___. Is that what you mean?
       MD
 
@@ -360,7 +364,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_4,
         "Gather comments on Flip#4 for up to 3 people and/or use chat",
-        description: "Learnings on listening to accept and extend" ,
+        description: "Learnings on listening to enquire and extend understanding" ,
         scribed_by: :fx2
       )
     end

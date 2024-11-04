@@ -2,8 +2,6 @@ require 'bcf/flightplans'
 require_relative './common_blocks'
 require_relative './common_resources'
 
-# Flightplan version 2.2.3
-
 MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "State"
   module_number 1
