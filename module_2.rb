@@ -41,9 +41,9 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       flipchart(
         :flip_1,
-        "Flip#1 for agenda",
+        scribed_by: :fx1,
         description: "Course outline and agenda",
-        scribed_by: :fx1
+        comments: "Free text for any notes"
       )
     end
 
@@ -435,7 +435,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         lead_by: :fx1)
 
   # TODO: Make fx1 lead
-  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :Fx1)
 
   instruction_ends
 
