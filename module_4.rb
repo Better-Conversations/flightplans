@@ -65,7 +65,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
   #TODO: Add a fieldwork common block?
   block(name: "Fieldwork", lead_by: :fx2) do
     length 4
-    section_comment "Chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
@@ -101,7 +101,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: " ",
+        comment: "Use flip to explain the model",
         description: "Conversation diagram (as on handbook)",
         scribed_by: :fx1
       )
@@ -140,7 +140,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 1", lead_by: :fx2) do
     length 8
-    section_comment "(2 min brief, 6 min BOR)"
+    section_comment "(2 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 6)
@@ -296,7 +296,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 2", lead_by: :fx1) do
     length 9 
-    section_comment "(1 min brief, 8 min BOR)"
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 8)
@@ -379,7 +379,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction <<~MD 
       Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
 
-      Handover to Fx2 for reflection, fieldwork and close
+      Handover to Fx2 for reflections, fieldwork and close
 
       MD
     end
@@ -435,7 +435,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
   ), lead_by: :fx2)
 
   block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx2, "Intentional Conversations", length: 1))
-  
+
   instruction_ends
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

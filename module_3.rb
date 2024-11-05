@@ -64,6 +64,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   #TODO - Handovers need to be parameterized for the right Fx if this is changed for training purposes
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "Let's have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
@@ -93,7 +94,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Use to explain the model",
+        comment: "Use flip to explain the model",
         description: "Context diagram (as in handbook, pre-prepared)",
         scribed_by: :fx1
       )
@@ -141,6 +142,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx2) do
     length 8
+    section_comment "(2 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 6)
@@ -203,7 +205,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout activity", lead_by: :fx2) do
     length 6
-    section_comment "Fx1 scribes"
 
     resources do
       flipchart(
@@ -240,6 +241,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout#2", lead_by: :fx1) do
     length 8
+    section_comment "(2 min briefing)"
 
     resources do
       breakout_room(:bor_2, default_duration: 6)
@@ -348,7 +350,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
-      instruction "Handover to Fx2 for reflection, fieldwork and close."
+      instruction "Handover to Fx2 for reflections, fieldwork and close."
     end
 
     producer do

@@ -66,6 +66,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
@@ -98,7 +99,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Use to explain the model",
+        comment: "Use flip to explain the model",
         description: "Assumptions diagram (as in handbook, pre-prepared)",
         scribed_by: :fx1
       )
@@ -194,6 +195,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx1) do
     length 9
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 8)
@@ -263,8 +265,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout activity", lead_by: :fx1) do
     length 7
-    section_comment "Fx2 scribes"
-
+    
     resources do
       flipchart(
         :flip_3,
@@ -303,7 +304,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Use to recap model",
+        comment: "Use flip to recap model",
         description: "Use assumptions diagram to explain how feelings affect assumptions",
         scribed_by: :fx1
       )
@@ -328,7 +329,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
   block(name: "Breakout#2", lead_by: :fx2) do
     length 7
-
+    section_comment "(1 min briefing)"
     resources do
       breakout_room(:bor_2, default_duration: 6)
     end
@@ -372,8 +373,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout#2 activity", lead_by: :fx2) do
     length 5
-    section_comment "Fx1 scribes"
-
+   
     resources do
       flipchart(
         :flip_4,
@@ -388,7 +388,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about feelings and assumptions?"
       spoken "Who's got something they want to share?"
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
-      instruction "Handover to Fx1 for reflection, fieldwork and close."
+      instruction "Handover to Fx1 for reflections, fieldwork and close."
     end
 
     producer do

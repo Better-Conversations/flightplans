@@ -81,7 +81,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
-    section_comment "Chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
@@ -132,7 +132,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Use to explain model",
+        comment: "Use flip to explain the concepts",
         description: "Conversation diagram (reuse Module 4 Flip#2 if desired)",
         scribed_by: :fx1
       )
@@ -295,6 +295,14 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Demonstrate Breakout 2", lead_by: :fx1) do
     length 6
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Use flip to explain process",
+        description: "Conversation diagram (reuse Module 4 Flip#2 if desired)",
+        scribed_by: :fx1
+      )
+    end
 
     facilitator do
       spoken "We are going to practise a way of separating intention and impact to help us prepare for intentional conversations. "
@@ -426,7 +434,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - **And is there anything else that you noticed about this process?**
         - **What might be the benefits of using this process?**
 
-        Handover to Fx1 for reflection and close
+        Handover to Fx1 for reflections and close
       MD
     end
 

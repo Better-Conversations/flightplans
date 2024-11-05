@@ -110,7 +110,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "State Check-in", lead_by: :fx2) do
     length 4
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       instruction "Lead check-in at a slower pace"
@@ -146,7 +146,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Motivation for being on the course", lead_by: :fx2) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken " In the chat, let's hear from you all in a few words..."
@@ -168,7 +168,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Learning Outcomes", lead_by: :fx2) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "And now let's think about outcomes from this course. Please take a moment to think about:"
@@ -210,7 +210,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Use to explain the model",
+        comment: "Use flip to explain the model",
         description: "Traffic Light Model on LHS, space for findings on RHS (pre-prepared)",
         scribed_by: :fx1
       )
@@ -288,7 +288,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 1", lead_by: :fx2) do
     length 6
-    section_comment "1 Minute briefing, 5 minutes in BORs"
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 5, notify_halfway: true, halfway_message: true)
@@ -354,7 +354,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 2", lead_by: :fx2) do
     length 5
-    section_comment "1 Minute breifing, 4 minutes in BORs"
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_2, default_duration: 4, notify_halfway: true, halfway_message: true)
@@ -403,7 +403,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         If time allows, focus in on the transition between amber/yellow and other states and the reasons for that.
 
-        Handover to Fx1 for reflection, fieldwork and close
+        Handover to Fx1 for reflections, fieldwork and close
       MD
 
     end
@@ -418,7 +418,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Reflect on learning in this session", lead_by: :fx1) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "You’ve had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
