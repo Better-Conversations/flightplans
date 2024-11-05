@@ -1,8 +1,8 @@
 GIT
-  remote: https://github.com/Better-Conversations/ruby-flightplans.git
-  revision: 4f50931b6c4b234480098fb69f48e58c98db024a
+  remote: https://github.com/Better-Conversations/bcf-flightplans-dsl.git
+  revision: 524426368118dae3cc262f8d6730cc716041be55
   specs:
-    bcf-flightplans (0.10.0)
+    bcf-flightplans (0.11.1)
       dry-struct (~> 1.6)
       redcarpet (~> 3.6)
       rspec (~> 3)
@@ -18,8 +18,9 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
-    dry-core (1.0.1)
+    dry-core (1.0.2)
       concurrent-ruby (~> 1.0)
+      logger
       zeitwerk (~> 2.6)
     dry-inflector (1.1.0)
     dry-logic (1.5.0)
@@ -54,7 +55,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     language_server-protocol (3.17.0.3)
-    logger (1.6.0)
+    logger (1.6.1)
     mini_mime (1.1.5)
     module_methods (0.1.0)
     multi_xml (0.7.1)
@@ -73,7 +74,7 @@ GEM
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.1)
+    rspec-core (3.13.2)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -90,7 +91,7 @@ GEM
     sorbet-runtime (0.5.11537)
     stringio (3.1.1)
     tilt (2.4.0)
-    zeitwerk (2.7.0)
+    zeitwerk (2.7.1)
 
 PLATFORMS
   aarch64-linux

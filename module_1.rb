@@ -2,8 +2,6 @@ require 'bcf/flightplans'
 require_relative './common_blocks'
 require_relative './common_resources'
 
-# Flightplan version 2.2.3
-
 MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "State"
   module_number 1
@@ -22,7 +20,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   MD
 
   demo <<~MD
-    Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state 
+    Prior to BOR1, Fx1 and Fx2 to have examples of what they are thinking and feeling in a red state (strong and unpleasant emotions). This doesn't have to be anger or fear. It could be sadness or extreme frustration.
   MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
@@ -37,25 +35,25 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "for course overview and agenda",
-        description: "Course outline and agenda",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
 
     facilitator do
       instruction <<~MD
-        Welcome People.
-
-        Introduce facilitators, producers, and observers. Briefly explain their roles (See above).
+        Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
 
         Explain that the course attendees are invited to learn any of these roles too, by working with the Foundation.
       MD
       spoken "There are some contact details going in the chat if you need to get in touch. These are also in the Course Handbook"
 
       spoken "Does everyone have experience with Zoom?"
-
+      
       instruction "Adjust response as necessary."
+
+      spoken "You can use translated captions to follow us more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on."
 
       spoken "The producer is on hand to help with any technical issues."
 
@@ -65,21 +63,17 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken_exact "Please let us know where you are in the world by typing in chat."
 
-      instruction "Facilitators give an example of where they are."
-
-      instruction "Observers etc. can type in the chat. "
+      instruction "Facilitators and Observers type where they are in the chat."
 
       # TODO: Spoken <<-MD Doesnt add a bullet point every new line however adds different styling to bullet points put in
       spoken <<~MD
-        You can use translated captions to follow more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on.
-
         We also ask that everyone respect confidentiality of what is shared by the group this course, to allow people to fully engage with the learning.
       MD
 
       instruction "Go through the course overview on flip"
 
       spoken <<~MD
-        There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Feedback
+        There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Intentional Conversations.
 
         The sixth module will consolidate the learning and explore what you would like to do next.
 
@@ -102,8 +96,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         phone: +44 118 234 9811
       CHAT
 
-      instruction "Enable Captions when facilitator mentions it"
-
       instruction "Copy to chat when the facilitator mentions location"
 
       chat <<~CHAT
@@ -118,7 +110,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "State Check-in", lead_by: :fx2) do
     length 4
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       instruction "Lead check-in at a slower pace"
@@ -154,7 +146,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Motivation for being on the course", lead_by: :fx2) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken " In the chat, let's hear from you all in a few words..."
@@ -176,15 +168,15 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Learning Outcomes", lead_by: :fx2) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "And now let's think about outcomes from this course. Please take a moment to think about:"
-      spoken_exact "What kind of conversations would you like to be better after this course?"
+      spoken_exact "What kind of conversation would you like to be better after this course?"
 
       instruction "Pause"
 
-      spoken "In the chat give labels to these conversations."
+      spoken "In the chat give a label to these conversations."
       spoken "It might be something like 'neighbour' or 'colleague'. A word that will help you remember these conversations."
       instruction "Pause"
       spoken "Now give us a number to show how these conversations are going for you on a scale of 0-10. 0 terrible and 10 brilliant."
@@ -200,7 +192,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions this:"
 
       chat <<~CHAT
-        What kind of conversations would you like to be better after this course? Give a label to these conversations.
+        What kind of conversation would you like to be better after this course? Give a label to these conversations.
         e.g. neighbour
       CHAT
 
@@ -215,12 +207,11 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Traffic Light Model", lead_by: :fx1) do
     length 5
-    section_comment "Scribed by fx1"
     resources do
       flipchart(
         :flip_2,
-        "to explain the model",
-        description: "Traffic Light Model on LHS, Space for findings on RHS",
+        comment: "Use flip to explain the model",
+        description: "Traffic Light Model on LHS, space for findings on RHS (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -240,7 +231,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   # TODO: Add scribed by section to block as well
   block(name: "Demonstrate Breakout exercises", lead_by: :fx1) do
     length 5
-    section_comment "Add to Flip#2 in the red state section for up to 3 people"
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the red state section for up to 3 people",
+        description: "Findings on red state",
+        scribed_by: :fx1
+      )
+    end
 
     facilitator do
       spoken "Let’s get some examples of how you experience these three different states."
@@ -290,7 +288,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 1", lead_by: :fx2) do
     length 6
-    section_comment "1 Minute briefing, 5 minutes in BORs"
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 5, notify_halfway: true, halfway_message: true)
@@ -323,10 +321,16 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  # TODO: Add scribed by section to block as well
   block(name: "Unpack Breakout 1 ", lead_by: :fx2) do
     length 5
-    section_comment "Add to Flip#2 in green section for up to 3 people"
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the green state section for up to 3 people",
+        description: "Findings on green state",
+        scribed_by: :fx1
+      )
+    end
 
     facilitator do
       spoken "Welcome back. Let’s get 2-3 examples of green state."
@@ -350,7 +354,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout 2", lead_by: :fx2) do
     length 5
-    section_comment "1 Minute breifing, 4 minutes in BORs"
+    section_comment "(1 min briefing)"
 
     resources do
       breakout_room(:bor_2, default_duration: 4, notify_halfway: true, halfway_message: true)
@@ -380,11 +384,15 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout 2", lead_by: :fx2) do
     length 5
-    section_comment " Fx1 Scribes
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the amber/yellow state section for up to 3 people",
+        description: "Findings on amber/yellow state",
+        scribed_by: :fx1
+      )
+    end
 
-    Add to Flip 2 in amber section for up to 3 people"
-
-    # TODO: Add scribed by section to block as well as allowing for discription without flipchart page
     facilitator do
       spoken "Now let’s get 2-3 examples of amber/yellow state"
 
@@ -395,7 +403,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         If time allows, focus in on the transition between amber/yellow and other states and the reasons for that.
 
-        Handover to Fx1 for reflection, fieldwork and close
+        Handover to Fx1 for reflections, fieldwork and close
       MD
 
     end
@@ -410,17 +418,17 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Reflect on learning in this session", lead_by: :fx1) do
     length 5
-    section_comment "Gather comments in chat"
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "You’ve had some conversations and learned a model to describe state. This is the basis for Better Conversations."
+      spoken "You’ve had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
       spoken "Take a moment now to reflect and put your thoughts in the chat. Here are some questions to guide your thinking:"
 
       spoken_exact "Thinking about conversations that have and haven’t gone well and what you know now about state, what are you noticing?"
       spoken_exact "What difference does this make?"
       spoken_exact "Is there something you may do differently now you know this?"
 
-      instruction "If time permits, pick 1-2 examples and allow people to speak."
+      instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
 
       spoken "We are almost at the end of this first module. There is space in the Course Handbook to capture any more thoughts you might have from today. "
 
@@ -472,7 +480,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :fx1)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Assumptions", length: 1))
 
   instruction_ends
 

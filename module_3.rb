@@ -40,8 +40,8 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "Flip#1 for agenda",
-        description: "Use to explain the model",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -64,6 +64,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   #TODO - Handovers need to be parameterized for the right Fx if this is changed for training purposes
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
+    section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
       spoken "Let's have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
@@ -93,26 +94,27 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "use to explain the model",
-        description: "Context diagram (as on handbook)",
+        comment: "Use flip to explain the model",
+        description: "Context diagram (as in handbook, pre-prepared)",
         scribed_by: :fx1
       )
     end
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 3 to help you remember the diagram."
-      spoken "In Better Conversations, context means what surrounds the conversation, the setting for the conversation."
+      spoken "In Better Conversations, context is what gives meaning to the conversation."
       spoken "Context is important because it defines our subjective experience."
-      spoken "It helps us make meaning of our world. Each of us brings our own context to conversations. And we take it into our future conversations, so our context can change over time."
+      spoken "We've extended the stimulus-response model to show that context affects all our sense-making and behaviour."
+      spoken "Each of us brings our own context to conversations. And we take it into our future conversations, so our context can change over time."
       spoken "Context also determines _what_ assumptions we make. We can make different assumptions in different contexts."
-      spoken "As an example, imagine you were in London and you saw people carrying umbrellas. You might think it was going to rain."
+      spoken "As an example, imagine you were in the UK and you saw people carrying umbrellas. You might think it was going to rain."
       spoken "Now imagine you are in a country in South Asia. If you saw people carrying umbrellas, they might be wanting to use them as parasols. If it was monsoon season, you might think the umbrella has a dual use."
       spoken "We have broken context down into 6 overlapping areas to help explain what it is."
 
       spoken <<~TYPST_SPOKEN
         Context can be:
-        - _Psychobiological_ (for example, your perception of your state, your personal values)
-        - _Sociocultural_ (for example, relationships and group behaviour, cultural values and beliefs)
+        - _Psychobiological_ (for example, your state, your personal values)
+        - _Sociocultural_ (for example, relationships, group behaviour, cultural values and beliefs)
         - _Historical_ (for example, what’s happened in the past, what’s documented or recorded)
         - _Environmental_ (for example, what’s going in the physical space you are in)
         - _Time_-based (for example, temporal - time zone, whether it’s day or night)
@@ -127,7 +129,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "We look at psychobiological, time-based, historical, environmental context in this course."
       spoken "We practice verbal communication in this course however you can apply the concepts to written communication."
-      spoken "We aren’t covering sociocultural context in this course in depth – this is beyond the scope of what we are doing here."
+      spoken "We aren’t covering sociocultural context in this course in depth – it's beyond the scope of what we can do in the time we have."
       spoken "What we are going to do now is put you in breakout rooms to find out more about the impact of knowing someone’s context."
       instruction "Handover to Fx2 for context exercise."
     end
@@ -140,6 +142,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   # TODO: Escape the in strings, Typst uses it as a control character
   block(name: "Breakout#1", lead_by: :fx2) do
     length 8
+    section_comment "(2 min briefing)"
 
     resources do
       breakout_room(:bor_1, default_duration: 6)
@@ -202,12 +205,11 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout activity", lead_by: :fx2) do
     length 6
-    section_comment "Fx1 scribes"
 
     resources do
       flipchart(
         :flip_3,
-        "Add to Flip#3 for up to 3 people and/or use chat.",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on context",
         scribed_by: :fx2
       )
@@ -239,6 +241,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Breakout#2", lead_by: :fx1) do
     length 8
+    section_comment "(2 min briefing)"
 
     resources do
       breakout_room(:bor_2, default_duration: 6)
@@ -247,7 +250,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
       spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_exact "Historical, psychobiological, sociocultural, environmental, time-based (temporal), method. "
+      spoken_exact "Psychobiological, sociocultural, historical, environmental, time-based (temporal), method. "
       spoken "Remember that context helps determine the assumptions we make."
       spoken_exact "Think about a conversation you'd like to be better."
       spoken "What you would like to have happen in that conversation?"
@@ -271,7 +274,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         We are going to consider improving a conversation using the 6 elements of context:
 
-        Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method.
+        Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method.
 
         Think about a conversation you'd like to be better:
 
@@ -291,12 +294,11 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout#2 activity", lead_by: :fx1) do
     length 7
-    section_comment "Fx2 scribes"
 
     resources do
       flipchart(
         :flip_4,
-        "Add to Flip#4 for up to 3 people and/or use chat.",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on context",
         scribed_by: :fx2
       )
@@ -337,7 +339,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 5
 
     facilitator do
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method."
+      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method."
       spoken "State is an important aspect of psychobiological context."
       spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
 
@@ -348,14 +350,14 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
-      instruction "Handover to Fx2 for reflection, fieldwork and close."
+      instruction "Handover to Fx2 for reflections, fieldwork and close."
     end
 
     producer do
       instruction "Copy in chat (when you hear facilitator say these):"
 
       chat <<~CHAT
-        6 elements of context: Historical, psychobiological, sociocultural, environmental, time-based (temporal), and method.
+        6 elements of context: Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method.
 
         Thinking about what you know about state, assumptions and context:
 
@@ -378,6 +380,9 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What difference does understanding context make to having Better Conversations?
         - What you will do differently now you know this?"
       MD
+
+      instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
+
       spoken "There is space in the Course Handbook to capture any more thoughts you might have from today."
     end
 
@@ -398,7 +403,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2
   ), lead_by: :fx2)
 
-  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx2, "Listening with Curiosity", length: 1))
 
   instruction_ends
 
