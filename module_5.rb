@@ -31,8 +31,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "for agenda",
-        description: "Course outline and agenda",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -132,7 +132,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "to explain model",
+        comment: "Use to explain model",
         description: "Conversation diagram (reuse Module 4 Flip#2 if desired)",
         scribed_by: :fx1
       )
@@ -251,10 +251,11 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout 1", lead_by: :fx2) do
     length 6
+
     resources do
       flipchart(
         :flip_3,
-        "Comments from up to 3 people and/or use chat",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on intention and impact",
         scribed_by: :fx1
       )
@@ -398,10 +399,11 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout 2", lead_by: :fx2) do
     length 6
+
     resources do
       flipchart(
         :flip_4,
-        "Comments from up to 3 people and/or use chat",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on preparing for an intentional conversation",
         scribed_by: :Fx1
       )

@@ -35,8 +35,8 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "for course overview and agenda",
-        description: "Course outline and agenda",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -207,12 +207,11 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Traffic Light Model", lead_by: :fx1) do
     length 5
-    section_comment "Scribed by fx1"
     resources do
       flipchart(
         :flip_2,
-        "to explain the model",
-        description: "Traffic Light Model on LHS, Space for findings on RHS",
+        comment: "Use to explain the model",
+        description: "Traffic Light Model on LHS, space for findings on RHS (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -232,7 +231,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   # TODO: Add scribed by section to block as well
   block(name: "Demonstrate Breakout exercises", lead_by: :fx1) do
     length 5
-    section_comment "Add to Flip#2 in the red state section for up to 3 people"
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the red state section for up to 3 people",
+        description: "Findings on red state",
+        scribed_by: :fx1
+      )
+    end
 
     facilitator do
       spoken "Let’s get some examples of how you experience these three different states."
@@ -315,10 +321,16 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
   end
 
-  # TODO: Add scribed by section to block as well
   block(name: "Unpack Breakout 1 ", lead_by: :fx2) do
     length 5
-    section_comment "Add to Flip#2 in green section for up to 3 people"
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the green state section for up to 3 people",
+        description: "Findings on green state",
+        scribed_by: :fx1
+      )
+    end
 
     facilitator do
       spoken "Welcome back. Let’s get 2-3 examples of green state."
@@ -372,11 +384,15 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout 2", lead_by: :fx2) do
     length 5
-    section_comment " Fx1 Scribes
+    resources do
+      flipchart(
+        :flip_2,
+        comment: "Add to flip in the amber/yellow state section for up to 3 people",
+        description: "Findings on amber/yellow state",
+        scribed_by: :fx1
+      )
+    end
 
-    Add to Flip 2 in amber section for up to 3 people"
-
-    # TODO: Add scribed by section to block as well as allowing for discription without flipchart page
     facilitator do
       spoken "Now let’s get 2-3 examples of amber/yellow state"
 

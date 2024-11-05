@@ -28,13 +28,13 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Welcome", lead_by: :fx1) do
     length 2
-    #TODO: Fix how to show flipchart as comments
+
     resources do
       flipchart(
         :flip_1,
-        comment: " ",
-        description: "Course outline and agenda",
-        scribed_by: :fx1,
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
+        scribed_by: :fx1
       )
     end
 
@@ -97,7 +97,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Conversation Model", lead_by: :fx1) do
     length 5
-    #TODO: Fix how scribed printed as comments
+
     resources do
       flipchart(
         :flip_2,
@@ -192,10 +192,11 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout 1 ", lead_by: :fx2) do
     length 7
+
     resources do
       flipchart(
         :flip_3,
-        comment: "Gather comments for up to 3 people and/or use chat",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on listening without interruption",
         scribed_by: :fx1
       )
@@ -363,7 +364,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_4,
-        comment: "Gather comments on Flip#4 for up to 3 people and/or use chat",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on listening to enquire and extend understanding",
         scribed_by: :fx2
       )

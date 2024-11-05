@@ -27,8 +27,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "for agenda",
-        description: "Course outline and agenda",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -152,8 +152,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "Comments from up to 3 people and/or use chat",
-        description: "Debrief from BOR 1 – Personal impact of course",
+        comment: "Summarise responses on flip, using people's words",
+        description: "Personal impact of course",
         scribed_by: :fx2
       )
     end
@@ -191,8 +191,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_3,
-        "to explain model",
-        description: "Foundation Model",
+        comment: "Use to explain model",
+        description: "Foundation Model (pre-prepared)",
         scribed_by: :sponsor
       )
     end
@@ -297,8 +297,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_4,
-        "Comments from up to 3 people and/or use chat",
-        description: "Debrief from BOR 2 – What would people like to have happen now",
+        comment: "Summarise responses on flip, using people's words",
+        description: "What would people would like to have happen now",
         scribed_by: :fx1
       )
     end

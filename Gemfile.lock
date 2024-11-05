@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/Better-Conversations/bcf-flightplans-dsl.git
-  revision: 6cf0f8d618801e92d8b0efc65d17b9af681e7570
+  revision: 524426368118dae3cc262f8d6730cc716041be55
   specs:
-    bcf-flightplans (0.11.0)
+    bcf-flightplans (0.11.1)
       dry-struct (~> 1.6)
       redcarpet (~> 3.6)
       rspec (~> 3)

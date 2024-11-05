@@ -41,8 +41,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       flipchart(
         :flip_1,
-        comment: "Free text for any notes",
-        description: "Course outline and agenda",
+        comment: "",
+        description: "Course outline and agenda (pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -98,8 +98,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "use to explain the model",
-        description: "Assumptions diagram (as in handbook)",
+        comment: "Use to explain the model",
+        description: "Assumptions diagram (as in handbook, pre-prepared)",
         scribed_by: :fx1
       )
     end
@@ -268,7 +268,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_3,
-        "Add to Flip#3 for up to 3 people and/or use chat.",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on assumptions",
         scribed_by: :fx2)
 
@@ -303,8 +303,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "",
-        description: "Use assumptions diagram to explain how feelings are represented by the model",
+        comment: "Use to recap model",
+        description: "Use assumptions diagram to explain how feelings affect assumptions",
         scribed_by: :fx1
       )
     end
@@ -377,7 +377,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_4,
-        "Add to Flip#4 for up to 3 people and/or use chat.",
+        comment: "Summarise responses on flip, using people's words",
         description: "Learnings on state and assumptions",
         scribed_by: :fx1
       )
