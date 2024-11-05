@@ -401,7 +401,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2
   ), lead_by: :fx2)
 
-  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx2, "Listening with Curiosity", length: 1))
 
   instruction_ends
 

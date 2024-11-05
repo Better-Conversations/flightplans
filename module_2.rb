@@ -388,7 +388,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about feelings and assumptions?"
       spoken "Who's got something they want to share?"
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
-      instruction "Handover to Fx2 for reflection, fieldwork and close."
+      instruction "Handover to Fx1 for reflection, fieldwork and close."
     end
 
     producer do
@@ -434,8 +434,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2),
         lead_by: :fx1)
 
-  # TODO: Make fx1 lead
-  block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :Fx1)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Context", length: 1))
 
   instruction_ends
 

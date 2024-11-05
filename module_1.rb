@@ -480,7 +480,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-  block(BCF::FlightPlans::CommonBlocks::CLOSING, lead_by: :fx1)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Assumptions", length: 1))
 
   instruction_ends
 

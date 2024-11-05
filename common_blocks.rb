@@ -47,6 +47,8 @@ module BCF
       end
 
       # TODO = consider whether we want to include a handover instruction here - it would create a dependency on the next block. There are several instances of handovers to look at across the flight plans.
+      # TODO = pass the facilitator as a parameter - for now, Fx1 always does the any questions block.
+    
       ANY_QUESTIONS = Block.build do
         length 2
         default_leader :fx1
@@ -60,6 +62,8 @@ module BCF
         end
       end
 
+      # TODO = pass the facilitator as a parameter - for now, Fx2 always does the state check-in using the traffic light model.
+      
       STATE_CHECKIN_TLM = Block.build do
         length 2
         default_leader :fx2
@@ -110,24 +114,6 @@ module BCF
         end
       end
 
-      #TODO: Parameterize the module names and pass the next module name as a parameter
-      CLOSING = Block.build do
-        length 1 
-        name "Close"
-        default_leader :fx2
-
-        facilitator do
-          spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished. "
-          spoken "Otherwise, we will see you next time on the next module which will cover [next module name]."
-          instruction "Handover to Sponsor"
-        end
-
-        producer do
-          instruction "If leaving the session early, make facilitator a host first."
-        end
-
-      end
-
       SPONSOR_DEBRIEF = Block.build do
         length 15
         name "Debrief"
@@ -168,6 +154,36 @@ module BCF
           end
         end
       end
+
+
+      class Closing < Block
+        def self.json_create(hash)
+          # Handle JSON deserialization
+          Block.json_create(hash)
+        end
+      
+        # Initialize with relevant parameters
+        def initialize(facilitator_name, next_module_name, length:)
+          super()  # Call the superclass constructor
+      
+          BCF::FlightPlans::Block::DSL.new(self) do
+            name "Close"
+            length length
+            lead_by facilitator_name
+      
+            facilitator do
+              spoken "If you have any further questions or anything you'd like to share, we will stay on the Zoom call for a few minutes after the session finished."
+              spoken "Otherwise, we will see you next time on the next module which will cover #{next_module_name}."
+              instruction "Handover to Sponsor"
+            end
+      
+            producer do
+              instruction "If leaving the session early, make facilitator a host first."
+            end
+          end
+        end
+      end
+      
     end
   end
 end

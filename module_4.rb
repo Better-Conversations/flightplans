@@ -434,7 +434,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length: 2
   ), lead_by: :fx2)
 
-  block(BCF::FlightPlans::CommonBlocks::CLOSING)
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx2, "Intentional Conversations", length: 1))
+  
   instruction_ends
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)

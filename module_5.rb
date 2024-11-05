@@ -473,11 +473,10 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There's a link in the chat to the Better Conversations Community - please do visit it if you haven't already. We are here to help!"
 
       spoken <<~MD
-       Our sixth and final module will:
+       Our sixth and final module on Applications will:
 
         - Consolidate Modules 1-5
         - Discuss next steps for you and how we can support you
-        - Consider how you might use Better Conversations in your work or communities"
       MD
 
       spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
