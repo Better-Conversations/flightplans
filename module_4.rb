@@ -32,9 +32,9 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_1,
-        "for agenda",
+        comment: " ",
         description: "Course outline and agenda",
-        scribed_by: :fx1
+        scribed_by: :fx1,
       )
     end
 
@@ -101,7 +101,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        "Use to explain model",
+        comment: " ",
         description: "Conversation diagram (as on handbook)",
         scribed_by: :fx1
       )
@@ -195,8 +195,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_3,
-        "Gather comments on Flip#3 for up to 3 people and/or use chat",
-        description: "Learnings on listening without interruption" ,
+        comment: "Gather comments for up to 3 people and/or use chat",
+        description: "Learnings on listening without interruption",
         scribed_by: :fx1
       )
 
@@ -363,8 +363,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_4,
-        "Gather comments on Flip#4 for up to 3 people and/or use chat",
-        description: "Learnings on listening to enquire and extend understanding" ,
+        comment: "Gather comments on Flip#4 for up to 3 people and/or use chat",
+        description: "Learnings on listening to enquire and extend understanding",
         scribed_by: :fx2
       )
     end

@@ -41,9 +41,9 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       flipchart(
         :flip_1,
-        scribed_by: :fx1,
+        comment: "Free text for any notes",
         description: "Course outline and agenda",
-        comments: "Free text for any notes"
+        scribed_by: :fx1
       )
     end
 
