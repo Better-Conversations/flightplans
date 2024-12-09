@@ -50,7 +50,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There are some contact details going in the chat if you need to get in touch. These are also in the Course Handbook"
 
       spoken "Does everyone have experience with Zoom?"
-      
+
       instruction "Adjust response as necessary."
 
       spoken "You can use translated captions to follow us more easily. Turn this on from the options at the bottom of your Zoom window. You may see a box pop-up on your screen to enter your spoken language if someone turns this on."
@@ -311,13 +311,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         What might you be thinking or feeling when you’re in a green state?
       CHAT
 
-      instruction <<~MD
-        When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes
+      instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes"
 
-        Send into BORs
-
-        Broadcast halfway message
-      MD
+      send_into_bor(:bor_1)
     end
   end
 
@@ -338,7 +334,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about being in a green state?"
 
       instruction "Facilitate brief discussion, helping people to say what they are thinking or feeling in a green state.  Suggest people can also put their answers in the chat."
-
     end
 
     producer do
@@ -367,19 +362,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      instruction " Copy to chat"
+      instruction "Copy to chat"
 
-      chat " What might you be thinking or feeling when you’re in an amber/yellow state? "
+      chat "What might you be thinking or feeling when you’re in an amber/yellow state? "
 
-      instruction <<~MD
-        When the facilitator has finished talking, tell the group you are going to send them into BORs for 4 minutes
-
-        Send into BORs
-
-        Broadcast halfway message:
-      MD
+      instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 4 minutes"
+      send_into_bor :bor_2
     end
-
   end
 
   block(name: "Unpack Breakout 2", lead_by: :fx2) do

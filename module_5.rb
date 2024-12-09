@@ -235,16 +235,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Manage the time so everyone gets a chance to talk about their experience
       CHAT
 
-      instruction <<~MD
-        When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes
-
-        Send into BORs
-
-        Broadcast halfway message
-
-      MD
-
-      broadcast "Halfway, 3 minutes remaining"
+      instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
+      send_into_bor :bor_1
     end
 
   end
@@ -353,7 +345,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 8)
+      breakout_room(:bor_2, default_duration: 8)
     end
 
     facilitator do
@@ -392,16 +384,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Manage the time so everyone gets a chance to practice these questions.
       CHAT
 
-      instruction <<~MD
-        When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes
-
-        Send into BORs
-
-        Broadcast halfway message
-
-      MD
-
-      broadcast "Halfway, 4 minutes remaining"
+      instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes"
+      send_into_bor :bor_2
     end
   end
 

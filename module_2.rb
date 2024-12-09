@@ -255,11 +255,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "When the facilitator has finished giving the instructions/answering questions." \
                     "Tell the group you are going to send them into BORs for 8 minutes"
 
-      instruction "Send into BORs"
-      instruction "Broadcast halfway message:"
-
-      # TODO: Parameterize the time of a breakout room at runtime
-      broadcast "Halfway, 4 minutes remaining"
+      send_into_bor :bor_1
     end
   end
 
@@ -365,9 +361,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       CHAT
 
       instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
-      instruction "Send into BORs"
-      instruction "Broadcast halfway message:"
-      broadcast "Halfway, 3 minutes remaining"
+      send_into_bor :bor_2
     end
   end
 

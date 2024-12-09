@@ -177,16 +177,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       
       CHAT
 
-      instruction <<~MD
-      When the facilitator has finished talking, tell the group you are going to send them into BORs for 6 minutes
-      
-      Send into BORs
-
-      Broadcast halfway message:
-      
-      MD
-
-      broadcast "Halfway, 3 minutes remaining"
+      instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 6 minutes"
+      send_into_bor :bor_1
     end
   end
 
