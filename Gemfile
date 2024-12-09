@@ -2,10 +2,9 @@
 
 source 'https://rubygems.org'
 
-branch = ENV['GITHUB_HEAD_REF'] || ENV['GITHUB_REF'] || 'main'
-gem 'bcf-flightplans', git: 'https://github.com/Better-Conversations/bcf-flightplans-dsl.git'#, branch: branch
+gem 'bcf-flightplans', git: 'https://github.com/Better-Conversations/bcf-flightplans-dsl.git'
+# gem 'bcf-flightplans', path: '../bcf-flightplans-dsl'
 
-# gem 'bcf-flightplans', path: '../ruby-flightplans'
 gem 'ffi-aspell'
 gem 'httparty'
 
