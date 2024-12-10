@@ -47,6 +47,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Explain that the course attendees are invited to learn any of these roles too, by working with the Foundation.
       MD
+
       spoken "There are some contact details going in the chat if you need to get in touch. These are also in the Course Handbook"
 
       spoken "Does everyone have experience with Zoom?"
@@ -192,8 +193,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions this:"
 
       chat <<~CHAT
-        What kind of conversation would you like to be better after this course? Give a label to these conversations.
-        e.g. neighbour
+        What kind of conversation would you like to be better after this course? Give a label to these conversations. e.g. neighbour
       CHAT
 
       chat <<~CHAT
@@ -364,7 +364,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       instruction "Copy to chat"
 
-      chat "What might you be thinking or feeling when you’re in an amber/yellow state? "
+      chat "What might you be thinking or feeling when you’re in an amber/yellow state?"
 
       instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 4 minutes"
       send_into_bor :bor_2
@@ -388,13 +388,12 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about being in an amber/yellow state?"
 
       instruction <<~MD
-        Facilitate brief discussion, helping people to say what they are thinking or feeling in an amber/yellow state.  Suggest people can also put their answers in the chat.
+        Facilitate brief discussion, helping people to say what they are thinking or feeling in an amber/yellow state. Suggest people can also put their answers in the chat.
 
         If time allows, focus in on the transition between amber/yellow and other states and the reasons for that.
 
         Handover to Fx1 for reflections, fieldwork and close
       MD
-
     end
 
     producer do
@@ -402,7 +401,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat "What did you notice about being in an amber/yellow state?"
     end
-
   end
 
   block(name: "Reflect on learning in this session", lead_by: :fx1) do
@@ -420,7 +418,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
 
       spoken "We are almost at the end of this first module. There is space in the Course Handbook to capture any more thoughts you might have from today. "
-
     end
 
     producer do
@@ -430,11 +427,8 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Thinking about conversations that have and haven’t gone well and what you know now about state
 
         - What are you noticing?
-
         - What difference does this make?
-
         - Is there something you may do differently now you know this?
-
       CHAT
     end
 
@@ -458,15 +452,11 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         Fieldwork:
 
-        - Notice your state, and how and when it changes for  you.
-
+        - Notice your state, and how and when it changes for you.
         - Try mapping it to the Traffic Light Model.
-
         - What’s your state like, before and after your conversations?
-
       CHAT
     end
-
   end
 
   block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Assumptions", length: 1))

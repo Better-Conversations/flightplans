@@ -48,7 +48,7 @@ module BCF
 
       # TODO = consider whether we want to include a handover instruction here - it would create a dependency on the next block. There are several instances of handovers to look at across the flight plans.
       # TODO = pass the facilitator as a parameter - for now, Fx1 always does the any questions block.
-    
+
       ANY_QUESTIONS = Block.build do
         length 2
         default_leader :fx1
@@ -63,7 +63,7 @@ module BCF
       end
 
       # TODO = pass the facilitator as a parameter - for now, Fx2 always does the state check-in using the traffic light model.
-      
+
       STATE_CHECKIN_TLM = Block.build do
         length 2
         default_leader :fx2
@@ -80,25 +80,24 @@ module BCF
           MD
 
           instruction <<~MD
-              Accept whatever states are put in chat.\ 
-              Avoid saying that green state is best.\ 
-              If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready.
+            Accept whatever states are put in chat.\ 
+            Avoid saying that green state is best.\ 
+            If people are in red then ask them to take the time they need, switch their camera off and mute, and join when they are ready.
           MD
         end
 
         producer do
           chat <<~CHAT
-                State check-in:
-
-                - Green – you’re good to go!
-                - Amber/Yellow – you need to proceed with caution
-                - Red – you need to stop, break
+            State check-in:
+  
+            - Green – you’re good to go!
+            - Amber/Yellow – you need to proceed with caution
+            - Red – you need to stop, break
           CHAT
 
           instruction "Take note of states to help decide BOR participants"
         end
       end
-
 
       SPONSOR_CLOSE = Block.build do
         length 16
@@ -155,35 +154,34 @@ module BCF
         end
       end
 
-
       class Closing < Block
         def self.json_create(hash)
           # Handle JSON deserialization
           Block.json_create(hash)
         end
-      
+
         # Initialize with relevant parameters
         def initialize(facilitator_name, next_module_name, length:)
-          super()  # Call the superclass constructor
-      
+          super() # Call the superclass constructor
+
           BCF::FlightPlans::Block::DSL.new(self) do
             name "Close"
             length length
             lead_by facilitator_name
-      
+
             facilitator do
               spoken "If you have any further questions or anything you'd like to share, we will stay on the Zoom call for a few minutes now."
               spoken "Otherwise, we will see you next time on the next module which will cover #{next_module_name}."
               instruction "Handover to Sponsor"
             end
-      
+
             producer do
               instruction "If leaving the session early, make facilitator a host first."
             end
           end
         end
       end
-      
+
     end
   end
 end

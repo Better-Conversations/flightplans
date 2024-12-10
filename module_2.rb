@@ -86,8 +86,10 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       chat <<~CHAT
         Think of one conversation you had recently – maybe it was a good conversation, maybe it wasn’t.
+
         - What was your state before the conversation?
         - What was your state after the conversation?
+        
         e.g. green/amber or amber/green
       CHAT
     end
@@ -198,7 +200,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 8)
+      breakout_room(:bor_1, default_duration: 8, halfway_message: true)
     end
 
     # TODO: insert the parameter for length of the BOR in the spoken text to make it easier to change/less error-prone. Note the length of the block is 1-2 minutes longer than the BOR length to allow for the intro and final comments
@@ -235,21 +237,15 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Work in pairs or threes, with one person as the Chooser and the other(s) as the Asker(s).
 
         1. The Chooser picks an object they can see but the Asker(s) can’t and says “I can see a ___” without showing the object.
-
         2. The Asker(s) draws their version of the object on a piece of paper, then shows it to the Chooser.
-
         3. The Asker(s) asks just two or three of these questions of the Chooser about the object:
-
-            - What kind of ___?
-            - Whereabouts is ___?
-            - Is there anything else about ___?
-
+          - What kind of ___?
+          - Whereabouts is ___?
+          - Is there anything else about ___?
         4. The Asker(s) updates their drawings based on the Chooser’s answers, then shows them to the Chooser again.
-
         5. The Chooser reveals the object and compares it with the Asker(s)’ drawings.
 
         Manage the time so everyone gets a chance to ask the questions.
-
       CHAT
 
       instruction "When the facilitator has finished giving the instructions/answering questions." \
@@ -261,15 +257,14 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout activity", lead_by: :fx1) do
     length 7
-    
+
     resources do
       flipchart(
         :flip_3,
         comment: "Summarise responses on flip, using people's words",
         description: "Learnings on assumptions",
-        scribed_by: :fx2)
-
-      breakout_room(:bor_1)
+        scribed_by: :fx2
+      )
     end
 
     facilitator do
@@ -280,7 +275,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
-        
+
       instruction "Handover to Fx1 for disucssion on assumptions and feelings."
     end
 
@@ -327,7 +322,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 7
     section_comment "(1 min briefing)"
     resources do
-      breakout_room(:bor_2, default_duration: 6)
+      breakout_room(:bor_2, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
@@ -357,7 +352,6 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - How your feelings related to your assumptions about the situation or person.
 
         Manage the time so everyone has a chance to answer the questions.
-        
       CHAT
 
       instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 6 minutes"
@@ -367,7 +361,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Unpack Breakout#2 activity", lead_by: :fx2) do
     length 5
-   
+
     resources do
       flipchart(
         :flip_4,
@@ -375,7 +369,6 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         description: "Learnings on state and assumptions",
         scribed_by: :fx1
       )
-      breakout_room(:bor_2)
     end
 
     facilitator do
@@ -415,6 +408,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       chat <<~CHAT
         Thinking about the conversations you are going to have in the next week, and what we have just learned on this module:
+
         - What do you know now about having better conversations?
         - Is there something you may do differently now you know this?
       CHAT
