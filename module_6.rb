@@ -7,13 +7,12 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_number 6
 
   learning_outcomes <<~MD
-  Learners will be able to:
-    -	Describe the personal impact of the Better Conversations course
-    -	Explain what they would like to have happen now
+    Learners will be able to:
+      -	Describe the personal impact of the Better Conversations course
+      -	Explain what they would like to have happen now
 
-    Suggested learning outcomes for further trainings/interventions
-    -	Follow up with individual meetings on next steps
-
+      Suggested learning outcomes for further trainings/interventions
+      -	Follow up with individual meetings on next steps
   MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
@@ -38,7 +37,6 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
 
         Point out this where this module is on the course overview on the flip
-
       MD
 
       spoken "We are on Module 6, where we consider the personal impact of the course and what you would like to have happen next. You'll need to customise this one for your own audience."
@@ -67,10 +65,9 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "If you’ve delivered the course recently, you can share observations from those experiences too."
 
       instruction <<~MD
-      If time, invite examples from 1-2 people.
+        If time, invite examples from 1-2 people.
 
-      Handover to Fx1 for BOR on personal impact
-
+        Handover to Fx1 for BOR on personal impact
       MD
     end
 
@@ -79,10 +76,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Thinking about what you explored on these modules…
 
         What surprised you?
-
       CHAT
     end
-
 
   end
 
@@ -99,15 +94,12 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There are some questions going into the chat that will help you discuss that impact. You don’t have to cover every question."
       spoken "It should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
       spoken_exact <<~MD
+        Thinking of your personal experience of the course, and the conversations you have had recently:
 
-      Thinking of your personal experience of the course, and the conversations you have had recently:
-
-       -What do you know now about having Better Conversations that you didn’t know before?
-
-        -What do you do differently now?
-
-        -Knowing this, what difference does this make to you?
-        MD
+        - What do you know now about having Better Conversations that you didn’t know before?
+        - What do you do differently now?
+        - Knowing this, what difference does this make to you?
+      MD
 
       spoken_exact "Manage the time so everyone has a chance to contribute. You don’t have to cover every question."
       spoken_exact "Please only share what you are comfortable sharing."
@@ -120,30 +112,20 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when you hear the facilitator say this: "
 
       chat <<~CHAT
-      Thinking of your personal experience of the course, and the conversations you have had recently:
+        Thinking of your personal experience of the course, and the conversations you have had recently:
 
-      - What do you know now about having Better Conversations that you didn’t know before?
+        - What do you know now about having Better Conversations that you didn’t know before?
 
-      - What do you do differently now?
+        - What do you do differently now?
 
-      - Knowing this, what difference does this make to you?
+        - Knowing this, what difference does this make to you?
 
-      Manage the time so everyone has a chance to contribute. You don’t have to cover every question.
-      Please only share what you are comfortable sharing.
-
+        Manage the time so everyone has a chance to contribute. You don’t have to cover every question.
+        Please only share what you are comfortable sharing.
       CHAT
 
-      instruction <<~MD
-
-      When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes
-
-      Send into BORs
-
-      Broadcast halfway message
-
-      MD
-
-      broadcast "Halfway, 4 minutes remaining"
+      instruction "When the facilitator has finished talking tell the group you are going to send them into BORs for 8 minutes"
+      send_into_bor :bor_1
     end
   end
 
@@ -174,16 +156,11 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as you hear the facilitator mention each of these questions:"
       chat <<~CHAT
         - What do you know now about the personal impact of Better Conversations?
-
         - Knowing that, what difference does that make, to you?
-
       CHAT
 
       instruction "Prepare BORs in 2/3s for 6 minutes"
-
     end
-
-
   end
 
   block(name: "Foundation Model", lead_by: :sponsor) do
@@ -218,7 +195,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Point to Community"
       spoken "We want to encourage community around this to get the help you might need and to support other people. If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there. You don't need to train to be a facilitator to join the community."
-      
+
       spoken "I’m going to handover to Fx2 to take you through to the next breakout."
       instruction "Handover to Fx2 for BOR on what people would like to have happen now"
     end
@@ -250,12 +227,10 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you into breakouts again. You will have 6 minutes for this exercise"
 
-
       spoken_exact <<~MD
-      Thinking about using and/or delivering Better Conversations:
+        Thinking about using and/or delivering Better Conversations:
 
         - What would you like to do now?
-
         - What support do you need for that to happen?
       MD
 
@@ -267,27 +242,19 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     producer do
       chat <<~CHAT
-      Thinking about using and/or delivering Better Conversations:
+        Thinking about using and/or delivering Better Conversations:
 
-      - What would you like to do now?
+        - What would you like to do now?
+        - What support do you need for that to happen?
 
-      - What support do you need for that to happen?
-
-      Manage the time so everyone has a chance to reflect on the questions. Please only share what you are comfortable sharing.
-
+        Manage the time so everyone has a chance to reflect on the questions. Please only share what you are comfortable sharing.
       CHAT
 
       instruction <<~MD
-      When the facilitator has finished giving the instructions/answering questions. tell the group you are going to send them into BORs for 6 minutes
-
-      Send into BORs
-
-      Broadcast halfway message
-
+        When the facilitator has finished giving the instructions/answering questions. tell the group you are going to send them into BORs for 6 minutes
       MD
 
-      broadcast "Halfway, 3 minutes remaining"
-
+      send_into_bor :bor_2
     end
 
   end
@@ -309,20 +276,16 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What support do you need for that to happen?"
 
       instruction <<~MD
-      Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
 
-      Handover to Fx1 for reflections and close.
-
-
-        MD
+        Handover to Fx1 for reflections and close.
+      MD
     end
 
     producer do
       chat <<~CHAT
         - What would you like to do now?
-
         - What support do you need for that to happen?
-
       CHAT
     end
 

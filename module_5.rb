@@ -27,7 +27,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(name: "Welcome", lead_by: :fx1) do
     length 2
-    #TODO: Fix how to show flipchart as comments
+    # TODO: Fix how to show flipchart as comments
     resources do
       flipchart(
         :flip_1,
@@ -39,10 +39,9 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       instruction <<~MD
-      Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
+        Welcome people and introduce facilitator(s), producer and any observers and briefly explain their roles.
 
-      Point out this where this module is on the course overview on the flip.
-
+        Point out this where this module is on the course overview on the flip.
       MD
 
       spoken "Last time we looked at listening with curiosity. We will do a quick review of that in just a bit."
@@ -51,6 +50,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We’ve covered what impacts conversations in Modules 1-4:"
       spoken_exact <<~MD
         The key factors are:
+
         - State
         - Assumptions
         - Context
@@ -66,6 +66,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~CHAT
         Factors that affect conversations:
+
         - State
         - Assumptions
         - Context
@@ -87,15 +88,14 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Let’s have a quick recap of the fieldwork. Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
       spoken_exact <<~MD
         Think of one conversation you had recently
+
         -	What kind of listening did you do?
         -	What impact did that have on the conversation?
-
       MD
 
       instruction <<~MD
         If time, invite examples from 1-2 people.
         Handover to Fx1 for considering the difference between intentions and impact.
-
       MD
 
     end
@@ -106,7 +106,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         - What kind of listening did you do?
         - What impact did that have on the conversation?
-
       CHAT
     end
 
@@ -139,7 +138,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      
+
       spoken "Let's look at the conversation model from Module 4 to see how that phrase might land."
       spoken "We have the LHS and RHS of the model representing two people in a conversation."
 
@@ -204,7 +203,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
       spoken_exact <<~MD
-
         Think of one conversation you had recently where someone gave you their opinion or some feedback.
 
         Ask each other these questions:
@@ -252,7 +250,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         scribed_by: :fx1
       )
     end
-
 
     facilitator do
       spoken "Let’s find out what you noticed:"
@@ -313,12 +310,12 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What would you like to have happen? Then what happens?"
       spoken_exact "What will you say or do?"
       spoken_exact "What might the impact be?"
-  
+
       instruction "Let's see how this works on the conversation model."
 
       instruction "Place a blue Post-it note labelled 'What's important here? (MOTIVATIONS)' between the 'I think/feel' and 'they think/feel' steps"
       spoken "We consider what’s important for both of you."
-  
+
       instruction "Place a blue Post-it note labelled 'What would you like to have happen (OUTCOME)' over the ‘I think/feel’ step on the LHS"
       spoken "This is the outcome you want from the conversation. What you'd like to have happen. Asking 'Then what happens?' extends this."
 
@@ -327,8 +324,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Place a blue Post-it note labelled 'What might the impact be (IMPACT ON THEM?)' over the ‘They think/feel’ step on the RHS"
       spoken "Then we consider what the impact might be on the other person."
-      
-      
+
       spoken "Bear in mind that you are making assumptions about their motivations and the impact on them."
       spoken "You can repeat this loop as many times as you like to explore what you might say or do."
 
@@ -380,7 +376,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What will you say or do?
         - What might the impact be?
 
-
         Manage the time so everyone gets a chance to practice these questions.
       CHAT
 
@@ -400,7 +395,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         scribed_by: :Fx1
       )
     end
-
 
     facilitator do
 
@@ -455,7 +449,6 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   end
 
-
   block(name: "Closing", lead_by: :fx1) do
     length 2
 
@@ -465,14 +458,14 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There's a link in the chat to the Better Conversations Community - please do visit it if you haven't already. We are here to help!"
 
       spoken <<~MD
-       Our sixth and final module on Applications will:
+        Our sixth and final module on Applications will:
 
-        - Consolidate Modules 1-5
-        - Discuss next steps for you and how we can support you
+         - Consolidate Modules 1-5
+         - Discuss next steps for you and how we can support you
       MD
 
       spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
-      
+
       instruction "Handover to Sponsor"
     end
 

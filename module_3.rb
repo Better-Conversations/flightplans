@@ -9,15 +9,15 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_number 3
 
   learning_outcomes <<~MD
-      Learners will be able to:
+    Learners will be able to:
 
-      - Describe the elements of context in conversations
-      - Link context, assumptions and state
+    - Describe the elements of context in conversations
+    - Link context, assumptions and state
 
-      Suggested learning outcomes for further trainings/interventions
+    Suggested learning outcomes for further trainings/interventions
 
-      - Describe how sociocultural context affects conversations
-    MD
+    - Describe how sociocultural context affects conversations
+  MD
 
   demo <<~MD
     No demo.
@@ -26,7 +26,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     - Imagine you are watching TV and have muted it for the commercials. The first commercial you see shows a kitchen knife setting on a cutting board on the counter. Around it there are lots of different kinds of vegetables and a stock pot. Given that context, you would likely assume they were advertising a cooking show.
     - The next commercial starts. You see the same kitchen knife. This time it is in the trunk (boot) of car along with some rope, duct tape, a tarp and a shovel.  That context brings up a completely different kind of show! Even though the kitchen knife is exactly the same.
-    MD
+  MD
 
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
 
@@ -61,7 +61,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN_TLM)
 
-  #TODO - Handovers need to be parameterized for the right Fx if this is changed for training purposes
+  # TODO - Handovers need to be parameterized for the right Fx if this is changed for training purposes
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
     section_comment "Gather comments in chat and pick out some examples"
@@ -83,7 +83,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         - Were your assumptions in that conversation accurate?
         - Please answer Yes or No in the chat.
-
       CHAT
     end
   end
@@ -154,7 +153,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Please only ask what is appropriate for this setting and share only what you feel comfortable sharing in the group when we come back into the main room."
       spoken "The exercise is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
       spoken_exact "One person will choose ONE of the starter questions below to ask your partner. " \
-        "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
+                     "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
       spoken_exact <<~MD
         Starter questions:
         -	Psychobiological: What would you like to have happen after attending this course?
@@ -184,11 +183,8 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Starter questions:
 
         - Psychobiological: What would you like to have happen after attending this course?
-
         - Historical: What have you learned so far on this course?
-
         - Time: What were you doing before you came to the course today? What else do you have on today?
-
         - Environmental: Where are you in the world?
 
         Manage the time so everyone gets a chance to try out one of the starter questions.
@@ -253,7 +249,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "[pause for thinking]"
 
-      spoken_exact <<~MD 
+      spoken_exact <<~MD
         - What might you have to consider about the other person’s context when preparing for your conversation with them?
         - How would you find out about their context before and during the conversation?
       MD
@@ -317,17 +313,16 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     producer do
       instruction "Copy in chat (when you hear facilitator say these):"
-      
+
       chat <<~CHAT
         When preparing for your conversation:
 
         - What might you have to consider about another person and their context?
-        
         - How might you find out about their context before and during the conversation? 
       CHAT
     end
   end
-  
+
   block(name: "Link to state", lead_by: :fx1) do
     length 5
 
@@ -355,7 +350,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Thinking about what you know about state, assumptions and context:
 
         - What will you do to manage your state before a conversation?
-
         - How might your context affect your state?
       CHAT
     end
@@ -385,7 +379,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         - What difference does understanding context make to having Better Conversations?
         - What will you do differently now you know this?
-        CHAT
+      CHAT
     end
   end
 
