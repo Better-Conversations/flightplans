@@ -144,7 +144,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(2 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 6)
+      breakout_room(:bor_1, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
@@ -205,8 +205,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         description: "Learnings on context",
         scribed_by: :fx2
       )
-
-      breakout_room(:bor_1)
     end
 
     facilitator do
@@ -236,7 +234,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(2 min briefing)"
 
     resources do
-      breakout_room(:bor_2, default_duration: 6)
+      breakout_room(:bor_2, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
@@ -291,7 +289,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         description: "Learnings on context",
         scribed_by: :fx2
       )
-      breakout_room(:bor_2)
     end
 
     facilitator do

@@ -195,7 +195,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 6)
+      breakout_room(:bor_1, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
@@ -341,7 +341,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_2, default_duration: 8)
+      breakout_room(:bor_2, default_duration: 8, halfway_message: true)
     end
 
     facilitator do

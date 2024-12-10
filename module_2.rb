@@ -200,7 +200,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 8)
+      breakout_room(:bor_1, default_duration: 8, halfway_message: true)
     end
 
     # TODO: insert the parameter for length of the BOR in the spoken text to make it easier to change/less error-prone. Note the length of the block is 1-2 minutes longer than the BOR length to allow for the intro and final comments
@@ -263,9 +263,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         :flip_3,
         comment: "Summarise responses on flip, using people's words",
         description: "Learnings on assumptions",
-        scribed_by: :fx2)
-
-      breakout_room(:bor_1)
+        scribed_by: :fx2
+      )
     end
 
     facilitator do
@@ -323,7 +322,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 7
     section_comment "(1 min briefing)"
     resources do
-      breakout_room(:bor_2, default_duration: 6)
+      breakout_room(:bor_2, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
@@ -370,7 +369,6 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
         description: "Learnings on state and assumptions",
         scribed_by: :fx1
       )
-      breakout_room(:bor_2)
     end
 
     facilitator do

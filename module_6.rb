@@ -52,7 +52,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN_TLM)
 
-  block(name: "Recap of the Coursee", lead_by: :fx2) do
+  block(name: "Recap of the Course", lead_by: :fx2) do
     length 4
     section_comment "Gather comments in chat and pick out some examples"
 
@@ -86,7 +86,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(2 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 8)
+      breakout_room(:bor_1, default_duration: 8, halfway_message: true)
     end
 
     facilitator do
@@ -221,7 +221,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 6)
+      breakout_room(:bor_1, default_duration: 6, halfway_message: true)
     end
 
     facilitator do
