@@ -4,9 +4,6 @@
 
 FROM ghcr.io/rails/devcontainer/images/ruby:3.3.0
 
-ADD https://github.com/Enter-tainer/typstyle/releases/download/v0.11.28/typstyle-linux-arm64 /usr/bin/typstyle
-RUN chmod +x /usr/bin/typstyle
-
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         fontconfig \
