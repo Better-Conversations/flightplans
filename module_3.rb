@@ -111,22 +111,22 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We have broken context down into 6 overlapping areas to help explain what it is."
 
       spoken <<~TYPST_SPOKEN
-        Context can be:
-        - _Psychobiological_ (for example, your state, your personal values)
-        - _Sociocultural_ (for example, relationships, group behaviour, cultural values and beliefs)
-        - _Historical_ (for example, what’s happened in the past, what’s documented or recorded)
-        - _Environmental_ (for example, what’s going in the physical space you are in)
-        - _Time_-based (for example, temporal - time zone, whether it’s day or night)
+        When considering context, we can think about:
+        - _Psychobiology_ (for example, your state, your personal values)
+        - _Socioculture_ (for example, relationships, group behaviour, cultural values and beliefs)
+        - _History_ (for example, what’s happened in the past, what’s documented or recorded)
+        - _Environment_ (for example, what’s going in the physical space you are in)
+        - _Time-based_ (for example, time zone, whether it’s day or night)
         - _Method_ (for example, the way you are communicating, the process for communicating)
       TYPST_SPOKEN
 
       spoken <<~MD
         Some examples of your context we have already covered so far in this course are:
-        - Asking where in the world you are and what time zone you are in (environmental, cultural and time-based context)
-        - Asking how you are feeling, when we do the state check-in (psychobiological context)
+        - Asking where in the world you are and what time zone you are in (environment, culture and time-based context)
+        - Asking how you are feeling, when we do the state check-in (psychobiology)
       MD
 
-      spoken "We look at psychobiological, time-based, historical, environmental context in this course."
+      spoken "We look at psychobiological, time-based, historical, and environmental context in this course."
       spoken "We practice verbal communication in this course however you can apply the concepts to written communication."
       spoken "We aren’t covering sociocultural context in this course in depth – it's beyond the scope of what we can do in the time we have."
       spoken "What we are going to do now is put you in breakout rooms to find out more about the impact of knowing someone’s context."
@@ -156,10 +156,10 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
                      "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
       spoken_exact <<~MD
         Starter questions:
-        -	Psychobiological: What would you like to have happen after attending this course?
-        -	Historical: What have you learned so far on this course?
+        -	Psychobiology: What would you like to have happen after attending this course?
+        -	History: What have you learned so far on this course?
         -	Time: What were you doing before you came to the course today? What else do you have on today?
-        -	Environmental: Where are you in the world?"
+        -	Environment: Where are you in the world?"
       MD
 
       spoken_exact "Manage the time so everyone gets a chance to try out one of the starter questions. "
@@ -182,10 +182,10 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Starter questions:
 
-        - Psychobiological: What would you like to have happen after attending this course?
-        - Historical: What have you learned so far on this course?
+        - Psychobiology: What would you like to have happen after attending this course?
+        - History: What have you learned so far on this course?
         - Time: What were you doing before you came to the course today? What else do you have on today?
-        - Environmental: Where are you in the world?
+        - Environment: Where are you in the world?
 
         Manage the time so everyone gets a chance to try out one of the starter questions.
       CHAT
@@ -240,7 +240,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
       spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_exact "Psychobiological, sociocultural, historical, environmental, time-based (temporal), method. "
+      spoken_exact "Psychobiology, Socioculture, History, Environment, Time, and Method."
       spoken "Remember that context helps determine the assumptions we make."
       spoken_exact "Think about a conversation you'd like to be better."
       spoken "What you would like to have happen in that conversation?"
@@ -264,7 +264,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         We are going to consider improving a conversation using the 6 elements of context:
 
-        Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method.
+        Psychobiology, Socioculture, History, Environment, Time, and Method.
 
         Think about a conversation you'd like to be better:
 
@@ -324,7 +324,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 5
 
     facilitator do
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method."
+      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Psychobiology, Socioculture, History, Environment, Time, and Method."
       spoken "State is an important aspect of psychobiological context."
       spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
 
@@ -342,7 +342,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy in chat (when you hear facilitator say these):"
 
       chat <<~CHAT
-        6 elements of context: Psychobiological, sociocultural, historical, environmental, time-based (temporal), and method.
+        6 elements of context: Psychobiology, Socioculture, History, Environment, Time, and Method.
 
         Thinking about what you know about state, assumptions and context:
 
