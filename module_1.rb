@@ -68,20 +68,22 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       # TODO: Spoken <<-MD Doesnt add a bullet point every new line however adds different styling to bullet points put in
       spoken <<~MD
-        We also ask that everyone respect confidentiality of what is shared by the group this course, to allow people to fully engage with the learning.
+
+        We've designed this course to be experiential. Because of that, we ask that you respect the confidentiality of what's shared in this group to allow everyone to fully engage with the learning.
+
       MD
 
       instruction "Go through the course overview on flip"
 
-      spoken <<~MD
-        There are 5 core modules in this course: State, Assumptions, Context, Listening with Curiosity and Intentional Conversations.
+      spoken "This course introduces some key aspects of communication around conversation. By the end of the course, you will have practical tools and strategies to prepare for and have better conversations."
+        
+      spoken "The five topics we'll cover are State, Assumptions, Context, Listening with Curiosity and Intentional Conversations."
 
-        The sixth module will consolidate the learning and explore what you would like to do next.
+      spoken "The sixth module will consolidate the learning and explore what you would like to do next."
 
-        Please do also book in with us for an individual session around modules 5 or 6 to discuss next steps and how we can support you.
+      spoken "Please do also book in with us for an individual session around modules 5 or 6 to discuss next steps and how we can support you."
 
-        We will be following the same pattern of activities each time
-      MD
+      spoken "We will be following the same pattern of activities each time."
 
       instruction "Facilitator quickly goes through the agenda points on flip"
 
@@ -219,11 +221,11 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     # TODO: When Handbook goes on website, check talking about the space in the handbook is still relevant in all flight plans
     facilitator do
       spoken "Now for the traffic light model which is an easy way to represent state. There is also an explanation in the Course Handbook in Section 1 to help you remember the model."
-      spoken "We have an inverted traffic light here. The colours represent different states of our thinking and feeling, which will impact our conversations. Green is at the top as usually we have better conversations when in a green state."
+      spoken "The colours of the traffic light represent different states of our thinking and feeling, which will impact our conversations."
       spoken "It’s important to know that being in an amber/yellow or red state isn’t ‘bad’, it’s your system or body trying to tell you something. No one state is better than another, they can be less helpful or resourceful depending on the situation you’re in."
-      spoken "Green light state is “I’m good to go”, 7-10 from the scale we used earlier.  You’re feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you’ll be thinking and acting at your best."
-      spoken "Amber/yellow light state is “proceed with caution”, 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else’s welfare."
       spoken "Red light is “stop and take a break”, 0-4. You are definitely not OK. You will be experiencing strong and unpleasant emotions. You may have a fight/flight/freeze response. Some of your basic needs will not be met, and there may be a threat to life."
+      spoken "Amber/yellow light state is “proceed with caution”, 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else’s welfare."
+      spoken "Green light state is “I’m good to go”, 7-10 from the scale we used earlier.  You’re feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you’ll be thinking and acting at your best."
     end
 
   end
