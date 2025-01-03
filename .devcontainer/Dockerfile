@@ -4,11 +4,11 @@
 
 FROM ghcr.io/rails/devcontainer/images/ruby:3.3.0
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN sudo -s apt-get update \
+    && sudo -s apt-get install -y --no-install-recommends \
         fontconfig \
         fswatch \
-    && rm -rf /var/lib/apt/lists/*
+    && sudo -s rm -rf /var/lib/apt/lists/*
 
 # Add Source Sans Pro font
 # Adpated from https://gist.github.com/jacksonpradolima/840b4a20c617204a65b15da61e124bf6
@@ -22,8 +22,8 @@ TEMP_DIR=$(pwd)
 
 wget https://github.com/adobe-fonts/source-sans-pro/archive/2.020R-ro/1.075R-it.zip
 unzip 1.075R-it.zip
-cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
+sudo -s cp source-sans-2.020R-ro-1.075R-it/OTF/*.otf /usr/local/share/fonts
 
-fc-cache -f -v
+sudo -s fc-cache -f -v
 rm -rf $TEMP_DIR
 EOF
