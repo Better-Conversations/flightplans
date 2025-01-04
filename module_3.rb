@@ -103,7 +103,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "There is an explanation in the handbook in Section 3 to help you remember the diagram."
       spoken "In Better Conversations, context is what gives meaning to the conversation."
       spoken "Context is important because it defines our subjective experience."
-      spoken "We've extended the stimulus-response model to show that context affects all our sense-making and behaviour."
+      spoken "We've extended the sense and respond model to show that context affects all our sense-making and behaviour."
       spoken "Each of us brings our own context to conversations. And we take it into our future conversations, so our context can change over time."
       spoken "Context also determines _what_ assumptions we make. We can make different assumptions in different contexts."
       spoken "As an example, imagine you were in the UK and you saw people carrying umbrellas. You might think it was going to rain."

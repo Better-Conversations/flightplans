@@ -107,8 +107,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 4 to help you remember the diagram."
-      spoken "We are extending the stimulus-response-context model to include the other person. We’ve drawn the diagram to show information flowing in a loop between the two people. It’s a simplification of what’s actually happening – think of it as a snapshot in time."
-      spoken "And, each person sees/hears, thinks/feels and says/does – they are taking the stimulus from each other and the surroundings and responding to each other and the surroundings."
+      spoken "We are extending the context model to include the other person. We’ve drawn the diagram to show information flowing in a loop between the two people. It’s a simplification of what’s actually happening – think of it as a snapshot in time."
+      spoken "And, each person sees/hears, thinks/feels and says/does – they are sensing the situation and their reaction to that and responding to each other and the surroundings."
       spoken "In a conversation each person brings their own context, makes meaning, makes assumptions and acts from that context."
       spoken "This means we can make assumptions based on our own context, and forget the other person has a different context. So we might judge other people based on our context without realising we are doing that."
       spoken "In this course we are asking you to be aware of what you are influencing and notice what might be happening for the other person (holding your assumptions lightly, of course!)."

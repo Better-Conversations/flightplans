@@ -109,7 +109,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
-      spoken "You can describe behaviour in a conversation using a simple stimulus-response model."
+      spoken "You can describe behaviour in a conversation using a simple sense and respond model."
       spoken "Think of it as a snapshot of what's happening for someone in a conversation."
 
       instruction "Point to each circle as you explain:"
