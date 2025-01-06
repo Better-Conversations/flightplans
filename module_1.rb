@@ -228,6 +228,10 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Green light state is “I’m good to go”, 7-10 from the scale we used earlier.  You’re feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you’ll be thinking and acting at your best."
     end
 
+    producer do
+      instruction "Prepare BORs in 2/3s for 5 minutes if not already done"
+    end
+
   end
 
   # TODO: Add scribed by section to block as well
@@ -246,14 +250,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Let’s get some examples of how you experience these three different states."
       spoken "We’ll do red together as a whole group first."
       spoken "We are going to find out what happens when you are at about a 3 or 4 on that scale of 0-10 we had earlier when we did our check-in. We don’t want to bring up very strong emotions or memories in this forum."
+      
+      instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn’t have to be about anger or fear."
+
       spoken "I’ve got an example. When I am in red, I think___, I feel___."
 
       instruction "Ask co-facilitator for their example"
 
       spoken "[Co-facilitator] When I am in red, I think___, I feel ___. "
-
-      # TODO: move this instruction to beforeco-facilitator asked.
-      instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn’t have to be about anger or fear."
 
       instruction "To group"
 
@@ -277,7 +281,6 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      instruction "Prepare BORs in 2/3s for 5 minutes if not already done"
 
       instruction "Copy to chat when facilitator mentions this: "
 
