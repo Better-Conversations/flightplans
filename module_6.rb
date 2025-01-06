@@ -58,7 +58,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "Let’s do a quick recap of Modules 1-5."
-      spoken "We explored State, Assumptions, Context, Listening with Curiosity and Feedback."
+      spoken "We explored State, Assumptions, Context, Listening with Curiosity and Intentional Conversations."
       spoken "Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
       spoken_exact "Thinking about what you explored on these modules…"
       spoken_exact "What surprised you?"
