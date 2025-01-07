@@ -58,7 +58,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "Let’s do a quick recap of Modules 1-5."
-      spoken "We explored State, Assumptions, Context, Listening with Curiosity and Feedback."
+      spoken "We explored State, Assumptions, Context, Listening with Curiosity and Intentional Conversations."
       spoken "Please share only what you’d like to and put your answers in the chat, so we hear from everyone quickly."
       spoken_exact "Thinking about what you explored on these modules…"
       spoken_exact "What surprised you?"
@@ -77,6 +77,8 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         What surprised you?
       CHAT
+      
+      instruction "Prepare BORs in 2/3s for 8 minutes if not already done."
     end
 
   end
@@ -164,7 +166,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Foundation Model", lead_by: :sponsor) do
-    length 5
+    length 8
 
     resources do
       flipchart(
@@ -196,40 +198,28 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Point to Community"
       spoken "We want to encourage community around this to get the help you might need and to support other people. If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there. You don't need to train to be a facilitator to join the community."
 
-      spoken "I’m going to handover to Fx2 to take you through to the next breakout."
-      instruction "Handover to Fx2 for BOR on what people would like to have happen now"
+      spoken "Any questions on this before we move on?"
+
+      instruction "Handover to Fx2 for BOR on next steps"
     end
 
-  end
-
-  block(name: "Unpack impact of Foundation model", lead_by: :fx2) do
-    length 5
-
-    facilitator do
-      spoken_exact "What was the impact on you, seeing and hearing that?"
-
-      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
-    end
-
-    producer do
-      chat "What was the impact on you, seeing and hearing that?"
-    end
   end
 
   block(name: "Breakout 2", lead_by: :fx2) do
-    length 7
+    length 9
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 6, halfway_message: true)
+      breakout_room(:bor_2, default_duration: 8, halfway_message: true)
     end
 
     facilitator do
-      spoken "We are going to put you into breakouts again. You will have 6 minutes for this exercise"
+      spoken "We are going to put you into breakouts again. You will have 8 minutes for this exercise"
 
       spoken_exact <<~MD
         Thinking about using and/or delivering Better Conversations:
 
+        - What was the impact on you when you learned more about our intentions for Better Conversations?
         - What would you like to do now?
         - What support do you need for that to happen?
       MD
@@ -244,6 +234,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         Thinking about using and/or delivering Better Conversations:
 
+        - What was the impact on you when you learned more about our intentions for Better Conversations?
         - What would you like to do now?
         - What support do you need for that to happen?
 
@@ -266,7 +257,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       flipchart(
         :flip_4,
         comment: "Summarise responses on flip, using people's words",
-        description: "What would people would like to have happen now",
+        description: "What would you would like to do now?",
         scribed_by: :fx1
       )
     end

@@ -109,7 +109,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "There is an explanation in the handbook in Section 2 to help you remember the diagram."
-      spoken "You can describe behaviour in a conversation using a simple stimulus-response model."
+      spoken "You can describe behaviour in a conversation using a simple sense and respond model."
       spoken "Think of it as a snapshot of what's happening for someone in a conversation."
 
       instruction "Point to each circle as you explain:"
@@ -276,7 +276,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
 
-      instruction "Handover to Fx1 for disucssion on assumptions and feelings."
+      instruction "Handover to Fx1 for discussion on assumptions and feelings."
     end
 
     producer do
@@ -338,6 +338,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "Share only what you are comfortable sharing in the group."
       spoken_exact "Manage the time so everyone has a chance to answer the questions."
       spoken_exact "We’ll talk about what you noticed about feelings and assumptions when you come back."
+      spoken "Any questions before we send you in?"
     end
 
     producer do

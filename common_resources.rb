@@ -33,7 +33,7 @@ FIELDWORK[3] = [
 ]
 
 FIELDWORK[4] = [
-  "Try out some of the questions on page 20 of the handbook in your conversations",
+  "Try out some of the questions in Section 4 of the handbook in your conversations",
   "What kind of listening do you do in a conversation?",
   "What impact does that have on the conversation?"
 ]
