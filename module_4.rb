@@ -282,7 +282,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_1, default_duration: 8, halfway_message: true)
+      breakout_room(:bor_2, default_duration: 8, halfway_message: true)
     end
 
     facilitator do
@@ -329,13 +329,9 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction <<~MD
         When the facilitator has finished talking, tell the group you are going to send them into BORs for 8 minutes
-
-        Send into BORs
-
-        Broadcast halfway message:
       MD
 
-      broadcast "Halfway, 4 minutes remaining"
+      send_into_bor :bor_2
     end
   end
 
