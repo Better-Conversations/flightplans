@@ -122,7 +122,8 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken <<~MD
         [I think/feel] \
         We process that information internally. Our mood or physical needs can influence how we do that because we also use data from our bodies.
-        Thinking processes include: \
+        Thinking processes include:
+
         - What we pay attention to
         - The meaning we make from things and the language we use
         - The assumptions that we hold as true
