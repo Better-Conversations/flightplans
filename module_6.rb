@@ -64,11 +64,9 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What surprised you?"
       spoken "If you’ve delivered the course recently, you can share observations from those experiences too."
 
-      instruction <<~MD
-        If time, invite examples from 1-2 people.
+      instruction "If time, invite examples from 1-2 people."
 
-        Handover to Fx1 for BOR on personal impact
-      MD
+      handover "for BOR on personal impact"
     end
 
     producer do
@@ -151,7 +149,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Facilitate brief discussion."
 
-      instruction "Handover to Sponsor for discussion of Foundation model"
+      handover "for discussion of Foundation model"
     end
 
     producer do
@@ -200,7 +198,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "Any questions on this before we move on?"
 
-      instruction "Handover to Fx2 for BOR on next steps"
+      handover "for BOR on next steps"
     end
 
   end
@@ -266,11 +264,9 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What would you like to do now?"
       spoken_exact "What support do you need for that to happen?"
 
-      instruction <<~MD
-        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
 
-        Handover to Fx1 for reflections and close.
-      MD
+      handover "for reflections and close"
     end
 
     producer do
@@ -310,7 +306,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "And if you’d like to write us a testimonial or be interviewed on video for it, that will help us spread Better Conversations further."
       spoken "If you have any further questions or anything you’d like to share today, we will stay on the Zoom call for a few minutes after the session has finished"
 
-      instruction "Handover to Sponsor"
+      handover
     end
 
     producer do

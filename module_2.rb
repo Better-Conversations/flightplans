@@ -80,7 +80,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "If time permits, invite examples from 1-2 people"
       spoken "Without adding too much detail, what caused the change in state?"
-      instruction "Handover to Fx1 for Assumptions model."
+      handover "for the Assumptions model"
     end
 
     producer do
@@ -136,7 +136,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       spoken "We are going to look at assumptions first and then how feelings can influence assumptions."
-      instruction "Handover to Fx2 for the assumptions demo."
+      handover "for the assumptions demo"
     end
 
     producer do
@@ -187,7 +187,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "How accurate was your drawing or description?"
       spoken "On a scale of 1-5, where 1 is least accurate, and 5 is super accurate, let’s see a show of fingers as to how accurate your assumptions were about [Producer/Co-facilitator]’s plant."
       instruction "Acknowledge what people score themselves at."
-      instruction "Handover to Fx1 to talk about breakout on assumptions."
+      handover "to talk about breakout on assumptions."
     end
 
     producer do
@@ -277,7 +277,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
 
-      instruction "Handover to Fx1 for discussion on assumptions and feelings."
+      handover "for discussion on assumptions and feelings."
     end
 
     producer do
@@ -316,7 +316,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Different emotions or feelings can affect our thinking differently."
       spoken "For example, when we are in red, we might be more likely to perceive threat and act quickly."
       spoken "When in green, we may be more creative in our thinking."
-      instruction "Handover to Fx2 to talk about assumptions and feelings breakout activity."
+      handover "to talk about assumptions and feelings breakout activity."
     end
   end
   block(name: "Breakout#2", lead_by: :fx2) do
@@ -377,7 +377,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about feelings and assumptions?"
       spoken "Who's got something they want to share?"
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
-      instruction "Handover to Fx1 for reflections, fieldwork and close."
+      handover "for reflections, fieldwork and close"
     end
 
     producer do

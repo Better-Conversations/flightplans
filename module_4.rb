@@ -74,12 +74,8 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "How much did you know about the other person’s context?"
       spoken_exact "What impact did that have on your conversation?"
 
-      instruction <<~MD
-        If time, invite examples from people 
-
-        Handover to Fx1 for Conversation Model
-      MD
-
+      instruction "If time, invite examples from people"
+      handover "for the conversation model"
     end
 
     producer do
@@ -123,7 +119,7 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Point to the model where it says 'I say/do' and 'their context' as you say this:"
       spoken "And the second exercise focuses on what you can be saying to find out more about their context."
 
-      instruction "Handover to Fx2 for breakout exercise on listening to understand."
+      handover "for the breakout exercise on listening to understand"
     end
 
     producer do
@@ -194,11 +190,9 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did  you notice about your state when you were talking about your topic?"
       spoken_exact "And what did you notice about your state when you were listening to understand what the other person was saying and doing?"
 
-      instruction <<~MD
-        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
 
-        Handover to Fx1 for demonstrating listening and responding exercise
-      MD
+      handover "for demonstrating listening and responding exercise"
     end
 
     producer do
@@ -353,11 +347,9 @@ MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What did you notice about your state when you were talking about your topic?"
       spoken_exact "And what did you notice about your state when you were asking questions?"
 
-      instruction <<~MD
-        Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
+      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
 
-        Handover to Fx2 for reflections, fieldwork and close
-      MD
+      handover "for reflections, fieldwork and close"
     end
 
     producer do

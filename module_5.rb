@@ -93,11 +93,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         -	What impact did that have on the conversation?
       MD
 
-      instruction <<~MD
-        If time, invite examples from 1-2 people.
-        Handover to Fx1 for considering the difference between intentions and impact.
-      MD
-
+      instruction "If time, invite examples from 1-2 people."
+      handover "for considering the difference between intentions and impact"
     end
 
     producer do
@@ -181,7 +178,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "For example, think about ahen someone given you their opinion or some feedback, and you experience an amber/yellow or red state."
 
-      instruction "Handover to Fx2 for exercise on intention and impact"
+      handover "for exercise on intention and impact"
     end
 
     producer do
@@ -263,11 +260,11 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
 
         If time allows, ask
-        - **How might you hold your assumptions lightly?**
 
-        Handover to Fx1 for discussion on intentional conversations
+        - **How might you hold your assumptions lightly?**
       MD
 
+      handover "for discussion on intentional conversations"
     end
 
     producer do
@@ -328,7 +325,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Bear in mind that you are making assumptions about their motivations and the impact on them."
       spoken "You can repeat this loop as many times as you like to explore what you might say or do."
 
-      instruction "Handover to Fx2 for the next exercise on preparing for intentional conversations."
+      handover "for the next exercise on preparing for intentional conversations"
     end
 
     producer do
@@ -411,9 +408,9 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         - **And is there anything else that you noticed about this process?**
         - **What might be the benefits of using this process?**
-
-        Handover to Fx1 for reflections and close
       MD
+      
+      handover "for reflections and close"
     end
 
     producer do
@@ -466,7 +463,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "If you have any further questions or anything you’d like to share, we will stay on the Zoom call for a few minutes after the session finished."
 
-      instruction "Handover to Sponsor"
+      handover
     end
 
     producer do

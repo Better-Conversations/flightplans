@@ -140,9 +140,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         0 – not OK at all, 10 – wonderful.
       CHAT
 
-      instruction "Take note of the numbers to decide BOR participants – avoid people with low scores in the same room
-      "
-
+      instruction "Take note of the numbers to decide BOR participants – avoid people with low scores in the same room"
     end
 
   end
@@ -277,7 +275,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "What are you noticing about these experiences?"
 
-      instruction "Handover to Fx2 for BOR1 on green state"
+      handover "for BOR1 on green state"
     end
 
     producer do
@@ -396,9 +394,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Facilitate brief discussion, helping people to say what they are thinking or feeling in an amber/yellow state. Suggest people can also put their answers in the chat.
 
         If time allows, focus in on the transition between amber/yellow and other states and the reasons for that.
-
-        Handover to Fx1 for reflections, fieldwork and close
       MD
+
+      handover "for reflections, fieldwork and close"
     end
 
     producer do

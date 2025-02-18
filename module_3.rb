@@ -61,7 +61,6 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::STATE_CHECKIN_TLM)
 
-  # TODO - Handovers need to be parameterized for the right Fx if this is changed for training purposes
   block(name: "Fieldwork reflections", lead_by: :fx2) do
     length 4
     section_comment "Gather comments in chat and pick out some examples"
@@ -74,7 +73,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "If time permits, facilitator asks one person who answers “No” and one person who answers “Yes”:"
       spoken "Without adding too much detail, when your assumption was/wasn't accurate, then what happened?"
-      instruction "Handover to Fx1 for Context model."
+      handover "for the context model"
     end
 
     producer do
@@ -130,7 +129,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We practice verbal communication in this course however you can apply the concepts to written communication."
       spoken "We aren’t covering sociocultural context in this course in depth – it's beyond the scope of what we can do in the time we have."
       spoken "What we are going to do now is put you in breakout rooms to find out more about the impact of knowing someone’s context."
-      instruction "Handover to Fx2 for context exercise."
+      handover "for the context exercise"
     end
 
     producer do
@@ -215,7 +214,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
                     "Aim for 2-3 examples, with one from the chat."
 
-      instruction "Handover to Fx1 for exercise on improving conversations."
+      handover "for exercise on improving conversations"
     end
 
     producer do
@@ -335,7 +334,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       instruction "Ask people to put answers in chat. Facilitate brief discussion if time."
-      instruction "Handover to Fx2 for reflections, fieldwork and close."
+      handover "for reflections, fieldwork and close"
     end
 
     producer do
