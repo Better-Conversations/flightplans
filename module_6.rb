@@ -159,7 +159,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - Knowing that, what difference does that make, to you?
       CHAT
 
-      instruction "Prepare BORs in 2/3s for 6 minutes"
+      instruction "Prepare BORs in 2/3s for 8 minutes"
     end
   end
 
