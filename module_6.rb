@@ -240,7 +240,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       CHAT
 
       instruction <<~MD
-        When the facilitator has finished giving the instructions/answering questions. tell the group you are going to send them into BORs for 6 minutes
+        When the facilitator has finished giving the instructions/answering questions. tell the group you are going to send them into BORs for 8 minutes
       MD
 
       send_into_bor :bor_2
