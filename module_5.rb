@@ -306,7 +306,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What's important here? For you and for them?"
       spoken_exact "What would you like to have happen? Then what happens?"
       spoken_exact "What will you say or do?"
-      spoken_exact "What might the impact be?"
+      spoken_exact "What might the impact be on them?"
 
       instruction "Let's see how this works on the conversation model."
 
@@ -352,13 +352,13 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
         - What will you say or do?
-        - What might the impact be?
+        - What might the impact be on them?
 
         Manage the time so everyone gets a chance to practice these questions.
       MD
 
       spoken "Please share only what you feel comfortable sharing in the group when we come back into the main room."
-      spoken "When you return, we will briefly share what we noticed about moving around the loop."
+      spoken "When you return, we will briefly share the impact of using these questions to prepare for a conversation."
       spoken "Any questions before we send you in?"
     end
 
@@ -371,7 +371,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What's important here? For you and for them?
         - What would you like to have happen? Then what happens?
         - What will you say or do?
-        - What might the impact be?
+        - What might the impact be on them?
 
         Manage the time so everyone gets a chance to practice these questions.
       CHAT
@@ -395,9 +395,8 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
 
-      spoken "Let’s find out what you noticed. We are going to focus on the _process_ you just used, focusing on outcomes, intentions and impact."
-      spoken_exact "What did you notice about moving from outcome to intention?"
-      spoken_exact "What did you notice about moving from intention to impact?"
+      spoken "Let’s find out what you noticed. We are going to focus on the _process_ you just used."
+      spoken_exact "What was the impact of using these questions to prepare for a conversation?"
 
       instruction <<~MD
         Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat.
@@ -417,8 +416,7 @@ MODULE_5 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         Thinking about the process you just used:
 
-        - What did you notice about moving from outcome to intention?
-        - What did you notice about moving from intention to impact?
+        - What was the impact of using these questions to prepare for a conversation?
       CHAT
     end
   end
