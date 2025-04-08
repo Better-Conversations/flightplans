@@ -40,7 +40,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       MD
 
       spoken "We are on Module 6, where we consider the personal impact of the course and what you would like to have happen next."
-      spoken "If you are delivering the course to your own audience, you'll need to customise this one."
+      spoken "If you are delivering the course to your own audience, you'll need to customise this module."
       spoken "We also wanted to create another way for people from the Better Conversations Community to connect and reconnect."
       spoken "You are welcome to come to any of the sessions again and observe the delivery team, and perhaps practice delivery with us, if that’s helpful."
 
@@ -183,10 +183,10 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "As an example, we'll share a little more about our strategy and approach."
 
       instruction "Go through the Foundation model on flip"
-      spoken "There's three main components to this: the Foundation, the Community and our Partners."
+      spoken "There's three main components to this: the Foundation, our Partners and the Community."
 
       instruction "Point to the Foundation."
-      spoken "We believe in the power of conversation to change the world for the better. And we also know that needs to start with us. So we've created the non-profit Foundation to support the work we do."
+      spoken "We believe in the power of conversation to change the world for the better. And we know that needs to start with us. So we've created the non-profit Foundation to support the work we do."
     
       spoken "We also know that learning these skills needs to be more accessible. We are inspired by the open source movement and the way it has revolutionised the software industry."
       spoken "We've adopted that approach. That's why we run these Experience Courses and make the course materials freely available."
@@ -203,7 +203,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We are growing a network of people who want to make a difference in their communities, teams and organisations. It's a lovely tribe."
       spoken "The community is open to everyone who's attended these sessions."
       spoken "It's a place to get help, support and advice. And to meet other people who are interested in having better conversations."
-      spoken "If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there."
+      spoken "If you've enjoyed this experience and want to hang out with us and support our efforts, we'd love to have you there."
 
       spoken "Any questions on this before we move on?"
 
@@ -292,7 +292,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "We are near the end of this module and our extended course. We’d like to thank you all, and our Faculty for enabling these conversations – we hope you’ll take something from the course and share it with your family, friends, teams or organisations."
+      spoken "We are near the end of this module and our course. We’d like to thank you all, and our Faculty for enabling these conversations – we hope you’ll take something from the course and share it with your family, friends, teams or organisations."
       spoken "We hope that you understand a little more about the Foundation and what we do now. We are all volunteers and hopefully we can achieve more working together."
 
       spoken "These Experience Courses are invite-only and the invites can come from you as well!"
@@ -300,7 +300,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "We’d love to continue the conversations in the community as well. You can ask for support and look for extra resources posted there too. There’s a link going in the chat for that as well."
 
-      spoken "Are there any questions before we finish?"
+      spoken "Are there any questions before we close the session?"
 
       instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat."
     end
@@ -334,7 +334,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      chat "Please email: hello@betterconversations.foundation for a certificate of attendance and badge, and/or if you'd like to give us testimonial."
+      chat "Please email hello@betterconversations.foundation for a certificate of attendance and badge, and/or if you'd like to give us testimonial."
 
       instruction "If leaving the session early, make facilitator a host first"
     end
