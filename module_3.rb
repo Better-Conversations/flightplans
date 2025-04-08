@@ -114,8 +114,8 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - _Psychobiology_ (for example, your state, your personal values)
         - _Socioculture_ (for example, relationships, group behaviour, cultural values and beliefs)
         - _History_ (for example, what’s happened in the past, what’s documented or recorded)
-        - _Environment_ (for example, what’s going in the physical space you are in)
         - _Time_ (for example, time zone, whether it’s day or night)
+        - _Environment_ (for example, what’s going in the physical space you are in)
         - _Method_ (for example, the way you are communicating, the process for communicating)
       TYPST_SPOKEN
 
@@ -211,8 +211,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What happened when you knew more about the other person’s context "
       spoken_exact "What was it like for you, when you were asked about your context?"
 
-      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
-                    "Aim for 2-3 examples, with one from the chat."
+      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
 
       handover "for exercise on improving conversations"
     end
@@ -239,7 +238,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to put you in breakouts again for 6 minutes to talk about this."
       spoken_exact "We are going to consider improving a conversation using the 6 elements of context: "
-      spoken_exact "Psychobiology, Socioculture, History, Environment, Time, and Method."
+      spoken_exact "Psychobiology, Socioculture, History, Time, Environment, and Method."
       spoken "Remember that context helps determine the assumptions we make."
       spoken_exact "Think about a conversation you'd like to be better."
       spoken "What you would like to have happen in that conversation?"
@@ -263,7 +262,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~CHAT
         We are going to consider improving a conversation using the 6 elements of context:
 
-        Psychobiology, Socioculture, History, Environment, Time, and Method.
+        Psychobiology, Socioculture, History, Time, Environment, and Method.
 
         Think about a conversation you'd like to be better:
 
@@ -323,7 +322,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 5
 
     facilitator do
-      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Psychobiology, Socioculture, History, Environment, Time, and Method."
+      spoken "Just to recap, there are six elements to context that affect each of us in our conversations:  Psychobiology, Socioculture, History, Time, Environment, and Method."
       spoken "State is an important aspect of psychobiological context."
       spoken "Context gives us a way of making meaning and understanding a situation.  It helps determine the assumptions we make."
 
@@ -341,7 +340,7 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy in chat (when you hear facilitator say these):"
 
       chat <<~CHAT
-        6 elements of context: Psychobiology, Socioculture, History, Environment, Time, and Method.
+        6 elements of context: Psychobiology, Socioculture, History, Time, Environment, and Method.
 
         Thinking about what you know about state, assumptions and context:
 
