@@ -178,7 +178,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "Thank you for giving up your time over the last few weeks. And thank you to those of you coming back to add your voice to the discussion."
-      spoken "You’ll need to customise this sectionif you are delivering the course for your own audience. You could introduce your other offerings, or link back to project goals, organisational strategy etc."
+      spoken "You’ll need to customise this section if you are delivering the course for your own audience. You could introduce your other offerings, or link back to project goals, organisational strategy etc."
       
       spoken "As an example, we'll share a little more about our strategy and approach."
       spoken "This course is designed to spread. We are making the materials available under Creative Commons which will help that."
