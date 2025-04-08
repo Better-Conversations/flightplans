@@ -154,7 +154,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     producer do
-      instruction "Copy to chat as you hear the facilitator mention each of these questions:"
+      instruction "Copy to chat when you hear the facilitator this:"
       chat <<~CHAT
         - What do you know now about the personal impact of Better Conversations?
         - Knowing that, what difference does that make, to you?
@@ -181,21 +181,29 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "You’ll need to customise this section if you are delivering the course for your own audience. You could introduce your other offerings, or link back to project goals, organisational strategy etc."
       
       spoken "As an example, we'll share a little more about our strategy and approach."
-      spoken "This course is designed to spread. We are making the materials available under Creative Commons which will help that."
-      spoken "Here's an overview. There's three main components to this: the Foundation, the Community and our Partners."
+
+      instruction "Go through the Foundation model on flip"
+      spoken "There's three main components to this: the Foundation, the Community and our Partners."
 
       instruction "Point to the Foundation."
-      spoken "The Foundation is here to support you with Open Source materials and guidance. We are volunteer-led."
-      spoken "We run these Experience Courses to find people who want to take these skills further."
+      spoken "We believe in the power of conversation to change the world for the better. And we also know that needs to start with us. So we've created the non-profit Foundation to support the work we do."
+    
+      spoken "We also know that learning these skills needs to be more accessible. We are inspired by the open source movement and the way it has revolutionised the software industry."
+      spoken "We've adopted that approach. That's why we run these Experience Courses and make the course materials freely available."
 
       instruction "Point to Partners"
-      spoken "We are looking for people who want to spread this into their communities, teams, organisations."
-      spoken "You can take as much or as little as you want - some people just take the traffic light module, some people give the 5 modules as we do, some people stretch sessions to 90 minutes."
-      spoken "There are ways of learning to give this course. You can come back and observe. Observers get to turn up in our preparation time and participate in the post-course debrief."
-      spoken "You can also practice delivering with us on a voluntary basis. It’s a great way to get some experience before you do it on your own."
+      
+      spoken "We are looking for like-minded people to advocate for better conversations."
+      spoken "You can use the course materials freely, under a Creative Commons licence. You can also modify them to suit your audience. And take as much or as little from them as you need."
+      spoken "You can come back and observe any session, where you join our team setup and debrief before and after the session and talk to us about how we deliver the course."
+      spoken "You can also practice delivering with us on a voluntary basis. It’s a great way to get some experience before you deliver your own course."
+      spoken "You are free to deliver this into your own organisation or to deliver the course on a commerical basis (we don't charge you for that)."
 
       instruction "Point to Community"
-      spoken "We want to encourage community around this to get the help you might need and to support other people. If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there. You don't need to train to be a facilitator to join the community."
+      spoken "We are growing a network of people who want to make a difference in their communities, teams and organisations. It's a lovely tribe."
+      spoken "The community is open to everyone who's attended these sessions."
+      spoken "It's a place to get help, support and advice. And to meet other people who are interested in having better conversations."
+      spoken "If you've enjoyed this experience and just want to hang out with us and support our efforts, we'd love to have you there."
 
       spoken "Any questions on this before we move on?"
 
@@ -213,7 +221,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "We are going to put you into breakouts again. You will have 8 minutes for this exercise"
+      spoken "We are going to put you into breakouts again. You will have 8 minutes to discuss these suggested questions."
 
       spoken_exact <<~MD
         Thinking about using and/or delivering Better Conversations:
@@ -285,15 +293,30 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "We are near the end of this module and our extended course. We’d like to thank you all, and our Faculty for enabling these conversations – we hope you’ll take something from the course and share it with your family, friends, teams or organisations."
-      spoken "We hope that you understand a little more about the Foundation and what we do now."
-      spoken "These Experience Courses are invite-only. Those invites can come from you as well!"
-      spoken_exact "So, we’d like to know: How can we find more people like you?"
+      spoken "We hope that you understand a little more about the Foundation and what we do now. We are all volunteers and hopefully we can achieve more working together."
+
+      spoken "These Experience Courses are invite-only and the invites can come from you as well!"
+      spoken "There's a link going into the chat to your own referral code to invite friends and family to attend these Experience Courses. Use it as many times as you like. It would really help us fill more courses for people who want to practice delivery."
+
+      spoken "We’d love to continue the conversations in the community as well. You can ask for support and look for extra resources posted there too. There’s a link going in the chat for that as well."
+
+      spoken "Are there any questions before we finish?"
 
       instruction "Facilitate brief discussion if time allows suggesting people can also put their answers in the chat."
     end
 
     producer do
-      chat "How can we find more people like you?"
+      instruction "Copy to chat when you hear facilitator say this:"
+
+      chat <<~CHAT
+        https://bettercourses.org/participant/referral
+      CHAT
+
+      instruction "Copy to chat when facilitator mentions this:"
+
+      chat <<~CHAT
+        https://community.betterconversations.foundation/
+      CHAT
     end
 
   end
@@ -302,16 +325,16 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 1
 
     facilitator do
-      spoken "There’s no fieldwork for this module. We’d love to continue the conversations in the community though – there’s a link going in the chat for that."
-      spoken "We will send out a short survey after the course to gather any more thoughts you have."
-      spoken "And if you’d like to write us a testimonial or be interviewed on video for it, that will help us spread Better Conversations further."
+      spoken "There’s no fieldwork for this module."
+      spoken "If you are interested in a certificate of attendance and badge you can display on LinkedIn, please email us or let us know in the chat."
+      spoken "We'd appreciate any testimonials you could give us. Again, please let us know if you can do that."
       spoken "If you have any further questions or anything you’d like to share today, we will stay on the Zoom call for a few minutes after the session has finished"
 
       handover
     end
 
     producer do
-      chat "https://community.betterconversations.foundation/"
+      chat "Please email: hello@betterconversations.foundation for a certificate of attendance and badge, and/or if you'd like to give us testimonial."
 
       instruction "If leaving the session early, make facilitator a host first"
     end
