@@ -39,8 +39,7 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
         Point out this where this module is on the course overview on the flip
       MD
 
-      spoken "We are on Module 6, where we consider the personal impact of the course and what you would like to have happen next."
-      spoken "If you are going to deliver the course you'll need to customise this one for your own audience."
+      spoken "We are on Module 6, where we consider the personal impact of the course and what you would like to have happen next. You'll need to customise this one for your own audience."
       spoken "We also wanted to create another way for people from the Better Conversations Community to connect and reconnect."
       spoken "You are welcome to come to any of the sessions again and observe the delivery team, and perhaps practice delivery with us, if that’s helpful."
 
@@ -178,9 +177,9 @@ MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "Thank you for giving up your time over the last few weeks. And thank you to those of you coming back to add your voice to the discussion."
-      spoken "This is the bit you’ll customise if you are delivering the course for your own audience. Here, you could introduce your other offerings, or link back to project goals, organisational strategy etc."
+      spoken "This is the bit you’ll customise for your own audience. You could introduce your other offerings, or link back to project goals, organisational strategy etc."
 
-      spoken "As an example, we'll share a little more about our strategy and approach."
+      spoken "We'll share a little more about our strategy and approach, as an example."
       spoken "This course is designed to spread. We are making the materials available under Creative Commons which will help that."
       spoken "Here's an overview. There's three main components to this: the Foundation, the Community and our Partners."
 
