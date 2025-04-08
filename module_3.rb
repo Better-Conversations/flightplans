@@ -115,13 +115,13 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - _Socioculture_ (for example, relationships, group behaviour, cultural values and beliefs)
         - _History_ (for example, what’s happened in the past, what’s documented or recorded)
         - _Environment_ (for example, what’s going in the physical space you are in)
-        - _Time-based_ (for example, time zone, whether it’s day or night)
+        - _Time_ (for example, time zone, whether it’s day or night)
         - _Method_ (for example, the way you are communicating, the process for communicating)
       TYPST_SPOKEN
 
       spoken <<~MD
         Some examples of your context we have already covered so far in this course are:
-        - Asking where in the world you are and what time zone you are in (environment, culture and time-based context)
+        - Asking where in the world you are and what time zone you are in (environment, culture and time)
         - Asking how you are feeling, when we do the state check-in (psychobiology)
       MD
 
@@ -155,10 +155,10 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
                      "Continue the conversation and ask more questions to improve your understanding of the other person’s context."
       spoken_exact <<~MD
         Starter questions:
-        -	Psychobiology: What would you like to have happen after attending this course?
-        -	History: What have you learned so far on this course?
-        -	Time: What were you doing before you came to the course today? What else do you have on today?
-        -	Environment: Where are you in the world?"
+        -	What would you like to have happen after attending this course? (psychobiology)
+        -	What have you learned so far on this course? (history)
+        -	What were you doing before you came to the course today? What else do you have on today? (time)
+        -	Where are you in the world? (environment)
       MD
 
       spoken_exact "Manage the time so everyone gets a chance to try out one of the starter questions. "
@@ -181,10 +181,10 @@ MODULE_3 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         Starter questions:
 
-        - Psychobiology: What would you like to have happen after attending this course?
-        - History: What have you learned so far on this course?
-        - Time: What were you doing before you came to the course today? What else do you have on today?
-        - Environment: Where are you in the world?
+        - What would you like to have happen after attending this course? (psychobiology)
+        - What have you learned so far on this course? (history)
+        - What were you doing before you came to the course today? What else do you have on today? (time)
+        - Where are you in the world? (environment)
 
         Manage the time so everyone gets a chance to try out one of the starter questions.
       CHAT
