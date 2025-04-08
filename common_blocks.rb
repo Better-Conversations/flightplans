@@ -172,7 +172,7 @@ module BCF
             facilitator do
               spoken "If you have any further questions or anything you'd like to share, we will stay on the Zoom call for a few minutes now."
               spoken "Otherwise, we will see you next time on the next module which will cover #{next_module_name}."
-              instruction "Handover to Sponsor"
+              handover
             end
 
             producer do
