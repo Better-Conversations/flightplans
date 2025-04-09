@@ -274,8 +274,7 @@ MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken_exact "What impact might making assumptions have on your conversations?"
       spoken "Who’s got something they want to share?"
 
-      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat." \
-                    "Aim for 2-3 examples, with one from the chat."
+      instruction "Facilitate brief discussion suggesting people can also put their answers in the chat. Aim for 2-3 examples, with one from the chat."
 
       handover "for discussion on assumptions and feelings."
     end

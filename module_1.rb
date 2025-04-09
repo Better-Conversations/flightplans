@@ -186,7 +186,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       spoken "Make a note of this label and number if it helps you. There's also a space in the handbook to write this down."
 
-      instruction "Hand over to Fx1 for State and Traffic Light model"
+      handover "for State and Traffic Light model"
     end
 
     producer do
