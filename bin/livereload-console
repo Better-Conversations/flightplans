@@ -8,46 +8,80 @@ require 'bcf/flightplans'
 require 'filewatcher'
 require 'httparty'
 
-if ARGV.length != 3
-  warn "Usage: #{__FILE__} <flightplan.rb> <flightplan_version> <host>"
+AFP_HOST = ENV.fetch('AFP_HOST', "https://lon.activeflightplans.com")
+
+if !(ARGV.length == 1 || ARGV.length == 2)
+  warn "Usage: #{__FILE__} <flightplan.rb> [existing-key]"
   exit 1
 end
 
-DEV_HOST = ARGV[2]
+FILE = ARGV[0]
 
-def push_change(file)
-  # Each load will re-run the code in this ruby process.
-  # This means that we may have pre-existing state that messes things up.
-  # But for now to allow for vscode to run things we want it to be a ruby file
-  # not a shell script so this will work.
-  load(file)
+def reload
+  begin
+    # Each load will re-run the code in this ruby process.
+    # This means that we may have pre-existing state that messes things up.
+    # But for now to allow for vscode to run things we want it to be a ruby file
+    # not a shell script so this will work.
+    load(FILE)
+    BCF::FlightPlans::FLIGHT_PLANS.last
+  rescue
+    puts "Failed to load..."
+  end
+end
 
-  flight_plan = BCF::FlightPlans::FLIGHT_PLANS.last
+def update(key)
+  flight_plan = reload
   HTTParty.post(
-    "http://#{DEV_HOST}/flightplans/development_live_reload_flightplan",
+    AFP_HOST + "/s/#{key}/update_with_info",
     headers: {
       "Content-Type" => "application/json"
     },
     body: {
-      flightplan_version: ARGV[1],
-      flight_plan: flight_plan
+      delivery_session: {
+        flight_plan: flight_plan.to_json
+      }
     }.to_json
   )
 
   puts "Pushed changes"
-  flight_plan.module_number
 end
 
-module_number = push_change(ARGV[0])
+def create
+  flight_plan = reload
+  response = HTTParty.post(
+    AFP_HOST + "/delivery_sessions",
+    headers: {
+      "Content-Type" => "application/json"
+    },
+    body: {
+      delivery_session: {
+        flight_plan: flight_plan.to_json,
+        start_time: Time.now.utc.iso8601
+      }
+    }.to_json
+  )
 
-test_url = URI.parse("http://#{DEV_HOST}/flightplans/test_flightplan")
-test_url.query = URI.encode_www_form(
-  'flightplan_delivery_testing[version]': ARGV[1],
-  'flightplan_delivery_testing[module_number]': module_number
-)
+  if response.code != 201
+    puts "Failed to create session"
+    puts response.body
+    exit 1
+  end
 
-puts "Test URL\n#{test_url}"
+  puts "Created session"
+  JSON.parse(response.body)["access_key"]
+end
 
-Filewatcher.new(ARGV[0]).watch do |changes|
-  push_change(ARGV[0])
+key = if ARGV[1]
+        # If we have been given a key push an initial update
+        update(ARGV[1])
+        ARGV[1]
+      else
+        create
+      end
+
+puts "Test URL:\n#{AFP_HOST}/s/#{key}/delivery_consoles/new"
+
+Filewatcher.new(FILE).watch do |changes|
+  update(key)
 end
