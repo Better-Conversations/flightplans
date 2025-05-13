@@ -2,7 +2,7 @@ require 'bcf/flightplans'
 require_relative './common_blocks'
 require_relative './common_resources'
 
-MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
+BCWAI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Human-AI Interaction"
   module_number 1
 
@@ -102,9 +102,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       chat <<~MD
 
-        email: help@betterconversations.foundation
-        phone: +44 118 234 9811
-        website: https://betterconversations.foundation
+        - email: help@betterconversations.foundation
+        - phone: +44 118 234 9811
+        - website: https://betterconversations.foundation
 
       MD
 
@@ -191,13 +191,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - What brings you to be on this course?
         - What are you hoping to get out of this course?
       MD
-
+    
+      instruction "Prepare BORs in 2/3s for 5 minutes if not already done"
     end
 
   end
 
   block(name: "Amphora Chat platform", lead_by: :fx1) do
-    length 5
+    length 8
     resources do
       flipchart(
         :flip_2,
@@ -212,7 +213,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "We are going to demo the Amphora Chat platform now."
 
-      instruction "One of the delivery team demos the platform"
+      instruction "Demo the platform (Facilitator describes and Producer drives?)"
 
       instruction <<~MD
         - Show how to navigate the platform
@@ -220,12 +221,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
         - Explain that we will be using the platform for the rest of the course including for doing the fieldwork
         - Confirm we can see their messages on the platform so they should not enter any sensitive or confidential information on the platform
       MD
+      spoken "We'll be on hand to help. Any questions on using the platform?"
+      
     end
 
     producer do
-      instruction "Prepare BORs in 2/3s for 5 minutes if not already done"
+      instruction "Help the facilitator demo the platform"
     end
-
   end
 
 
@@ -241,9 +243,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We are going to send you into breakout rooms for 5 minutes."
       spoken_exact <<~MD
         - Try typing this prompt into the Amphora Chat platform:
-        - How do I boil an egg?
+        - Why is the sky blue?
         - You can also try out other prompts to get used to the platform.
-        - If you run into any issues message us in the Zoom chat and we can help you.
+        - If you run into any issues, message us in the Zoom chat and we can help you.
       MD
 
       spoken "Any questions before we send you in?"
@@ -253,11 +255,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when facilitator mentions this: "
 
       chat <<~MD
-        - Try typing this prompt into the Amphora Chat platform: 
+        Try typing this prompt into the Amphora Chat platform: 
         
-        *How do I boil an egg?*
+        *Why is the sky blue?*
 
-        You can also try out other prompts to get used to the platform. If you run into any issues message us in the Zoom chat and we can help you.
+        You can also try out other prompts to get used to the platform. 
+        
+        If you run into any issues, message us in the Zoom chat and we can help you.
       MD
 
       instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes"
@@ -303,28 +307,43 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   end
 
   block(name: "Breakout 2", lead_by: :fx2) do
-    length 5
+    length 7
     section_comment "(1 min briefing)"
 
     resources do
-      breakout_room(:bor_2, default_duration: 4, notify_halfway: true, halfway_message: true)
+      breakout_room(:bor_2, default_duration: 6, notify_halfway: true, halfway_message: true)
     end
 
     facilitator do
-      spoken "We are going to do a bit more with the AI model we just used. We are going to explore what it can and can't do and introduce more context into our AI conversation."
+      spoken "We are going to do a bit more with the AI model we just used. We are going to explore introducing more context into our AI conversation, and asking it to clarify how it knows things."
       
       spoken_exact <<~MD
+        Enter these prompts this time, and allow the AI to respond between each prompt (you need to repeat the first prompt)
 
-      - Enter these prompts this time, and note the responses between each prompt
-      - 
-      spoken "This time, come back with examples of being in amber/yellow states that you are happy to share in the wider group. You’ll have 4 minutes this time."
-      spoken "We’ll put the question in the chat again…"
+          1. Why is the sky blue?
+          2. If you were a poet, how would you answer this?
+          3. As an AI, how do you really know that the sky is blue?
+
+        What do you notice about the responses?
+      MD
+
+      spoken <<~MD
+        - Any questions before we send you in?
+      MD
     end
 
     producer do
       instruction "Copy to chat"
 
-      chat "What might you be thinking or feeling when you’re in an amber/yellow state?"
+      chat <<~MD
+        Enter these prompts this time, and allow the AI to respond between each prompt (you need to repeat the first prompt)
+
+        1. Why is the sky blue?
+        2. If you were a poet, how would you answer this?
+        3. As an AI, how do you really know that the sky is blue?
+
+        What do you notice about the responses?
+      MD
 
       instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 4 minutes"
       send_into_bor :bor_2
@@ -336,21 +355,24 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     resources do
       flipchart(
         :flip_2,
-        comment: "Add to flip in the amber/yellow state section for up to 3 people",
-        description: "Findings on amber/yellow state",
+        comment: "Summarise responses on flip, using people's words",
+        description: "Observations from Breakout 2",
         scribed_by: :fx1
       )
     end
 
     facilitator do
-      spoken "Now let’s get 2-3 examples of amber/yellow state"
+      spoken "Now let's find out what you noticed about your AI conversations"
 
-      spoken_exact "What did you notice about being in an amber/yellow state?"
+      spoken_exact <<~MD
+        - What did you notice about the AI's responses?
+        - Did you notice any differences in the responses as you went along?
+      MD
 
       instruction <<~MD
         Facilitate brief discussion, helping people to say what they are thinking or feeling in an amber/yellow state. Suggest people can also put their answers in the chat.
 
-        If time allows, focus in on the transition between amber/yellow and other states and the reasons for that.
+        If time allows, focus on the differences in the responses and whether each person got the same or different responses (invite them to paste the poems in the chat).
       MD
 
       handover "for reflections, fieldwork and close"
@@ -359,7 +381,10 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     producer do
       instruction "Copy to chat: "
 
-      chat "What did you notice about being in an amber/yellow state?"
+      chat <<~MD
+        - What did you notice about the AI's responses?
+        - Did you notice any differences in the responses as you went along?
+      MD
     end
   end
 
@@ -368,27 +393,31 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "You’ve had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
+      spoken "You’ve had a quick introduction to the Amphora Chat platform and a chance to see how an AI model can respond to different prompts."
       spoken "Take a moment now to reflect and put your thoughts in the chat. Here are some questions to guide your thinking:"
 
-      spoken_exact "Thinking about conversations that have and haven’t gone well and what you know now about state, what are you noticing?"
-      spoken_exact "What difference does this make?"
-      spoken_exact "Is there something you may do differently now you know this?"
+      spoken_exact <<~MD
+        - Thinking about conversations with AI, what are you noticing?
+        - Is there something you may do differently now you know this?
+        - What questions do you have about the platform or the AI you used?
+      MD
 
-      instruction "Use chat to gather comments. If time permits, invite examples from 1-2 people."
-
-      spoken "We are almost at the end of this first module. There is space in the Course Handbook to capture any more thoughts you might have from today. "
+      instruction <<~MD
+        - Invite people to put their thoughts in the chat.
+        - If time permits, invite examples from 1-2 people.
+        - If time permits, answer the simple questions if you can, or suggest that they will be answered as the course progresses, or that the delivery team will follow up.
+      MD
+      
+      #TODO: There is space in the Course Handbook to capture any more thoughts you might have from today. "
     end
 
     producer do
-      instruction "Copy to chat as facilitator mentions fieldwork: "
+      instruction "Copy to chat as facilitator mentions the reflection questions."
 
       chat <<~MD
-        - Thinking about conversations that have and haven’t gone well and what you know now about state
-
-        - What are you noticing?
-        - What difference does this make?
+        - Thinking about conversations with AI, what are you noticing?
         - Is there something you may do differently now you know this?
+        - What questions do you have about the platform or the AI you used?
       MD
     end
 
@@ -399,11 +428,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     length 2
 
     facilitator do
-      spoken "We have fieldwork that is optional but very useful to consolidate what we cover in each module. We will send this out by email."
+      spoken "We have fieldwork that consolidates what we cover in each module and prepares you for the next module. We will send this out by email."
       spoken "The suggested fieldwork for this module is to:"
-      spoken_exact "Notice your state, and how and when it changes for you."
-      spoken_exact "Try mapping it to the Traffic Light Model."
-      spoken_exact "What’s your state like, before and after your conversations?"
+      spoken_exact <<~MD
+        - Use the Amphora Chat platform to have a conversation with an AI. you'll be able to try out different models and prompts.
+        - Vary the information you give the AI to see how it responds e.g. suggest it answers in a different persona or style.
+        - Ask the AI to explain how it knows things, or to clarify how it arrived at an answer.
+      MD
     end
 
     producer do
@@ -412,14 +443,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       chat <<~MD
         - Fieldwork:
 
-        - Notice your state, and how and when it changes for you.
-        - Try mapping it to the Traffic Light Model.
-        - What’s your state like, before and after your conversations?
+        - Use the Amphora Chat platform to have a conversation with an AI. you'll be able to try out different models and prompts.
+        - Vary the information you give the AI to see how it responds e.g. suggest it answers in a different persona or style.
+        - Ask the AI to explain how it knows things, or to clarify how it arrived at an answer.
       MD
     end
   end
 
-  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Assumptions", length: 1))
+  block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Goal-setting with AIs", length: 1))
 
   instruction_ends
 
