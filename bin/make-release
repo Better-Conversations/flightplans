@@ -4,7 +4,8 @@ require 'bundler/setup'
 require 'fileutils'
 
 # Load all courses
-require_relative '../source/experience-course/course'
+require_relative '../source/shared/course'
+require_relative '../source/bc-course/course'
 require_relative '../source/bc-ai-course/course'
 
 # Get command line arguments
@@ -16,8 +17,8 @@ FileUtils.mkdir_p('json-outputs')
 
 # Define available courses with their configurations
 COURSES = {
-  'experience' => ExperienceCourse::COURSE,
-  'bc-ai' => BCAICourse::COURSE
+  'bc' => BC_COURSE,
+  'bc-ai' => BC_AI_COURSE
 }
 
 # Select courses to process
@@ -33,15 +34,21 @@ else
   COURSES.values
 end
 
+def get_course_config(course_identifier)
+  case course_identifier
+  when BC_COURSE
+    BC_COURSE::CONFIG
+  when BC_AI_COURSE
+    BC_AI_COURSE::CONFIG
+  else
+    raise "Unknown course: #{course_identifier}"
+  end
+end
+
 # Process selected courses
 courses_to_process.each do |course|
   # Get course configuration from the module
-  config = case course
-  when ExperienceCourse::COURSE
-    ExperienceCourse::CONFIG
-  when BCAICourse::COURSE
-    BCAICourse::CONFIG
-  end
+  config = get_course_config(course)
 
   json_output = "json-outputs/#{config.identifier}#{suffix}"
 

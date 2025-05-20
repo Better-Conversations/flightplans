@@ -13,7 +13,7 @@ require_relative '../validations/flight_plan_length'
 # require_relative '../validations/note_spelling'
 
 # Load all courses
-require_relative '../source/experience-course/course'
+require_relative '../source/bc-course/course'
 require_relative '../source/bc-ai-course/course'
 
 validations = Validations.constants.map do |validator|
@@ -23,7 +23,7 @@ validations = Validations.constants.map do |validator|
 end
 
 # Validate each course
-[EXPERIENCE_COURSE, BC_AI_COURSE].each do |course|
+[BC_COURSE, BC_AI_COURSE].each do |course|
   puts "\nValidating #{course.title}..."
   validator = BCF::FlightPlans::Validator.new(course, validations)
 

@@ -10,7 +10,7 @@ require_relative 'module_6'
 
 module ExperienceCourse
   CONFIG = CourseConfig::Config.new(
-    identifier: 'experience',
+    identifier: 'experience', # name should match the *-course directory
     title: 'Experience Course'
   )
 
