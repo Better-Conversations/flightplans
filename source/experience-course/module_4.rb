@@ -1,6 +1,6 @@
 require 'bcf/flightplans'
-require_relative './common_blocks'
-require_relative './common_resources'
+require_relative '../shared/common_blocks'
+require_relative '../shared/common_resources'
 
 MODULE_4 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Listening with Curiosity"

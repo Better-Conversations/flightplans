@@ -1,6 +1,6 @@
 require 'bcf/flightplans'
-require_relative './common_blocks'
-require_relative './common_resources'
+require_relative '../shared/common_blocks'
+require_relative '../shared/common_resources'
 
 # This is from Version 2.2.3 in Box
 

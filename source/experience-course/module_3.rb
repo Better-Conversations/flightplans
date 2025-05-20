@@ -1,6 +1,6 @@
 require 'bcf/flightplans'
-require_relative './common_blocks'
-require_relative './common_resources'
+require_relative '../shared/common_blocks'
+require_relative '../shared/common_resources'
 
 # TODO check this is the same as version 2.2.3 here https://amphora.app.box.com/folder/158341017039?s=46iq09ejyhjjq6fkp2jgbw0jg4pjiu6h
 
