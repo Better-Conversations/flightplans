@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'fileutils'
 
 # Load all courses
-require_relative '../source/shared/course'
+require_relative '../source/shared/course_config'
 require_relative '../source/bc-course/course'
 require_relative '../source/bc-ai-course/course'
 
@@ -37,9 +37,9 @@ end
 def get_course_config(course_identifier)
   case course_identifier
   when BC_COURSE
-    BC_COURSE::CONFIG
+    BC::CONFIG
   when BC_AI_COURSE
-    BC_AI_COURSE::CONFIG
+    BCAICourse::CONFIG
   else
     raise "Unknown course: #{course_identifier}"
   end
