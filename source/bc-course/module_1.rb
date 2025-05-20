@@ -221,9 +221,9 @@ BC_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "Now for the traffic light model which is an easy way to represent state. There is also an explanation in the Course Handbook in Section 1 to help you remember the model."
       spoken "The colours of the traffic light represent different states of our thinking and feeling, which will impact our conversations."
       spoken "It's important to know that being in an amber/yellow or red state isn't 'bad', it's your system or body trying to tell you something. No one state is better than another, they can be less helpful or resourceful depending on the situation you're in."
-      spoken "Red light is "stop and take a break", 0-4. You are definitely not OK. You will be experiencing strong and unpleasant emotions. You may have a fight/flight/freeze response. Some of your basic needs will not be met, and there may be a threat to life."
-      spoken "Amber/yellow light state is "proceed with caution", 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else's welfare."
-      spoken "Green light state is "I'm good to go", 7-10 from the scale we used earlier.  You're feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you'll be thinking and acting at your best."
+      spoken "Red light is 'stop and take a break', 0-4. You are definitely not OK. You will be experiencing strong and unpleasant emotions. You may have a fight/flight/freeze response. Some of your basic needs will not be met, and there may be a threat to life."
+      spoken "Amber/yellow light state is 'proceed with caution', 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else's welfare."
+      spoken "Green light state is 'I'm good to go', 7-10 from the scale we used earlier. You're feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you'll be thinking and acting at your best."
     end
 
     producer do

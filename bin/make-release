@@ -17,8 +17,8 @@ FileUtils.mkdir_p('json-outputs')
 
 # Define available courses with their configurations
 COURSES = {
-  'bc' => BC_COURSE,
-  'bc-ai' => BC_AI_COURSE
+  'bc' => BC_COURSE::COURSE,
+  'bc-ai' => BC_AI_COURSE::COURSE
 }
 
 # Select courses to process
@@ -36,9 +36,9 @@ end
 
 def get_course_config(course_identifier)
   case course_identifier
-  when BC_COURSE
+  when BC_COURSE::COURSE
     BC_COURSE::CONFIG
-  when BC_AI_COURSE
+  when BC_AI_COURSE::COURSE
     BC_AI_COURSE::CONFIG
   else
     raise "Unknown course: #{course_identifier}"

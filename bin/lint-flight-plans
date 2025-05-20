@@ -23,7 +23,7 @@ validations = Validations.constants.map do |validator|
 end
 
 # Validate each course
-[BC_COURSE, BC_AI_COURSE].each do |course|
+[BC_COURSE::COURSE, BC_AI_COURSE::COURSE].each do |course|
   puts "\nValidating #{course.title}..."
   validator = BCF::FlightPlans::Validator.new(course, validations)
 

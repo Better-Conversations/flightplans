@@ -25,6 +25,3 @@ module BC_COURSE
     BC_MODULE_6
   ]
 end
-
-# Export course constant
-BC_COURSE = BC_COURSE::COURSE

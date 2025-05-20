@@ -21,6 +21,3 @@ module BC_AI_COURSE
     BC_AI_MODULE_5,
   ]
 end
-
-# For backward compatibility
-BC_AI_COURSE = BC_AI_COURSE::COURSE
