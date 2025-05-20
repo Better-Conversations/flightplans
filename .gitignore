@@ -1,10 +1,32 @@
+# IDE and OS files
 /.idea/
-*.pdf
-.bundle
-# Ignore all json-outputs directories
-json-outputs/
-# But keep the directory itself
-!json-outputs/.gitkeep
-build-context
-pdf-outputs*
 .DS_Store
+
+# Ruby
+.bundle
+*.gem
+*.rbc
+
+# Generated outputs
+*.pdf
+pdf-outputs*/
+build-context/
+
+# JSON outputs and zips
+
+# Ignore all json-outputs directories and their contents
+json-outputs/
+
+# But keep the directory structure
+!json-outputs/
+!json-outputs/.gitkeep
+
+# Ignore all zip files
+*.zip
+
+# But keep any zip files we want to track (if any)
+!*.zip.sig
+
+# Temporary files
+*.swp
+*~
