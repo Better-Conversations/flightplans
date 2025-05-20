@@ -3,8 +3,8 @@
 # Check if a course name was provided
 if [ -z "$2" ]; then
   # No course specified, zip all courses separately
-  zip -r json-outputs-experience_course-$1.zip json-outputs/experience_course-$1
-  zip -r json-outputs-better_conversations_with_ai-$1.zip json-outputs/better_conversations_with_ai-$1
+  zip -r json-outputs-experience-$1.zip json-outputs/experience-$1
+  zip -r json-outputs-bc-ai-$1.zip json-outputs/bc-ai-$1
 else
   # Zip specific course
   course_name=$2
