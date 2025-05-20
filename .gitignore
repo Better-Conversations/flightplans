@@ -1,7 +1,10 @@
 /.idea/
 *.pdf
 .bundle
-json-outputs*
+# Ignore all json-outputs directories
+json-outputs/
+# But keep the directory itself
+!json-outputs/.gitkeep
 build-context
 pdf-outputs*
 .DS_Store
