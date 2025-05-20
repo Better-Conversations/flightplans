@@ -37,9 +37,9 @@ end
 def get_course_config(course_identifier)
   case course_identifier
   when BC_COURSE
-    BC::CONFIG
+    BC_COURSE::CONFIG
   when BC_AI_COURSE
-    BCAICourse::CONFIG
+    BC_AI_COURSE::CONFIG
   else
     raise "Unknown course: #{course_identifier}"
   end
