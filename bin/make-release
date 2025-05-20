@@ -9,23 +9,23 @@ require_relative '../source/bc-ai-course/course'
 
 # Get command line arguments
 suffix = ARGV[0] ? "-#{ARGV[0]}" : ""
-course_name = ARGV[1]&.downcase&.gsub(/\s+/, '_')  # Optional course name parameter
+course_identifier = ARGV[1]&.downcase  # Optional course identifier parameter
 
 # Create the base json-outputs directory if it doesn't exist
 FileUtils.mkdir_p('json-outputs')
 
-# Define available courses
+# Define available courses with their configurations
 COURSES = {
-  'experience_course' => EXPERIENCE_COURSE,
-  'better_conversations_with_ai' => BC_AI_COURSE
+  'experience' => ExperienceCourse::COURSE,
+  'bc-ai' => BCAICourse::COURSE
 }
 
 # Select courses to process
-courses_to_process = if course_name
-  if COURSES.key?(course_name)
-    [COURSES[course_name]]
+courses_to_process = if course_identifier
+  if COURSES.key?(course_identifier)
+    [COURSES[course_identifier]]
   else
-    puts "Error: Unknown course '#{course_name}'"
+    puts "Error: Unknown course identifier '#{course_identifier}'"
     puts "Available courses: #{COURSES.keys.join(', ')}"
     exit 1
   end
@@ -35,14 +35,21 @@ end
 
 # Process selected courses
 courses_to_process.each do |course|
-  course_name = course.title.downcase.gsub(/\s+/, '_')
-  json_output = "json-outputs/#{course_name}#{suffix}"
+  # Get course configuration from the module
+  config = case course
+  when ExperienceCourse::COURSE
+    ExperienceCourse::CONFIG
+  when BCAICourse::COURSE
+    BCAICourse::CONFIG
+  end
+
+  json_output = "json-outputs/#{config.identifier}#{suffix}"
 
   FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
   FileUtils.mkdir_p(json_output)
 
   course.modules.each do |flight_plan|
-    puts "Rendering Flight Plan for #{course.title} Module #{flight_plan.module_number}..."
+    puts "Rendering Flight Plan for #{config.title} Module #{flight_plan.module_number}..."
     output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
     flight_plan.write_json(output_json_path)
   end
