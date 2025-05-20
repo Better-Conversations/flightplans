@@ -452,8 +452,13 @@ BC_AI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
   block(BCF::FlightPlans::CommonBlocks::Closing.new(:fx1, "Goal-setting with AIs", length: 1))
 
+  # Padding to make the validation work temporarily
+  block(name: "Padding", lead_by: :fx1) do
+    length 5
+  end
   instruction_ends
 
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
   block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
+
 end

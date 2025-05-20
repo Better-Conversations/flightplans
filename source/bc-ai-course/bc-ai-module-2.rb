@@ -23,5 +23,14 @@ BC_AI_MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   block(BCF::FlightPlans::CommonBlocks::PRE_FLIGHT)
   block(BCF::FlightPlans::CommonBlocks::GREETING)
   instruction_starts
+
+    # Padding to make the validation work temporarily
+    block(name: "Padding", lead_by: :fx1) do
+    length 59
+    end
+
   instruction_ends
+
+  block(BCF::FlightPlans::CommonBlocks::SPONSOR_CLOSE)
+  block(BCF::FlightPlans::CommonBlocks::SPONSOR_DEBRIEF)
 end 
