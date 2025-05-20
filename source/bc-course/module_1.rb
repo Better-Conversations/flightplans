@@ -2,7 +2,7 @@ require 'bcf/flightplans'
 require_relative '../shared/common_blocks'
 require_relative '../shared/common_resources'
 
-MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
+BC_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "State"
   module_number 1
 
@@ -87,7 +87,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "Facilitator quickly goes through the agenda points on flip"
 
-      spoken "Today, we are going to explore what we call ‘state’, State is what you might be thinking or feeling at any moment. Being more aware of our state can help us have Better Conversations."
+      spoken "Today, we are going to explore what we call 'state', State is what you might be thinking or feeling at any moment. Being more aware of our state can help us have Better Conversations."
     end
 
     producer do
@@ -119,7 +119,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Lead check-in at a slower pace"
 
       spoken "Before we get into the content, take a moment to check in with yourself and find out what you notice"
-      spoken "There’s no need to say anything out aloud – just place your attention on yourself and notice any thoughts or feelings, emotions, or sensations you have in this moment."
+      spoken "There's no need to say anything out aloud – just place your attention on yourself and notice any thoughts or feelings, emotions, or sensations you have in this moment."
 
       instruction "Pause to let people settle"
 
@@ -220,10 +220,10 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     facilitator do
       spoken "Now for the traffic light model which is an easy way to represent state. There is also an explanation in the Course Handbook in Section 1 to help you remember the model."
       spoken "The colours of the traffic light represent different states of our thinking and feeling, which will impact our conversations."
-      spoken "It’s important to know that being in an amber/yellow or red state isn’t ‘bad’, it’s your system or body trying to tell you something. No one state is better than another, they can be less helpful or resourceful depending on the situation you’re in."
-      spoken "Red light is “stop and take a break”, 0-4. You are definitely not OK. You will be experiencing strong and unpleasant emotions. You may have a fight/flight/freeze response. Some of your basic needs will not be met, and there may be a threat to life."
-      spoken "Amber/yellow light state is “proceed with caution”, 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else’s welfare."
-      spoken "Green light state is “I’m good to go”, 7-10 from the scale we used earlier.  You’re feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you’ll be thinking and acting at your best."
+      spoken "It's important to know that being in an amber/yellow or red state isn't 'bad', it's your system or body trying to tell you something. No one state is better than another, they can be less helpful or resourceful depending on the situation you're in."
+      spoken "Red light is "stop and take a break", 0-4. You are definitely not OK. You will be experiencing strong and unpleasant emotions. You may have a fight/flight/freeze response. Some of your basic needs will not be met, and there may be a threat to life."
+      spoken "Amber/yellow light state is "proceed with caution", 4-7. You are not completely OK. You may be unsure about the social rules, or the people you are with. You may be concerned for someone else's welfare."
+      spoken "Green light state is "I'm good to go", 7-10 from the scale we used earlier.  You're feeling good and connected with yourself and others and engaged with the world. All your needs are met, and you'll be thinking and acting at your best."
     end
 
     producer do
@@ -245,13 +245,13 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "Let’s get some examples of how you experience these three different states."
-      spoken "We’ll do red together as a whole group first."
-      spoken "We are going to find out what happens when you are at about a 3 or 4 on that scale of 0-10 we had earlier when we did our check-in. We don’t want to bring up very strong emotions or memories in this forum."
+      spoken "Let's get some examples of how you experience these three different states."
+      spoken "We'll do red together as a whole group first."
+      spoken "We are going to find out what happens when you are at about a 3 or 4 on that scale of 0-10 we had earlier when we did our check-in. We don't want to bring up very strong emotions or memories in this forum."
       
-      instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn’t have to be about anger or fear."
+      instruction "Share example drawing attention to strong and unpleasant thoughts and feelings – remember this doesn't have to be about anger or fear."
 
-      spoken "I’ve got an example. When I am in red, I think___, I feel___."
+      spoken "I've got an example. When I am in red, I think___, I feel___."
 
       instruction "Ask co-facilitator for their example"
 
@@ -259,14 +259,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
       instruction "To group"
 
-      spoken_exact "What might you be thinking or feeling that lets you know you’re in this red state?"
+      spoken_exact "What might you be thinking or feeling that lets you know you're in this red state?"
 
-      spoken "Let’s get 2-3 examples. Who’s got something they’d like to share?"
+      spoken "Let's get 2-3 examples. Who's got something they'd like to share?"
 
       instruction <<~MD
         Remember to write on the flipchart
 
-        Help them by asking questions about what they are thinking or feeling if they can’t identify thinking or feeling. Can also ask “How do you know you are in a red state?”
+        Help them by asking questions about what they are thinking or feeling if they can't identify thinking or feeling. Can also ask "How do you know you are in a red state?"
 
         Suggest people can also put their answers in the chat.
 
@@ -283,7 +283,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when facilitator mentions this: "
 
       chat <<~CHAT
-        What might you be thinking or feeling that lets you know you’re in a red state?
+        What might you be thinking or feeling that lets you know you're in a red state?
       CHAT
     end
 
@@ -301,9 +301,9 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "We are going to send you into breakout rooms for 5 minutes."
       spoken "Like we did for the red state, discuss what you might be thinking or feeling in a green state."
       spoken "Keep it brief so everyone gets a chance to talk."
-      spoken "We want you all to feel safe and keep things appropriate. As we don’t know each other that well we’d like you to only share what you are comfortable sharing in the group."
-      spoken "The question is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can’t see it."
-      spoken "We’ll then come back and find out what you noticed about being in a green state."
+      spoken "We want you all to feel safe and keep things appropriate. As we don't know each other that well we'd like you to only share what you are comfortable sharing in the group."
+      spoken "The question is going in the chat so it should travel to the breakout room with you. If you are on a mobile device, you might want to take a note of it in case you can't see it."
+      spoken "We'll then come back and find out what you noticed about being in a green state."
       spoken "Any questions before we send you in?"
     end
 
@@ -311,7 +311,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat when facilitator mentions this: "
 
       chat <<~CHAT
-        What might you be thinking or feeling when you’re in a green state?
+        What might you be thinking or feeling when you're in a green state?
       CHAT
 
       instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 5 minutes"
@@ -332,7 +332,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "Welcome back. Let’s get 2-3 examples of green state."
+      spoken "Welcome back. Let's get 2-3 examples of green state."
 
       spoken_exact "What did you notice about being in a green state?"
 
@@ -360,14 +360,14 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
     facilitator do
       spoken "Now we are going to do the same for amber/yellow"
-      spoken "This time, come back with examples of being in amber/yellow states that you are happy to share in the wider group. You’ll have 4 minutes this time."
-      spoken "We’ll put the question in the chat again…"
+      spoken "This time, come back with examples of being in amber/yellow states that you are happy to share in the wider group. You'll have 4 minutes this time."
+      spoken "We'll put the question in the chat again…"
     end
 
     producer do
       instruction "Copy to chat"
 
-      chat "What might you be thinking or feeling when you’re in an amber/yellow state?"
+      chat "What might you be thinking or feeling when you're in an amber/yellow state?"
 
       instruction "When the facilitator has finished talking, tell the group you are going to send them into BORs for 4 minutes"
       send_into_bor :bor_2
@@ -386,7 +386,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     end
 
     facilitator do
-      spoken "Now let’s get 2-3 examples of amber/yellow state"
+      spoken "Now let's get 2-3 examples of amber/yellow state"
 
       spoken_exact "What did you notice about being in an amber/yellow state?"
 
@@ -411,10 +411,10 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "You’ve had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
+      spoken "You've had some conversations and learned a model to describe state. This is a key ingredient in having Better Conversations."
       spoken "Take a moment now to reflect and put your thoughts in the chat. Here are some questions to guide your thinking:"
 
-      spoken_exact "Thinking about conversations that have and haven’t gone well and what you know now about state, what are you noticing?"
+      spoken_exact "Thinking about conversations that have and haven't gone well and what you know now about state, what are you noticing?"
       spoken_exact "What difference does this make?"
       spoken_exact "Is there something you may do differently now you know this?"
 
@@ -427,7 +427,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Copy to chat as facilitator mentions fieldwork: "
 
       chat <<~CHAT
-        Thinking about conversations that have and haven’t gone well and what you know now about state
+        Thinking about conversations that have and haven't gone well and what you know now about state
 
         - What are you noticing?
         - What difference does this make?
@@ -446,7 +446,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       spoken "The suggested fieldwork for this module is to:"
       spoken_exact "Notice your state, and how and when it changes for you."
       spoken_exact "Try mapping it to the Traffic Light Model."
-      spoken_exact "What’s your state like, before and after your conversations?"
+      spoken_exact "What's your state like, before and after your conversations?"
     end
 
     producer do
@@ -457,7 +457,7 @@ MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
 
         - Notice your state, and how and when it changes for you.
         - Try mapping it to the Traffic Light Model.
-        - What’s your state like, before and after your conversations?
+        - What's your state like, before and after your conversations?
       CHAT
     end
   end

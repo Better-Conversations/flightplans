@@ -7,20 +7,20 @@ require_relative 'module_3'
 require_relative 'module_4'
 require_relative 'module_5'
 
-module BCAICourse
+module BC_AI_COURSE
   CONFIG = CourseConfig::Config.new(
     identifier: 'bc-ai', # name should match the *-course directory
     title: 'Better Conversations with AI'
   )
 
   COURSE = BCF::FlightPlans::define_course CONFIG.title, [
-    MODULE_1,
-    MODULE_2,
-    MODULE_3,
-    MODULE_4,
-    MODULE_5,
+    BC_AI_MODULE_1,
+    BC_AI_MODULE_2,
+    BC_AI_MODULE_3,
+    BC_AI_MODULE_4,
+    BC_AI_MODULE_5,
   ]
 end
 
 # For backward compatibility
-BC_AI_COURSE = BCAICourse::COURSE
+BC_AI_COURSE = BC_AI_COURSE::COURSE

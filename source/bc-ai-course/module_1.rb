@@ -182,7 +182,7 @@ BC_AI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
       instruction "Pick out 1-2 examples from chat and ask people to expand on them. Acknowledge what they say."
 
       handover "for Amphora Chat platform"
-        
+      
     end
 
     producer do
@@ -393,7 +393,7 @@ BC_AI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
     section_comment "Gather comments in chat and pick out some examples"
 
     facilitator do
-      spoken "You’ve had a quick introduction to the Amphora Chat platform and a chance to see how an AI model can respond to different prompts."
+      spoken "You've had a quick introduction to the Amphora Chat platform and a chance to see how an AI model can respond to different prompts."
       spoken "Take a moment now to reflect and put your thoughts in the chat. Here are some questions to guide your thinking:"
 
       spoken_exact <<~MD

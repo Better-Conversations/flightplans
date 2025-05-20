@@ -4,7 +4,7 @@ require_relative '../shared/common_resources'
 
 # This is from Version 2.2.3 in Box
 
-MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
+BC_MODULE_2 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Assumptions"
   module_number 2
 

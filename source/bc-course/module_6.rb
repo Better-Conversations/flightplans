@@ -2,7 +2,7 @@ require 'bcf/flightplans'
 require_relative '../shared/common_blocks'
 require_relative '../shared/common_resources'
 
-MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
+BC_MODULE_6 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Applications"
   module_number 6
 
