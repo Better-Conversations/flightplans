@@ -1,18 +1,49 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
+require 'fileutils'
 
-require_relative '../experience_course'
+# Load all courses
+require_relative '../source/experience-course/course'
+require_relative '../source/bc-ai-course/course'
 
+# Get command line arguments
 suffix = ARGV[0] ? "-#{ARGV[0]}" : ""
-json_output = "json-outputs#{suffix}"
+course_name = ARGV[1]&.downcase&.gsub(/\s+/, '_')  # Optional course name parameter
 
-FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
-Dir.mkdir(json_output)
+# Create the base json-outputs directory if it doesn't exist
+FileUtils.mkdir_p('json-outputs')
 
-EXPERIENCE_COURSE.modules.each do |flight_plan|
-  puts "Rendering Flight Plan for Module #{flight_plan.module_number}..."
+# Define available courses
+COURSES = {
+  'experience_course' => EXPERIENCE_COURSE,
+  'better_conversations_with_ai' => BC_AI_COURSE
+}
 
-  output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
-  flight_plan.write_json(output_json_path)
+# Select courses to process
+courses_to_process = if course_name
+  if COURSES.key?(course_name)
+    [COURSES[course_name]]
+  else
+    puts "Error: Unknown course '#{course_name}'"
+    puts "Available courses: #{COURSES.keys.join(', ')}"
+    exit 1
+  end
+else
+  COURSES.values
+end
+
+# Process selected courses
+courses_to_process.each do |course|
+  course_name = course.title.downcase.gsub(/\s+/, '_')
+  json_output = "json-outputs/#{course_name}#{suffix}"
+
+  FileUtils.rm_rf(json_output) if Dir.exist?(json_output)
+  FileUtils.mkdir_p(json_output)
+
+  course.modules.each do |flight_plan|
+    puts "Rendering Flight Plan for #{course.title} Module #{flight_plan.module_number}..."
+    output_json_path = File.join(json_output, "module_#{flight_plan.module_number}.json")
+    flight_plan.write_json(output_json_path)
+  end
 end
