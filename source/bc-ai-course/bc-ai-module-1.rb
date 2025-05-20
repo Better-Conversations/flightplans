@@ -1,8 +1,8 @@
 require 'bcf/flightplans'
-require_relative './common_blocks'
-require_relative './common_resources'
+require_relative '../shared/common_blocks'
+require_relative '../shared/common_resources'
 
-BCWAI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
+BC_AI_MODULE_1 = BCF::FlightPlans::ConventionalFlightPlan.build do
   module_title "Human-AI Interaction"
   module_number 1
 

@@ -12,7 +12,9 @@ require_relative '../validations/block_structure'
 require_relative '../validations/flight_plan_length'
 # require_relative '../validations/note_spelling'
 
-require_relative '../experience_course'
+# Load all courses
+require_relative '../source/experience-course/course'
+require_relative '../source/bc-ai-course/course'
 
 validations = Validations.constants.map do |validator|
   puts "Loading validator: #{validator}"
@@ -20,19 +22,18 @@ validations = Validations.constants.map do |validator|
   klass.new
 end
 
-validator = BCF::FlightPlans::Validator.new(
-  EXPERIENCE_COURSE,
-  validations,
-)
+# Validate each course
+[EXPERIENCE_COURSE, BC_AI_COURSE].each do |course|
+  puts "\nValidating #{course.title}..."
+  validator = BCF::FlightPlans::Validator.new(course, validations)
 
-unless validator.is_valid?
-  warn "Course is invalid"
-
-  validator.errors.each do |error|
-    warn error
+  unless validator.is_valid?
+    warn "#{course.title} is invalid"
+    validator.errors.each do |error|
+      warn error
+    end
+    exit 1
   end
 
-  exit 1
+  puts "#{course.title} is valid"
 end
-
-puts "Course is valid"
