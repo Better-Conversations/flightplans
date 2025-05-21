@@ -10,7 +10,7 @@ module BCF
     end
 
     module CommonBlocks
-      # Call this with `block BCF::FlightPlans::CommonBlocks::preflight_block(25)`
+      # Call this with `block BCF::FlightPlans::CommonBlocks::pre_flight(25)`
       def self.pre_flight(length_value)
         Block.build do
           length(length_value)
