@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
+
 # A basic Gemfile because things expect it
 
 source 'https://rubygems.org'

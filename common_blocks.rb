@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under CC-BY-SA-4.0. See LICENSE-CONTENT.txt.
+
 module BCF
   module FlightPlans
     class ConventionalFlightPlan < BCF::FlightPlans::FlightPlan

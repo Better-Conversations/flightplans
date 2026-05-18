@@ -1,4 +1,7 @@
-# Note you can test this with 
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
+
+# Note you can test this with
 #    docker build .devcontainer
 # And note, it'll cache the layers, which means if you're just messing around with the last few lines, it'll be fast.
 

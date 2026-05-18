@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under CC-BY-SA-4.0. See LICENSE-CONTENT.txt.
+
 require 'bcf/flightplans'
 require_relative './common_blocks'
 require_relative './common_resources'

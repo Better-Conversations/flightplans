@@ -12,11 +12,24 @@ This repository contains the sources for the BCF flight plans.
     - `bin/render-pdf-watch` watches for changes and rebuilds but may be less reliable.
     - `bin/render-pdf-fswatch` uses fswatch to watch for changes and rebuilds, so is slower but more reliable.
 
-## Things to do 
+## Licensing
+
+This repository is dual-licensed:
+
+- **Code and tooling** (`bin/`, `validations/`, `Gemfile`, `Dockerfile`,
+  CI workflows, etc.) is licensed under the **MIT License** — see
+  [`LICENSE.txt`](LICENSE.txt).
+- **Course content** (the flight-plan modules, common blocks, common
+  resources, and the materials rendered from them) is licensed under
+  **Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)** —
+  see [`LICENSE-CONTENT.txt`](LICENSE-CONTENT.txt).
+
+Each source file carries a header indicating which licence applies.
+Copyright © 2026 Better Conversations Foundation Ltd.
+
+## Things to do
 
 TODO is it safe having a "/" in the gem name
-
-TODO License both a license file and also in GitHub
 
 TODO Declare demo and also require it to be there (and if there's one and no demo declaration then raise an error)
 

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
 
 require 'ffi/aspell'
 

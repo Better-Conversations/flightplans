@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
+
 class Validations::BlockStructure
   include BCF::FlightPlans::Validation
 

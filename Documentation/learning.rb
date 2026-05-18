@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under CC-BY-SA-4.0. See LICENSE-CONTENT.txt.
+
 # This is our Gem which interprets the data structure and provides the output
 require 'bcf/flightplans'
 

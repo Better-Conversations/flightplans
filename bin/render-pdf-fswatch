@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
 
 fswatch --event Updated -0 $1 | xargs -0 -I {} bin/render-pdf {}

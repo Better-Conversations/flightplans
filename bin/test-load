@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Copyright (c) 2026 Better Conversations Foundation Ltd.
+# Licensed under the MIT License. See LICENSE.txt.
 
 require 'bundler/setup'
 require 'bcf/flightplans'
